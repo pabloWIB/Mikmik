@@ -1,3 +1,41 @@
-@import "Nav/nav.css";
-@import "Footer/footer.css";
-@import "Fonts/fontSizes.css";/*# sourceMappingURL=styles.css.map */
+@import "Fonts/fontSizes.css";
+
+.swiper-container {
+  position: relative;
+  width: 90vw;
+  height: 300px;
+}
+
+.swiper-container > .swiper-slide__content {
+  position: absolute;
+  top: 0;
+}
+
+.swiper-slide {
+  height: 300px;
+  display: flex;
+  background: #eee;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms linear;
+  transform: scale(0.8);
+}
+.swiper-slide.swiper-slide-active {
+  transform: scale(1);
+  background: #fc0;
+}
+
+.swiper-slide__content {
+  height: 300px;
+}
+
+.swiper-button-prev {
+  background-image: url("../IMG/right.svg");
+  transform: rotate(180deg);
+  scale: 1.85;
+}
+
+.swiper-button-next {
+  background-image: url("../IMG/right.svg");
+  scale: 1.85;
+}
