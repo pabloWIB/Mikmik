@@ -1,41 +1,124 @@
 @import "Fonts/fontSizes.css";
-
-.swiper-container {
-  position: relative;
-  width: 90vw;
-  height: 300px;
-}
-
-.swiper-container > .swiper-slide__content {
-  position: absolute;
-  top: 0;
-}
-
-.swiper-slide {
-  height: 300px;
+body {
   display: flex;
-  background: #eee;
+  flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
-  transition: all 200ms linear;
-  transform: scale(0.8);
-}
-.swiper-slide.swiper-slide-active {
-  transform: scale(1);
-  background: #fc0;
+  gap: 1.5rem;
 }
 
-.swiper-slide__content {
-  height: 300px;
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  background-image: url("../IMG/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header > :nth-child(1) {
+  margin: 0 auto;
 }
 
-.swiper-button-prev {
-  background-image: url("../IMG/right.svg");
-  transform: rotate(180deg);
-  scale: 1.85;
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  background-color: red;
+  width: 90%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+main > :nth-child(1) {
+  background-color: orange;
+  text-align: center;
+}
+main > :nth-child(2) {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: green;
+  flex: 1;
+  gap: 1rem;
+}
+main > :nth-child(2) > div {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+  align-items: flex-start;
+  gap: 1rem;
+  background: blue;
+  text-align: center;
+}
+main > :nth-child(2) > div > :nth-child(1) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  place-content: center;
+}
+main > :nth-child(2) > div > :nth-child(1) > :nth-child(1) {
+  width: 100%;
+  max-width: 150px;
+}
+main > :nth-child(2) > div > :nth-child(1) > :nth-child(1) img {
+  width: 100%;
+  height: 150px;
+  border-radius: 50%;
+}
+main > :nth-child(2) > div > :nth-child(2) {
+  background-color: peru;
+}
+main > :nth-child(2) > div > :nth-child(2) > :nth-child(1) {
+  background: palegreen;
+}
+main > :nth-child(3) {
+  text-align: center;
 }
 
-.swiper-button-next {
-  background-image: url("../IMG/right.svg");
-  scale: 1.85;
+section {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 90%;
+  max-width: 1250px;
+  background-color: red;
+  margin: 0 auto;
 }
+section > :nth-child(2) > :nth-child(1) {
+  display: flex;
+  flex-flow: row wrap;
+}
+section > :nth-child(2) > :nth-child(2) {
+  display: flex;
+  flex-flow: row wrap;
+}
+section > :nth-child(2) > :nth-child(3) {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+aside {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 90%;
+  max-width: 1250px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+footer {
+  width: 90%;
+  max-width: 1250px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 90%;
+  max-width: 1250px;
+  background-color: red;
+  margin: 0 auto;
+}/*# sourceMappingURL=styles.css.map */
