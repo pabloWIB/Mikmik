@@ -8,30 +8,94 @@ body {
 
 header {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
   display: flex;
   place-content: center;
   align-items: center;
-  background-image: url("../IMG/1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow: hidden;
+  position: relative;
 }
 header > :nth-child(1) {
-  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+  background: url("../IMG/1.jpg") center center no-repeat;
+  background-size: cover;
+  transform-origin: center;
+  animation: headerAnimation 0.75s linear;
+}
+header > :nth-child(2) {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  animation: headerAnimation2 0.75s linear;
+}
+header > :nth-child(2) h1 {
+  font-family: "Rubik Dirt", serif;
+  font-weight: 400;
+  font-size: 75px;
+}
+header > :nth-child(2) h2 {
+  font-family: "Varela Round", serif;
+  font-weight: 400;
+  font-size: 42px;
+}
+header > :nth-child(2) button {
+  all: unset;
+  margin-top: 3rem;
+  background-color: #fbff86;
+  font-family: "Varela Round", serif;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+header > :nth-child(2) button:hover {
+  scale: 1.05;
+  transition: 0.3s;
 }
 
+@keyframes headerAnimation {
+  0% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes headerAnimation2 {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 main {
   display: flex;
   flex-flow: column nowrap;
   gap: 2rem;
   background-color: red;
   width: 90%;
-  max-width: 1250px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 main > :nth-child(1) {
   background-color: orange;
   text-align: center;
+}
+main > :nth-child(1) h2 {
+  all: unset;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
 }
 main > :nth-child(2) {
   display: flex;
@@ -57,11 +121,10 @@ main > :nth-child(2) > div > :nth-child(1) {
 }
 main > :nth-child(2) > div > :nth-child(1) > :nth-child(1) {
   width: 100%;
-  max-width: 150px;
+  max-width: 250px;
 }
 main > :nth-child(2) > div > :nth-child(1) > :nth-child(1) img {
   width: 100%;
-  height: 150px;
   border-radius: 50%;
 }
 main > :nth-child(2) > div > :nth-child(2) {
@@ -69,31 +132,159 @@ main > :nth-child(2) > div > :nth-child(2) {
 }
 main > :nth-child(2) > div > :nth-child(2) > :nth-child(1) {
   background: palegreen;
+  display: flex;
+  flex-flow: column wrap;
+}
+main > :nth-child(2) > div > :nth-child(2) > :nth-child(1) h4 {
+  all: unset;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
 }
 main > :nth-child(3) {
   text-align: center;
+  font-size: 28px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+main > :nth-child(3) > div {
+  background-color: green;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+}
+main > :nth-child(3) > div h5 {
+  all: unset;
+  font-weight: 600;
+}
+main > :nth-child(3) > div > :nth-child(1) {
+  text-decoration: underline;
+}
+main > :nth-child(4) {
+  background: #fbff86;
+  display: flex;
+  padding: 1rem;
+  margin: 0 auto;
+}
+main > :nth-child(4) form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.25rem;
+}
+main > :nth-child(4) form h4 {
+  text-align: center;
+}
+main > :nth-child(4) form > :nth-child(2) {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+main > :nth-child(4) form > :nth-child(2) div {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.75rem;
+}
+main > :nth-child(4) form > :nth-child(3) {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  place-content: center;
+}
+main > :nth-child(4) form > :nth-child(3) input[type=submit] {
+  all: unset;
+  background-color: red;
+  font-family: "Varela Round", serif;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 2px 2px rgba(97, 97, 97, 0.4);
+}
+main > :nth-child(4) form > :nth-child(3) input[type=submit]:hover {
+  scale: 1.05;
+  transition: 0.3s;
 }
 
 section {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  gap: 1.75rem;
   width: 90%;
-  max-width: 1250px;
+  max-width: 1450px;
   background-color: red;
   margin: 0 auto;
+}
+section > :nth-child(1) h2 {
+  all: unset;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+}
+section > :nth-child(2) {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.75rem;
 }
 section > :nth-child(2) > :nth-child(1) {
   display: flex;
   flex-flow: row wrap;
+  gap: 1rem;
+}
+section > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+  flex: 1.4;
+}
+section > :nth-child(2) > :nth-child(1) > :nth-child(1) img {
+  width: 100%;
+}
+section > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+  flex: 0.6;
+}
+section > :nth-child(2) > :nth-child(1) > :nth-child(2) img {
+  width: 100%;
 }
 section > :nth-child(2) > :nth-child(2) {
   display: flex;
   flex-flow: row wrap;
+  gap: 1rem;
+}
+section > :nth-child(2) > :nth-child(2) > :nth-child(1) {
+  flex: 0.7;
+}
+section > :nth-child(2) > :nth-child(2) > :nth-child(1) img {
+  width: 100%;
+}
+section > :nth-child(2) > :nth-child(2) > :nth-child(2) {
+  flex: 1.3;
+}
+section > :nth-child(2) > :nth-child(2) > :nth-child(2) img {
+  width: 100%;
 }
 section > :nth-child(2) > :nth-child(3) {
   display: flex;
   flex-flow: row wrap;
+  gap: 1rem;
+}
+section > :nth-child(2) > :nth-child(3) > :nth-child(1) {
+  flex: 0.6;
+}
+section > :nth-child(2) > :nth-child(3) > :nth-child(1) img {
+  width: 100%;
+}
+section > :nth-child(2) > :nth-child(3) > :nth-child(2) {
+  flex: 0.75;
+}
+section > :nth-child(2) > :nth-child(3) > :nth-child(2) img {
+  width: 100%;
+}
+section > :nth-child(2) > :nth-child(3) > :nth-child(3) {
+  flex: 1.2;
+}
+section > :nth-child(2) > :nth-child(3) > :nth-child(3) img {
+  width: 100%;
 }
 
 aside {
@@ -101,24 +292,86 @@ aside {
   flex-flow: column wrap;
   align-items: center;
   width: 90%;
-  max-width: 1250px;
+  max-width: 1450px;
   background-color: red;
   margin: 0 auto;
+}
+aside > :nth-child(3) {
+  background: #fbff86;
+  display: flex;
+  padding: 1rem;
+  margin: 0 auto;
+}
+aside > :nth-child(3) form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.25rem;
+}
+aside > :nth-child(3) form h4 {
+  text-align: center;
+}
+aside > :nth-child(3) form > :nth-child(2) {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+aside > :nth-child(3) form > :nth-child(2) div {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.75rem;
+}
+aside > :nth-child(3) form > :nth-child(3) {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  place-content: center;
+}
+aside > :nth-child(3) form > :nth-child(3) input[type=submit] {
+  all: unset;
+  background-color: red;
+  font-family: "Varela Round", serif;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 2px 2px rgba(97, 97, 97, 0.4);
+}
+aside > :nth-child(3) form > :nth-child(3) input[type=submit]:hover {
+  scale: 1.05;
+  transition: 0.3s;
 }
 
 footer {
   width: 90%;
-  max-width: 1250px;
+  max-width: 1450px;
   background-color: red;
   margin: 0 auto;
+}
+footer .swiper-container {
+  background: orange;
+}
+footer .swiper-container .swiper-wrapper {
+  background-color: blue;
+  display: flex;
+  gap: 1rem;
+}
+footer .swiper-container .swiper-wrapper .swiper-slide {
+  background: green;
+}
+footer .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 350px;
 }
 
 nav {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-items: center;
+  place-self: center;
+  place-content: center;
+  gap: 2rem;
   width: 90%;
-  max-width: 1250px;
+  max-width: 1450px;
   background-color: red;
-  margin: 0 auto;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=styles.css.map */
