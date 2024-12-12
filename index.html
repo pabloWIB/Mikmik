@@ -64,9 +64,11 @@
 	<header>
 		<div></div>
 		<div>
-			<h1 >יום ההולדת שלך מתחילה כאן!</h1>
+			<h1>יום ההולדת שלך מתחילה כאן!</h1>
 			<h2>מיקמיק הפעלות והפתעות בהפעלת יום הולדת חלומית</h2>
-			<button>שלח</button>
+			<div>
+				<button type="submit">שלח</button>
+			</div>
 		</div>
 	</header>
 
@@ -74,6 +76,7 @@
 		<div>
 			<h2>ההפעלות של מיקמיק</h2>
 		</div>
+		<div></div>
 		<div>
 			<div>
 				<div>
@@ -198,7 +201,7 @@
 					<div>
 						<label for="שם">שם</label>
 						<input type="text" id="שם" name="שם" placeholder="שם">
-					</div>	
+					</div>
 				</div>
 				<div>
 					<input type="submit" name="שלח" value="שלח">
@@ -207,41 +210,44 @@
 		</div>
 	</main>
 
- 
-	<section dir="ltr">
-		<div>
-			<h2>תמונות מההפעלות שלי</h2>
-		</div>
-		<div>
+
+	<div class="beforeSection">
+		<section dir="ltr">
+			<div>
+				<h2>תמונות מההפעלות שלי</h2>
+			</div>
+			<div></div>
 			<div>
 				<div>
-					<img src="IMG/background.jpg" alt="Image #6">
+					<div>
+						<img src="IMG/background.jpg" alt="Image #6">
+					</div>
+					<div>
+						<img src="IMG/background.jpg" alt="Image #7">
+					</div>
 				</div>
 				<div>
-					<img src="IMG/background.jpg" alt="Image #7">
+					<div>
+						<img src="IMG/background.jpg" alt="Image #8">
+					</div>
+					<div>
+						<img src="IMG/background.jpg" alt="Image #9">
+					</div>
+				</div>
+				<div>
+					<div>
+						<img src="IMG/background.jpg" alt="Image #10">
+					</div>
+					<div>
+						<img src="IMG/background.jpg" alt="Image #11">
+					</div>
+					<div>
+						<img src="IMG/background.jpg" alt="Image #12">
+					</div>
 				</div>
 			</div>
-			<div>
-				<div>
-					<img src="IMG/background.jpg" alt="Image #8">
-				</div>
-				<div>
-					<img src="IMG/background.jpg" alt="Image #9">
-				</div>
-			</div>
-			<div>
-				<div>
-					<img src="IMG/background.jpg" alt="Image #10">
-				</div>
-				<div>
-					<img src="IMG/background.jpg" alt="Image #11">
-				</div>
-				<div>
-					<img src="IMG/background.jpg" alt="Image #12">
-				</div>
-			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 
 
 	<aside>
@@ -251,32 +257,33 @@
 				<img src="IMG/13.png" alt="Image #13">
 			</div>
 			<div>
-				<p>בוגרת תואר ראשון בבימוי והוראת תיאטרון עם תשוקה לעולם הילדים, ועם ניסיון כליצנית רפואית גיליתי את עולם ההפעלות וצמחתי לדרך משלי - יצירת חוויות מיוחדות לילדים. </p>
-				<p>עם 8 שנות ניסיון, הפכתי את ההפעלות למשהו יותר מסתם בידור - לסיפור, למסע, להרפתקה. כל יום הולדת הוא במה קטנה, וכל ילד - גיבור ראשי.</p>
+				<p>בוגרת תואר ראשון בבימוי והוראת תיאטרון עם תשוקה לעולם הילדים, ועם ניסיון כליצנית רפואית גיליתי את
+					עולם ההפעלות וצמחתי לדרך משלי - יצירת חוויות מיוחדות לילדים. </p>
+				<p>עם 8 שנות ניסיון, הפכתי את ההפעלות למשהו יותר מסתם בידור - לסיפור, למסע, להרפתקה. כל יום הולדת הוא
+					במה קטנה, וכל ילד - גיבור ראשי.</p>
 				<p>מהשרון ועד באר שבע, אני מביאה קסם, צחוק ודמיון - לא סתם מפעילה, אלא יוצרת עולמות של שמחה.</p>
 			</div>
 		</div>
 		<div>
 			<form action="">
 				<h4>השאירו פרטים ליומולדת חלומית</h4>
-				<div>
-					<div>
-						<label for="עיר">עיר</label>
-						<input type="text" id="עיר" name="עיר" placeholder="שם">
-					</div>
-					<div>
-						<label for="טלפון">טלפון</label>
-						<input dir="rtl" type="tel" id="טלפון" name="טלפון" placeholder="טלפון">
-					</div>
-					<div>
-						<label for="שם">שם</label>
-						<input type="text" id="שם" name="שם" placeholder="שם">
-					</div>	
+				<div class="form-group">
+					<label for="עיר">עיר</label>
+					<input type="text" id="עיר" name="עיר" placeholder="שם">
 				</div>
-				<div>
+				<div class="form-group">
+					<label for="טלפון">טלפון</label>
+					<input dir="rtl" type="tel" id="טלפון" name="טלפון" placeholder="טלפון">
+				</div>
+				<div class="form-group">
+					<label for="שם">שם</label>
+					<input type="text" id="שם" name="שם" placeholder="שם">
+				</div>
+				<div class="form-footer">
 					<input type="submit" name="שלח" value="שלח">
 				</div>
 			</form>
+
 		</div>
 	</aside>
 
@@ -311,8 +318,6 @@
 	</footer>
 
 	<article>
-		
-		
 		<div>
 			<a href="">
 				<img src="IMG/" alt="Phonecall">
