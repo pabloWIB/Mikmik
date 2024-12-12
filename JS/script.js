@@ -17,3 +17,9 @@ $(document).ready(function () {
         }
     });
 });
+
+var date = new Date(); 
+
+var dateAño = date.getFullYear(); 
+
+document.getElementById('upDate').textContent = dateAño;
