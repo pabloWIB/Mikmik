@@ -3,7 +3,7 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3.5rem;
 }
 
 header {
@@ -22,7 +22,7 @@ header > :nth-child(1) {
   z-index: 9;
   height: 100%;
   width: 100%;
-  background: url("../IMG/1.jpg") center center no-repeat;
+  background: url("../IMG/background.webp") center center no-repeat;
   background-size: cover;
   transform-origin: center;
   animation: headerAnimation 0.75s linear;
@@ -39,30 +39,28 @@ header > :nth-child(2) h1 {
   font-size: 75px;
 }
 header > :nth-child(2) h2 {
-  font-family: "Varela Round", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 42px;
 }
 header > :nth-child(2) button {
   all: unset;
-  margin-top: 3rem;
+  margin-top: 1rem;
   background-color: #fbff86;
-  font-family: "Varela Round", serif;
-  padding: 1rem 3rem;
+  font-family: "Poppins", sans-serif;
+  padding: 1.5rem 15rem;
   cursor: pointer;
-  font-size: 22px;
-  border-radius: 12px;
+  font-size: 32px;
   transition: 0.3s;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 header > :nth-child(2) button:hover {
-  scale: 1.05;
+  scale: 1.025;
   transition: 0.3s;
 }
 
 @keyframes headerAnimation {
   0% {
-    transform: scale(1.25);
+    transform: scale(1.15);
   }
   100% {
     transform: scale(1);
@@ -81,36 +79,34 @@ header > :nth-child(2) button:hover {
 main {
   display: flex;
   flex-flow: column nowrap;
-  gap: 2rem;
-  background-color: red;
+  gap: 3.5rem;
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
 }
 main > :nth-child(1) {
-  background-color: orange;
   text-align: center;
+  padding: 1.5rem 0rem;
 }
 main > :nth-child(1) h2 {
   all: unset;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  font-size: 52px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 75px;
 }
 main > :nth-child(2) {
   display: flex;
   flex-flow: row wrap;
-  background-color: green;
   flex: 1;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 main > :nth-child(2) > div {
   display: flex;
   flex-flow: column wrap;
   flex: 1;
   align-items: flex-start;
+  align-items: center;
   gap: 1rem;
-  background: blue;
   text-align: center;
 }
 main > :nth-child(2) > div > :nth-child(1) {
@@ -121,25 +117,37 @@ main > :nth-child(2) > div > :nth-child(1) {
 }
 main > :nth-child(2) > div > :nth-child(1) > :nth-child(1) {
   width: 100%;
-  max-width: 250px;
-}
-main > :nth-child(2) > div > :nth-child(1) > :nth-child(1) img {
-  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  overflow: hidden;
   border-radius: 50%;
 }
-main > :nth-child(2) > div > :nth-child(2) {
-  background-color: peru;
+main > :nth-child(2) > div > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+  background: url("../IMG/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+}
+main > :nth-child(2) > div > :nth-child(1) > :nth-child(1) > :nth-child(1):hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 main > :nth-child(2) > div > :nth-child(2) > :nth-child(1) {
-  background: palegreen;
   display: flex;
   flex-flow: column wrap;
 }
 main > :nth-child(2) > div > :nth-child(2) > :nth-child(1) h4 {
   all: unset;
-  font-weight: 500;
+  font-weight: 600;
   font-family: "Poppins", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
+}
+main > :nth-child(2) > div > :nth-child(2) p {
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
 }
 main > :nth-child(3) {
   text-align: center;
@@ -150,13 +158,14 @@ main > :nth-child(3) {
   gap: 1.5rem;
 }
 main > :nth-child(3) > div {
-  background-color: green;
   display: flex;
   flex-flow: column wrap;
   gap: 0.5rem;
 }
 main > :nth-child(3) > div h5 {
   all: unset;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
   font-weight: 600;
 }
 main > :nth-child(3) > div > :nth-child(1) {
@@ -175,6 +184,8 @@ main > :nth-child(4) form {
 }
 main > :nth-child(4) form h4 {
   text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
 }
 main > :nth-child(4) form > :nth-child(2) {
   display: flex;
@@ -186,6 +197,15 @@ main > :nth-child(4) form > :nth-child(2) div {
   flex-flow: column wrap;
   gap: 0.75rem;
 }
+main > :nth-child(4) form > :nth-child(2) div label {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+}
+main > :nth-child(4) form > :nth-child(2) div input {
+  cursor: pointer;
+  font-size: 22px;
+  border: 3px solid black;
+}
 main > :nth-child(4) form > :nth-child(3) {
   display: flex;
   flex-flow: row wrap;
@@ -196,12 +216,11 @@ main > :nth-child(4) form > :nth-child(3) input[type=submit] {
   all: unset;
   background-color: red;
   font-family: "Varela Round", serif;
-  padding: 1rem 3rem;
+  padding: 0.5rem 3.5rem;
   cursor: pointer;
   font-size: 22px;
-  border-radius: 12px;
+  border: 3px solid black;
   transition: 0.3s;
-  box-shadow: 0px 0px 2px 2px rgba(97, 97, 97, 0.4);
 }
 main > :nth-child(4) form > :nth-child(3) input[type=submit]:hover {
   scale: 1.05;
@@ -212,17 +231,16 @@ section {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  gap: 1.75rem;
+  gap: 3.5rem;
   width: 90%;
   max-width: 1450px;
-  background-color: red;
   margin: 0 auto;
 }
 section > :nth-child(1) h2 {
   all: unset;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  font-size: 52px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 75px;
 }
 section > :nth-child(2) {
   display: flex;
@@ -235,16 +253,18 @@ section > :nth-child(2) > :nth-child(1) {
   gap: 1rem;
 }
 section > :nth-child(2) > :nth-child(1) > :nth-child(1) {
-  flex: 1.4;
+  flex: 1.25;
 }
 section > :nth-child(2) > :nth-child(1) > :nth-child(1) img {
   width: 100%;
+  height: 250px;
 }
 section > :nth-child(2) > :nth-child(1) > :nth-child(2) {
-  flex: 0.6;
+  flex: 0.75;
 }
 section > :nth-child(2) > :nth-child(1) > :nth-child(2) img {
   width: 100%;
+  height: 250px;
 }
 section > :nth-child(2) > :nth-child(2) {
   display: flex;
@@ -252,16 +272,18 @@ section > :nth-child(2) > :nth-child(2) {
   gap: 1rem;
 }
 section > :nth-child(2) > :nth-child(2) > :nth-child(1) {
-  flex: 0.7;
+  flex: 0.8;
 }
 section > :nth-child(2) > :nth-child(2) > :nth-child(1) img {
   width: 100%;
+  height: 250px;
 }
 section > :nth-child(2) > :nth-child(2) > :nth-child(2) {
-  flex: 1.3;
+  flex: 1.2;
 }
 section > :nth-child(2) > :nth-child(2) > :nth-child(2) img {
   width: 100%;
+  height: 250px;
 }
 section > :nth-child(2) > :nth-child(3) {
   display: flex;
@@ -273,28 +295,60 @@ section > :nth-child(2) > :nth-child(3) > :nth-child(1) {
 }
 section > :nth-child(2) > :nth-child(3) > :nth-child(1) img {
   width: 100%;
+  height: 250px;
 }
 section > :nth-child(2) > :nth-child(3) > :nth-child(2) {
   flex: 0.75;
 }
 section > :nth-child(2) > :nth-child(3) > :nth-child(2) img {
   width: 100%;
+  height: 250px;
 }
 section > :nth-child(2) > :nth-child(3) > :nth-child(3) {
   flex: 1.2;
 }
 section > :nth-child(2) > :nth-child(3) > :nth-child(3) img {
   width: 100%;
+  height: 250px;
 }
 
 aside {
   display: flex;
   flex-flow: column wrap;
-  align-items: center;
+  gap: 1rem;
   width: 90%;
   max-width: 1450px;
-  background-color: red;
   margin: 0 auto;
+}
+aside h2 {
+  all: unset;
+  font-weight: 500;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 70px;
+}
+aside > :nth-child(2) {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+aside > :nth-child(2) > :nth-child(1) {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+aside > :nth-child(2) > :nth-child(1) img {
+  width: 100%;
+  max-width: 550px;
+}
+aside > :nth-child(2) > :nth-child(2) {
+  flex: 1;
+}
+aside > :nth-child(2) > :nth-child(2) p {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
 }
 aside > :nth-child(3) {
   background: #fbff86;
@@ -335,7 +389,6 @@ aside > :nth-child(3) form > :nth-child(3) input[type=submit] {
   font-size: 22px;
   border-radius: 12px;
   transition: 0.3s;
-  box-shadow: 0px 0px 2px 2px rgba(97, 97, 97, 0.4);
 }
 aside > :nth-child(3) form > :nth-child(3) input[type=submit]:hover {
   scale: 1.05;
@@ -345,8 +398,14 @@ aside > :nth-child(3) form > :nth-child(3) input[type=submit]:hover {
 footer {
   width: 90%;
   max-width: 1450px;
-  background-color: red;
+  background-color: rgb(192, 108, 108);
   margin: 0 auto;
+}
+footer h2 {
+  all: unset;
+  font-weight: 500;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 75px;
 }
 footer .swiper-container {
   background: orange;
@@ -363,7 +422,7 @@ footer .swiper-container .swiper-wrapper .swiper-slide img {
   width: 350px;
 }
 
-nav {
+article {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
