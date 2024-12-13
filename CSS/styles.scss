@@ -1,5 +1,9 @@
 @import "Fonts/fontSizes.css";
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-flow: column wrap;
