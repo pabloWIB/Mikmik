@@ -66,9 +66,9 @@
 		<div>
 			<h1>יום ההולדת שלך מתחילה כאן!</h1>
 			<h2>מיקמיק הפעלות והפתעות בהפעלת יום הולדת חלומית</h2>
-			<div>
+			<a>
 				<button type="submit">שלח</button>
-			</div>
+			</a>
 		</div>
 	</header>
 
@@ -192,32 +192,33 @@
 			</div>
 		</div>
 		<div>
-			<form action="">
+
+			<form id="form">
 				<h4>השאירו פרטים ליומולדת חלומית</h4>
 				<div>
 					<div>
-						<!-- <label for="עיר">עיר</label> -->
-						<input type="text" id="עיר" name="עיר" placeholder="שם">
+						<!-- <label for="name_id">name_id</label> -->
+						<input dir="rtl" type="text" name="name_id" id="name_id" placeholder="הכנס את שמך" required>
 					</div>
 					<div>
-						<!-- <label for="טלפון">טלפון</label> -->
-						<input dir="rtl" type="tel" id="טלפון" name="טלפון" placeholder="טלפון">
+						<!-- <label for="city_id">city_id</label> -->
+						<input dir="rtl" type="text" name="city_id" id="city_id" placeholder="הכנס את העיר שלך" required>
 					</div>
 					<div>
-						<!-- <label for="שם">שם</label> -->
-						<input type="text" id="שם" name="שם" placeholder="שם">
+						<!-- <label for="phone_id">phone_id</label> -->
+						<input dir="rtl" type="tel" name="phone_id" id="phone_id" placeholder="הכנס את מספר הטלפון שלך" required>
 					</div>
 				</div>
 				<div>
-					<input type="submit" name="שלח" value="שלח">
+					<input type="submit" id="button" value="שלח">
 				</div>
 			</form>
+
 		</div>
 	</main>
 
-
 	<div class="beforeSection">
-		<section >
+		<section>
 			<div>
 				<h2 dir="rtl">תמונות מההפעלות שלי</h2>
 			</div>
@@ -268,7 +269,6 @@
 		</section>
 	</div>
 
-
 	<aside id="mainID9">
 		<h2 id="mainID9See">נעים מאוד, אני מיקמיק</h2>
 		<div>
@@ -284,26 +284,29 @@
 			</div>
 		</div>
 		<div>
-			<form action="">
+
+			<form id="form2">
 				<h4>השאירו פרטים ליומולדת חלומית</h4>
 				<div>
-					<div class="form-group">
-						<!-- <label for="עיר">עיר</label> -->
-						<input type="text" id="עיר" name="עיר" placeholder="שם">
+					<div>
+						<!-- <label for="name_id">name_id</label> -->
+						<input dir="rtl" type="text" name="name_id2" id="name_id2" placeholder="הכנס את שמך" required>
 					</div>
-					<div class="form-group">
-						<!-- <label for="טלפון">טלפון</label> -->
-						<input dir="rtl" type="tel" id="טלפון" name="טלפון" placeholder="טלפון">
+					<div>
+						<!-- <label for="city_id">city_id</label> -->
+						<input dir="rtl" type="text" name="city_id2" id="city_id2" placeholder="הכנס את העיר שלך" required>
 					</div>
-					<div class="form-group">
-						<!-- <label for="שם">שם</label> -->
-						<input type="text" id="שם" name="שם" placeholder="שם">
+					<div>
+						<!-- <label for="phone_id">phone_id</label> -->
+						<input dir="rtl" type="tel" name="phone_id2" id="phone_id2" placeholder="הכנס את מספר הטלפון שלך" required>
 					</div>
 				</div>
-				<div class="form-footer">
-					<input type="submit" name="שלח" value="שלח">
+				<div>
+					<input type="submit" id="button2" value="שלח">
 				</div>
 			</form>
+
+
 		</div>
 	</aside>
 
@@ -314,22 +317,6 @@
 		<div></div>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				
-				<div class="swiper-slide">
-					<div>
-						<div>
-							<h4>המלצה</h4>
-						</div>
-						<div>
-							<div>
-								<div></div>
-							</div>
-						</div>
-						<div>
-							<h4>שם הממליץ</h4>
-						</div>
-					</div>
-				</div>
 
 				<div class="swiper-slide">
 					<div>
@@ -362,7 +349,23 @@
 						</div>
 					</div>
 				</div>
-				
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div>
+								<div></div>
+							</div>
+						</div>
+						<div>
+							<h4>שם הממליץ</h4>
+						</div>
+					</div>
+				</div>
+
 			</div>
 
 			<div class="swiper-button-prev"></div>
@@ -371,24 +374,38 @@
 		</div>
 	</footer>
 
-	<article>
+	<article dir="ltr">
 		<div>
-			<a href="">
+			<a href="https://wa.me/message/XFALSGSM4H5BE1">
+				<img src="IMG/whatsapp.svg" alt="Whatsapp">
+			</a>
+		</div>
+		<div>
+			<a href="+972 50-772-7997">
 				<img src="IMG/telefono.svg" alt="Phonecall">
 			</a>
 		</div>
 		<div>
-			<a href="">
+			<a href="https://www.facebook.com/mikmik.birthdays?mibextid=ZbWKwL">
 				<img src="IMG/facebook.svg" alt="Facebook">
 			</a>
 		</div>
 		<div>
-			<a href="">
+			<a href="https://www.instagram.com/mikmik_120?igsh=Zzl1bG02NGJmM2Ji">
 				<img src="IMG/instagram.svg" alt="Instagram">
 			</a>
 		</div>
+		<div>
+			<a href="https://www.tiktok.com/@mik.mik1010?_t=8oHYW7xdm2p&_r=1">
+				<img src="IMG/tik-tok.svg" alt="Tik-tok">
+			</a>
+		</div>
+		<div>
+			<a href="https://youtube.com/@mikmikids?feature=shared">
+				<img src="IMG/youtube.svg" alt="Youtube">
+			</a>
+		</div>
 	</article>
-
 
 	<div class="footerFinal">
 		<div>
@@ -396,10 +413,10 @@
 		</div>
 	</div>
 
-
-
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.js'></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 	<script src="JS/script.js"></script>
+	<script src="JS/emailJS.js"></script>
 	<script src="JS/zoom.js"></script>
 </body>
 

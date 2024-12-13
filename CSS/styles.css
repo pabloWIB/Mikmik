@@ -150,7 +150,10 @@ header > :nth-child(2) h2 {
   font-size: 45px;
   color: white;
 }
-header > :nth-child(2) button {
+header > :nth-child(2) a {
+  all: unset;
+}
+header > :nth-child(2) a button {
   all: unset;
   background-color: #ffffff;
   font-family: "Poppins", sans-serif;
@@ -161,12 +164,27 @@ header > :nth-child(2) button {
   transition: 0.3s;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
 }
-header > :nth-child(2) button:hover {
+header > :nth-child(2) a button:hover {
   scale: 1.025;
   transition: 0.3s;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 1200px) {
+  header > :nth-child(2) {
+    gap: 1.5rem;
+  }
+  header > :nth-child(2) h1 {
+    font-size: 55px;
+  }
+  header > :nth-child(2) h2 {
+    font-size: 25px;
+  }
+  header > :nth-child(2) a button {
+    padding: 0.55rem 1.75rem;
+    font-size: 25px;
+  }
+}
 @media (max-width: 900px) {
   header > :nth-child(2) {
     gap: 1.5rem;
@@ -177,9 +195,20 @@ header > :nth-child(2) button:hover {
   header > :nth-child(2) h2 {
     font-size: 22.5px;
   }
-  header > :nth-child(2) button {
+  header > :nth-child(2) a button {
     padding: 0.55rem 1.75rem;
     font-size: 22.5px;
+  }
+}
+@media (max-width: 750px) {
+  header > :nth-child(2) h1 {
+    font-size: 30px;
+  }
+  header > :nth-child(2) h2 {
+    font-size: 18px;
+  }
+  header > :nth-child(2) a button {
+    font-size: 18px;
   }
 }
 @media (max-width: 575px) {
@@ -192,7 +221,7 @@ header > :nth-child(2) button:hover {
   header > :nth-child(2) h2 {
     font-size: 15px;
   }
-  header > :nth-child(2) button {
+  header > :nth-child(2) a button {
     padding: 0.25rem 1.15rem;
     font-size: 15px;
   }
@@ -360,7 +389,7 @@ main > :nth-child(5) {
   margin: 0 auto;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   main {
     gap: 2.5rem;
   }
@@ -927,14 +956,6 @@ article div a img:hover {
   }
   article div a img {
     max-width: 30px;
-  }
-}
-@media (max-width: 575px) {
-  article {
-    gap: 1.5rem;
-  }
-  article div a img {
-    max-width: 25px;
   }
 }
 .footerFinal {
