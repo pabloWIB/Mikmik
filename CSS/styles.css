@@ -7,6 +7,103 @@ body {
   background-color: rgb(248, 248, 248);
 }
 
+@media (max-width: 900px) {
+  body {
+    gap: 2.25rem;
+  }
+}
+@media (max-width: 575px) {
+  body {
+    gap: 1.75rem;
+  }
+}
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+form > :nth-child(2) {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+form h4 {
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  padding: 0rem 0rem 3rem 0rem;
+}
+form input[type=submit] {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 15px;
+  background-color: #dd9048;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+form input[type=submit]:hover {
+  background-color: #d1843d;
+}
+form input[type=text],
+form input[type=tel] {
+  width: 100%;
+  padding: 12px;
+  font-size: 22px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #eaeced;
+  border-radius: 6px;
+  color: black;
+  cursor: pointer;
+}
+form input[type=text]:focus,
+form input[type=tel]:focus {
+  border-color: #dd9048;
+}
+
+@media screen and (max-width: 900px) {
+  form {
+    padding: 20px;
+  }
+  form h4 {
+    font-size: 26px;
+    padding: 0rem 0rem 2rem 0rem;
+  }
+  form input[type=submit],
+  form input[type=text],
+  form input[type=tel] {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+/* Media Query for screens up to 575px */
+@media screen and (max-width: 575px) {
+  form {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  form h4 {
+    font-size: 22px;
+    padding: 0rem 0rem 1.5rem 0rem;
+  }
+  form input[type=submit],
+  form input[type=text],
+  form input[type=tel] {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
 header {
   width: 100%;
   height: 75vh;
@@ -36,6 +133,8 @@ header > :nth-child(2) {
   display: flex;
   flex-flow: column wrap;
   gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
 }
 header > :nth-child(2) h1 {
   all: unset;
@@ -55,35 +154,47 @@ header > :nth-child(2) button {
   all: unset;
   background-color: #ffffff;
   font-family: "Poppins", sans-serif;
-  padding: 0.65rem 2.25rem;
+  padding: 0.35rem 2.25rem;
   cursor: pointer;
   font-size: 35px;
   border-radius: 12px;
   transition: 0.3s;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Darker shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
 }
 header > :nth-child(2) button:hover {
   scale: 1.025;
   transition: 0.3s;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes headerAnimation {
-  0% {
-    transform: scale(1.15);
+@media (max-width: 900px) {
+  header > :nth-child(2) {
+    gap: 1.5rem;
   }
-  100% {
-    transform: scale(1);
+  header > :nth-child(2) h1 {
+    font-size: 45px;
+  }
+  header > :nth-child(2) h2 {
+    font-size: 22.5px;
+  }
+  header > :nth-child(2) button {
+    padding: 0.55rem 1.75rem;
+    font-size: 22.5px;
   }
 }
-@keyframes headerAnimation2 {
-  0% {
-    transform: scale(0.75);
-    opacity: 0;
+@media (max-width: 575px) {
+  header {
+    height: 75vh;
   }
-  100% {
-    transform: scale(1);
-    opacity: 1;
+  header > :nth-child(2) h1 {
+    font-size: 22.5px;
+  }
+  header > :nth-child(2) h2 {
+    font-size: 15px;
+  }
+  header > :nth-child(2) button {
+    padding: 0.25rem 1.15rem;
+    font-size: 15px;
   }
 }
 main {
@@ -96,6 +207,7 @@ main {
 }
 main > :nth-child(1) {
   text-align: center;
+  animation: headerAnimation2 0.75s linear;
 }
 main > :nth-child(1) h2 {
   all: unset;
@@ -109,13 +221,14 @@ main > :nth-child(2) {
   margin: 0 auto;
   background-color: #e9e9e9;
   border-radius: 20px;
+  animation: mainAnimation 0.75s linear;
 }
 main > :nth-child(3) {
   display: flex;
   flex-flow: row wrap;
   flex: 1;
   gap: 1.15rem;
-  padding: 2.5rem 0rem;
+  padding: 0.5rem 0rem 2.5rem 0rem;
 }
 main > :nth-child(3) > div {
   display: flex;
@@ -129,6 +242,8 @@ main > :nth-child(3) > div {
   border-radius: 15px;
   background: white;
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(-17.5%);
 }
 main > :nth-child(3) > div > :nth-child(1) {
   width: 100%;
@@ -176,9 +291,27 @@ main > :nth-child(3) > div > :nth-child(2) p {
   font-family: "Poppins", sans-serif;
   font-size: 19px;
 }
+main > :nth-child(3) > :nth-child(1) {
+  transition: 0.5s;
+}
+main > :nth-child(3) > :nth-child(2) {
+  transition: 0.8s;
+}
+main > :nth-child(3) > :nth-child(3) {
+  transition: 1.2s;
+}
+main > :nth-child(3) > :nth-child(4) {
+  transition: 1.6s;
+}
+main > :nth-child(3) > :nth-child(5) {
+  transition: 2s;
+}
+main > :nth-child(3) .animationN1 {
+  transform: translateY(0%);
+  opacity: 1;
+}
 main > :nth-child(4) {
   text-align: center;
-  font-size: 28px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -187,13 +320,12 @@ main > :nth-child(4) {
 main > :nth-child(4) > div {
   display: flex;
   flex-flow: column wrap;
-  gap: 0.85rem;
 }
 main > :nth-child(4) > div h5 {
   all: unset;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
 }
 main > :nth-child(4) > div > :nth-child(1) {
   text-decoration: underline;
@@ -203,55 +335,100 @@ main > :nth-child(5) {
   padding: 1rem;
   margin: 0 auto;
 }
-main > :nth-child(5) form {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-}
-main > :nth-child(5) form h4 {
-  text-align: center;
-  font-size: 30px;
-  color: #333;
-  margin-bottom: 20px;
-}
-main > :nth-child(5) form label {
-  font-size: 25px;
-  color: #555;
-  display: block;
-  margin: 1rem 0rem 0.5rem 0rem;
-}
-main > :nth-child(5) form input[type=submit] {
-  width: 100%;
-  margin-top: 1.5rem;
-  padding: 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 22px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-main > :nth-child(5) form input[type=submit]:hover {
-  background-color: #0056b3;
-}
-main > :nth-child(5) form input[type=text],
-main > :nth-child(5) form input[type=tel] {
-  width: 100%;
-  padding: 12px;
-  font-size: 22px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-  outline: none;
-}
-main > :nth-child(5) form input[type=text]:focus,
-main > :nth-child(5) form input[type=tel]:focus {
-  border-color: #007bff;
-}
 
+@media (max-width: 900px) {
+  main {
+    gap: 2.5rem;
+  }
+  main > :nth-child(1) h2 {
+    font-size: 45px;
+  }
+  main > :nth-child(3) {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1;
+    gap: 1rem;
+    padding: 0rem;
+  }
+  main > :nth-child(3) > div {
+    gap: 0.75rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    place-content: center;
+    text-align: center;
+    padding: 1rem 0rem;
+    opacity: 0;
+    transform: translateY(-10.5%);
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  main > :nth-child(3) > div > :nth-child(1) {
+    padding: 0.75rem 0rem;
+  }
+  main > :nth-child(3) > div > :nth-child(1) > :nth-child(1) {
+    max-width: 215px;
+    height: 215px;
+  }
+  main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) h4 {
+    font-size: 19px;
+  }
+  main > :nth-child(3) > div > :nth-child(2) p {
+    font-size: 18px;
+  }
+  main > :nth-child(4) {
+    gap: 1.75rem;
+  }
+  main > :nth-child(4) > div h5 {
+    font-size: 20px;
+  }
+  main > :nth-child(5) {
+    padding: 0.75rem;
+  }
+}
+@media (max-width: 575px) {
+  main {
+    gap: 1.75rem;
+  }
+  main > :nth-child(1) h2 {
+    font-size: 22.5px;
+  }
+  main > :nth-child(3) {
+    gap: 0.75rem;
+  }
+  main > :nth-child(3) > div {
+    gap: 0.65rem;
+    padding: 0.75rem 0rem;
+    opacity: 0;
+    transform: translateY(-10.5%);
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  main > :nth-child(3) > div > :nth-child(1) {
+    padding: 0.65rem 0rem;
+  }
+  main > :nth-child(3) > div > :nth-child(1) > :nth-child(1) {
+    max-width: 215px;
+    height: 215px;
+  }
+  main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) h4 {
+    font-size: 16px;
+  }
+  main > :nth-child(3) > div > :nth-child(2) p {
+    font-size: 15px;
+  }
+  main > :nth-child(4) {
+    gap: 1.5rem;
+  }
+  main > :nth-child(4) > div h5 {
+    font-size: 16px;
+  }
+  main > :nth-child(5) {
+    padding: 0.5rem;
+  }
+}
 .beforeSection {
   width: 100%;
   padding: 2.5rem 0rem 2.75rem 0rem;
@@ -283,51 +460,152 @@ main > :nth-child(5) form input[type=tel]:focus {
   flex-flow: column wrap;
   gap: 1rem;
 }
-.beforeSection section > :nth-child(3) > :nth-child(1),
-.beforeSection section > :nth-child(3) > :nth-child(2),
-.beforeSection section > :nth-child(3) > :nth-child(3) {
+.beforeSection section > :nth-child(3) div {
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
   width: 100%;
   border-radius: 4px;
+  transition: 0.65s;
 }
-.beforeSection section > :nth-child(3) > :nth-child(1) div,
-.beforeSection section > :nth-child(3) > :nth-child(2) div,
-.beforeSection section > :nth-child(3) > :nth-child(3) div {
+.beforeSection section > :nth-child(3) div div {
   width: 100%;
   height: 300px;
   box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   overflow: hidden;
+  transition: 1s;
 }
-.beforeSection section > :nth-child(3) > :nth-child(1) div > :nth-child(1),
-.beforeSection section > :nth-child(3) > :nth-child(2) div > :nth-child(1),
-.beforeSection section > :nth-child(3) > :nth-child(3) div > :nth-child(1) {
+.beforeSection section > :nth-child(3) div div > :nth-child(1) {
   height: 100%;
   width: 100%;
   border-radius: 4px;
   transition: 0.3s;
 }
-.beforeSection section > :nth-child(3) > :nth-child(1) div > :nth-child(1):hover,
-.beforeSection section > :nth-child(3) > :nth-child(2) div > :nth-child(1):hover,
-.beforeSection section > :nth-child(3) > :nth-child(3) div > :nth-child(1):hover {
+.beforeSection section > :nth-child(3) div div > :nth-child(1) img {
+  width: 100%;
+}
+.beforeSection section > :nth-child(3) div div > :nth-child(1):hover {
   transform: scale(1.025);
   transition: 0.3s;
 }
 .beforeSection section > :nth-child(3) > :nth-child(1) > :nth-child(2) {
+  width: 90%;
+}
+.beforeSection section > :nth-child(3) .animationN2 > :nth-child(2) {
   width: 50%;
 }
 .beforeSection section > :nth-child(3) > :nth-child(2) > :nth-child(1) {
+  width: 100%;
+}
+.beforeSection section > :nth-child(3) .animationN3 > :nth-child(1) {
   width: 65%;
 }
 .beforeSection section > :nth-child(3) > :nth-child(3) > :nth-child(1) {
-  width: 55%;
+  width: 35%;
 }
 .beforeSection section > :nth-child(3) > :nth-child(3) > :nth-child(2) {
+  width: 100%;
+}
+.beforeSection section > :nth-child(3) .animationN4 > :nth-child(1) {
+  width: 55%;
+}
+.beforeSection section > :nth-child(3) .animationN4 > :nth-child(2) {
   width: 65%;
 }
+.beforeSection section > :nth-child(3) .animationN2 .animationN3 .animationN4 {
+  transition: 0.65s;
+}
 
+@media (max-width: 900px) {
+  .beforeSection {
+    padding: 1.5rem 0rem 0.75rem 0rem;
+  }
+  .beforeSection section {
+    gap: 1.5rem;
+    width: 90%;
+  }
+  .beforeSection section > :nth-child(1) h2 {
+    font-size: 45px;
+  }
+  .beforeSection section > :nth-child(3) {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.75rem;
+  }
+  .beforeSection section > :nth-child(3) div {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.75rem;
+    width: 100%;
+    transition: 0.65s;
+  }
+  .beforeSection section > :nth-child(3) div div {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 1s;
+  }
+  .beforeSection section > :nth-child(3) div div > :nth-child(1) {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+  .beforeSection section > :nth-child(3) div div > :nth-child(1) img {
+    width: 100%;
+  }
+  .beforeSection section > :nth-child(3) > :nth-child(1) > :nth-child(2) {
+    width: 100%;
+  }
+  .beforeSection section > :nth-child(3) .animationN2 > :nth-child(2) {
+    width: 100%;
+  }
+  .beforeSection section > :nth-child(3) > :nth-child(2) > :nth-child(1) {
+    width: 100%;
+  }
+  .beforeSection section > :nth-child(3) .animationN3 > :nth-child(1) {
+    width: 100%;
+  }
+  .beforeSection section > :nth-child(3) > :nth-child(3) > :nth-child(1) {
+    width: 100%;
+  }
+  .beforeSection section > :nth-child(3) > :nth-child(3) > :nth-child(2) {
+    width: 100%;
+  }
+  .beforeSection section > :nth-child(3) .animationN4 > :nth-child(1) {
+    width: 100%;
+  }
+  .beforeSection section > :nth-child(3) .animationN4 > :nth-child(2) {
+    width: 100%;
+  }
+  .beforeSection section > :nth-child(3) .animationN2 .animationN3 .animationN4 {
+    transition: 0.65s;
+  }
+}
+@media (max-width: 575px) {
+  .beforeSection {
+    padding: 1rem 0rem 0.65rem 0rem;
+  }
+  .beforeSection section {
+    gap: 1rem;
+    width: 90%;
+  }
+  .beforeSection section > :nth-child(1) h2 {
+    font-size: 22.5px;
+  }
+  .beforeSection section > :nth-child(3) {
+    gap: 0.65rem;
+  }
+  .beforeSection section > :nth-child(3) div {
+    gap: 0.65rem;
+  }
+  .beforeSection section > :nth-child(3) div div {
+    height: 300px;
+  }
+}
 aside {
   display: flex;
   flex-flow: column wrap;
@@ -335,6 +613,9 @@ aside {
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
+  opacity: 0;
+  transform: translateY(-5%);
+  transition: 2s;
 }
 aside h2 {
   all: unset;
@@ -354,11 +635,12 @@ aside > :nth-child(2) > :nth-child(1) {
   display: flex;
   place-content: center;
   align-items: center;
+  scale: 0.75;
 }
 aside > :nth-child(2) > :nth-child(1) img {
   width: 100%;
   max-width: 550px;
-  filter: drop-shadow(0px 0px 5px #75B507);
+  filter: drop-shadow(0px 0px 10px #75b507);
 }
 aside > :nth-child(2) > :nth-child(2) {
   flex: 1;
@@ -372,59 +654,80 @@ aside > :nth-child(3) {
   padding: 1rem;
   margin: 0 auto;
 }
-aside > :nth-child(3) form {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
+
+@media (max-width: 900px) {
+  aside {
+    gap: 1.5rem;
+    transform: translateY(-2.5%);
+  }
+  aside h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+  aside > :nth-child(2) {
+    flex-flow: column wrap;
+    gap: 1rem;
+  }
+  aside > :nth-child(2) > :nth-child(1) {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    scale: 0.75;
+  }
+  aside > :nth-child(2) > :nth-child(1) img {
+    width: 100%;
+    max-width: 350px;
+  }
+  aside > :nth-child(2) > :nth-child(2) p {
+    font-size: 20px;
+  }
+  aside > :nth-child(3) {
+    padding: 0.75rem;
+  }
 }
-aside > :nth-child(3) form h4 {
-  text-align: center;
-  font-size: 30px;
-  color: #333;
-  margin-bottom: 20px;
+@media (max-width: 575px) {
+  aside {
+    gap: 1.15rem;
+    transform: translateY(-2%);
+  }
+  aside h2 {
+    font-size: 22.5px;
+  }
+  aside > :nth-child(2) {
+    flex-flow: column wrap;
+    gap: 0.85rem;
+  }
+  aside > :nth-child(2) > :nth-child(1) {
+    scale: 0.75;
+  }
+  aside > :nth-child(2) > :nth-child(1) img {
+    width: 100%;
+    max-width: 350px;
+  }
+  aside > :nth-child(2) > :nth-child(2) p {
+    font-size: 15px;
+  }
+  aside > :nth-child(3) {
+    padding: 0.55rem;
+  }
 }
-aside > :nth-child(3) form label {
-  font-size: 25px;
-  color: #555;
-  display: block;
-  margin: 1rem 0rem 0.5rem 0rem;
+.animationN5 {
+  transition: 2s;
+  opacity: 1;
+  transform: translateY(0%);
 }
-aside > :nth-child(3) form input[type=submit] {
-  width: 100%;
-  margin-top: 1.5rem;
-  padding: 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 22px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-aside > :nth-child(3) form input[type=submit]:hover {
-  background-color: #0056b3;
-}
-aside > :nth-child(3) form input[type=text],
-aside > :nth-child(3) form input[type=tel] {
-  width: 100%;
-  padding: 12px;
-  font-size: 22px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-  outline: none;
-}
-aside > :nth-child(3) form input[type=text]:focus,
-aside > :nth-child(3) form input[type=tel]:focus {
-  border-color: #007bff;
+.animationN5 > :nth-child(2) > :nth-child(1) {
+  transition: 2.25s;
+  scale: 1;
 }
 
 footer {
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
+  padding: 1.5rem 0rem;
 }
 footer > :nth-child(1) {
   text-align: center;
@@ -445,14 +748,132 @@ footer > :nth-child(2) {
   background-color: #e9e9e9;
   border-radius: 20px;
 }
-footer .swiper-container .swiper-wrapper {
+footer .swiper-container .swiper-wrapper .swiper-slide {
+  place-content: center;
+  text-align: center;
+  padding: 2rem 0rem;
   display: flex;
+  flex-flow: row wrap;
   gap: 1rem;
 }
-footer .swiper-container .swiper-wrapper .swiper-slide img {
-  width: 350px;
+footer .swiper-container .swiper-wrapper .swiper-slide > div {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  background-color: white;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.25);
+  padding: 1rem 0rem;
+  border-radius: 12px;
+  text-align: center;
+  flex: 0.75;
+}
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) h4 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+}
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  padding: 1rem 0rem;
+}
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) > :nth-child(1) {
+  width: 95%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0px 10px 0.1px rgba(0, 0, 0, 0.35);
+}
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+  background: url("../IMG/Mountains.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+}
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) > :nth-child(1) > :nth-child(1):hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
+  margin: 0 auto;
+  width: 90%;
+}
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 {
+  all: unset;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
 }
 
+@media (max-width: 900px) {
+  footer {
+    padding: 1.15rem 0rem;
+  }
+  footer > :nth-child(1) {
+    padding: 1.15rem 0rem;
+  }
+  footer > :nth-child(1) h2 {
+    font-size: 45px;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide {
+    padding: 2rem 0rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide > div {
+    padding: 0.9rem 0rem;
+    flex: 0.95;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) h4 {
+    font-size: 20px;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
+    padding: 0.9rem 0rem;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 575px) {
+  footer {
+    padding: 1.15rem 0rem;
+  }
+  footer > :nth-child(1) {
+    padding: 1.15rem 0rem;
+  }
+  footer > :nth-child(1) h2 {
+    font-size: 22.5px;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide {
+    padding: 2rem 0rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide > div {
+    padding: 0.9rem 0rem;
+    flex: 0.95;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) h4 {
+    font-size: 18px;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
+    padding: 0.9rem 0rem;
+  }
+  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 {
+    font-size: 15px;
+  }
+}
 article {
   display: flex;
   flex-flow: row wrap;
@@ -476,6 +897,22 @@ article div a img:hover {
   transition: 0.3s;
 }
 
+@media (max-width: 900px) {
+  article {
+    gap: 1.5rem;
+  }
+  article div a img {
+    max-width: 30px;
+  }
+}
+@media (max-width: 575px) {
+  article {
+    gap: 1.5rem;
+  }
+  article div a img {
+    max-width: 25px;
+  }
+}
 .footerFinal {
   background-color: black;
   width: 100%;
@@ -486,4 +923,58 @@ article div a img:hover {
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
+}
+.footerFinal div p {
+  font-size: 22px;
+}
+
+@media (max-width: 900px) {
+  .footerFinal {
+    padding: 0.85rem 0rem;
+  }
+  .footerFinal div p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .footerFinal {
+    padding: 0.75rem 0rem;
+  }
+  .footerFinal div p {
+    font-size: 16px;
+  }
+}
+@keyframes headerAnimation {
+  0% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes headerAnimation2 {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes mainAnimation {
+  0% {
+    width: 1.5%;
+    height: 5px;
+    margin: 0 auto;
+    background-color: #e9e9e9;
+    border-radius: 20px;
+  }
+  100% {
+    width: 12.5%;
+    height: 5px;
+    margin: 0 auto;
+    background-color: #e9e9e9;
+    border-radius: 20px;
+  }
 }/*# sourceMappingURL=styles.css.map */

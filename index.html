@@ -54,8 +54,8 @@
 	</script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.css'>
 	<link rel="stylesheet" href="CSS/styles.css" />
+	<link rel="stylesheet" href="CSS/stylesSwiper.css">
 	<title>Mikmik</title>
 </head>
 
@@ -78,7 +78,7 @@
 		</div>
 		<div></div>
 		<div>
-			<div>
+			<div id="mainID1">
 				<div>
 					<div>
 						<div></div>
@@ -95,7 +95,7 @@
 						לכוכב הקומדיה שלנו!</p>
 				</div>
 			</div>
-			<div>
+			<div id="mainID2">
 				<div>
 					<div>
 						<div></div>
@@ -112,7 +112,7 @@
 						לסיפור מצחיק ומפתיע!</p>
 				</div>
 			</div>
-			<div>
+			<div id="mainID3">
 				<div>
 					<div>
 						<div></div>
@@ -129,7 +129,7 @@
 						המופע!</p>
 				</div>
 			</div>
-			<div>
+			<div id="mainID4">
 				<div>
 					<div>
 						<div></div>
@@ -145,7 +145,7 @@
 						מרגש של גילוי ופתרון חידות!</p>
 				</div>
 			</div>
-			<div>
+			<div id="mainID5">
 				<div>
 					<div>
 						<div></div>
@@ -163,27 +163,32 @@
 		</div>
 		<div>
 			<div>
-				<h5>חגיגת יום הולדת מושלמת! 🎉</h5>
+				<h5>חגיגת יום הולדת מושלמת!</h5>
 				<h5>חבילת VIP המלאה והכייפית ביותר ליום הולדת</h5>
 			</div>
 			<div>
 				<h5>מה בחבילה שלנו?</h5>
-				<h5>✨ עמדת איפור וקעקועים מקצועית 🎨 תפאורת קונספט מרהיבה לבחירתכם 🧸 בובת ענק מרשימה </h5>
-				<h5>🫧 מסיבת בועות סבון מדהימה 🎈 בלוני צורות מיוחדים</h5>
+				<h5>עמדת איפור וקעקועים מקצועית</h5>
+				<h5>תפאורת קונספט מרהיבה לבחירתכם</h5>
+				<h5>בובת ענק מרשימה</h5>
+				<h5>מסיבת בועות סבון מדהימה</h5>
+				<h5> בלוני צורות מיוחדים</h5>
 			</div>
 			<div>
 				<h5>פינוקים והפתעות:</h5>
-				<h5>🏆 פרסים לכל המשתתפים 🎁 מתנה מיוחדת לחוגגים 👑 עיצוב כיסא יום הולדת חגיגי וייחודי</h5>
+				<h5>פרסים לכל המשתתפים</h5>
+				<h5>מתנה מיוחדת לחוגגים</h5>
+				<h5>עיצוב כיסא יום הולדת חגיגי וייחודי</h5>
 			</div>
 			<div>
 				<h5>תוספות מקצועיות:</h5>
-				<h5>📱 הזמנה דיגיטלית + אישורי הגעה 🔊 הגברה וציוד מקצועי מלא 🎥 סרטון הכרות והכנה לחוגגים
-				</h5>
+				<h5>הזמנה דיגיטלית + אישורי הגעה</h5>
+				<h5>הגברה וציוד מקצועי מלא 🎥 סרטון הכרות והכנה לחוגגים</h5>
 			</div>
 			<div>
 				<h5>ערך מוסף:</h5>
-				<h5>📋 שאלון הכרות והתאמה אישית 🛒 רשימת ציוד וקניות מלאה 📖 סיפור מסגרת מגבש ומלכד 👥 אשת
-					צוות נוספת לסיוע מלא</h5>
+				<h5>📋 שאלון הכרות והתאמה אישית 🛒 רשימת ציוד וקניות מלאה 📖 סיפור מסגרת מגבש ומלכד 👥 אשת צוות נוספת
+					לסיוע מלא</h5>
 			</div>
 		</div>
 		<div>
@@ -191,15 +196,15 @@
 				<h4>השאירו פרטים ליומולדת חלומית</h4>
 				<div>
 					<div>
-						<label for="עיר">עיר</label>
+						<!-- <label for="עיר">עיר</label> -->
 						<input type="text" id="עיר" name="עיר" placeholder="שם">
 					</div>
 					<div>
-						<label for="טלפון">טלפון</label>
+						<!-- <label for="טלפון">טלפון</label> -->
 						<input dir="rtl" type="tel" id="טלפון" name="טלפון" placeholder="טלפון">
 					</div>
 					<div>
-						<label for="שם">שם</label>
+						<!-- <label for="שם">שם</label> -->
 						<input type="text" id="שם" name="שם" placeholder="שם">
 					</div>
 				</div>
@@ -212,13 +217,13 @@
 
 
 	<div class="beforeSection">
-		<section dir="ltr">
+		<section >
 			<div>
-				<h2>תמונות מההפעלות שלי</h2>
+				<h2 dir="rtl">תמונות מההפעלות שלי</h2>
 			</div>
 			<div></div>
-			<div>
-				<div>
+			<div dir="ltr">
+				<div id="mainID6">
 					<div>
 						<div>
 							<img src="IMG/Mountains.jpg" alt="">
@@ -230,7 +235,7 @@
 						</div>
 					</div>
 				</div>
-				<div>
+				<div id="mainID7">
 					<div>
 						<div>
 							<img src="IMG/Mountains.jpg" alt="">
@@ -242,7 +247,7 @@
 						</div>
 					</div>
 				</div>
-				<div>
+				<div id="mainID8">
 					<div>
 						<div>
 							<img src="IMG/Mountains.jpg" alt="">
@@ -264,8 +269,8 @@
 	</div>
 
 
-	<aside>
-		<h2>נעים מאוד, אני מיקמיק</h2>
+	<aside id="mainID9">
+		<h2 id="mainID9See">נעים מאוד, אני מיקמיק</h2>
 		<div>
 			<div>
 				<img src="IMG/13.png" alt="Image #13">
@@ -281,28 +286,26 @@
 		<div>
 			<form action="">
 				<h4>השאירו פרטים ליומולדת חלומית</h4>
-				<div class="form-group">
-					<label for="עיר">עיר</label>
-					<input type="text" id="עיר" name="עיר" placeholder="שם">
-				</div>
-				<div class="form-group">
-					<label for="טלפון">טלפון</label>
-					<input dir="rtl" type="tel" id="טלפון" name="טלפון" placeholder="טלפון">
-				</div>
-				<div class="form-group">
-					<label for="שם">שם</label>
-					<input type="text" id="שם" name="שם" placeholder="שם">
+				<div>
+					<div class="form-group">
+						<!-- <label for="עיר">עיר</label> -->
+						<input type="text" id="עיר" name="עיר" placeholder="שם">
+					</div>
+					<div class="form-group">
+						<!-- <label for="טלפון">טלפון</label> -->
+						<input dir="rtl" type="tel" id="טלפון" name="טלפון" placeholder="טלפון">
+					</div>
+					<div class="form-group">
+						<!-- <label for="שם">שם</label> -->
+						<input type="text" id="שם" name="שם" placeholder="שם">
+					</div>
 				</div>
 				<div class="form-footer">
 					<input type="submit" name="שלח" value="שלח">
 				</div>
 			</form>
-
 		</div>
 	</aside>
-
-
-
 
 	<footer>
 		<div>
@@ -311,22 +314,57 @@
 		<div></div>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
+				
 				<div class="swiper-slide">
-					<img src="IMG/2.jpg" alt="">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div>
+								<div></div>
+							</div>
+						</div>
+						<div>
+							<h4>שם הממליץ</h4>
+						</div>
+					</div>
 				</div>
+
 				<div class="swiper-slide">
-					<img src="IMG/2.jpg" alt="">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div>
+								<div></div>
+							</div>
+						</div>
+						<div>
+							<h4>שם הממליץ</h4>
+						</div>
+					</div>
 				</div>
+
 				<div class="swiper-slide">
-					<img src="IMG/2.jpg" alt="">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div>
+								<div></div>
+							</div>
+						</div>
+						<div>
+							<h4>שם הממליץ</h4>
+						</div>
+					</div>
 				</div>
-				<div class="swiper-slide">
-					<img src="IMG/2.jpg" alt="">
-				</div>
-				<div class="swiper-slide">
-					<img src="IMG/2.jpg" alt="">
-				</div>
+				
 			</div>
+
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-button-next"></div>
 
