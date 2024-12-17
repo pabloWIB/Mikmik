@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "Fonts/fontSizes.css";
 html {
   scroll-behavior: smooth;
@@ -8,7 +9,7 @@ body {
   flex-flow: column wrap;
   align-items: center;
   gap: 3.5rem;
-  background-color: rgb(248, 248, 248);
+  background-color: #faf8f3;
 }
 
 @media (max-width: 900px) {
@@ -90,7 +91,6 @@ form input[type=tel]:focus {
     padding: 10px;
   }
 }
-/* Media Query for screens up to 575px */
 @media screen and (max-width: 575px) {
   form {
     padding: 15px;
@@ -124,10 +124,22 @@ header > :nth-child(1) {
   z-index: 9;
   height: 100%;
   width: 100%;
-  background: url("../IMG/Mountains.jpg") center center no-repeat;
+  background: url("../IMG/1PC.jpg") center fixed no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-size: cover;
   transform-origin: center;
   animation: headerAnimation 0.75s linear;
+}
+header > :nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.27); /* Adjust opacity to darken */
+  z-index: 10; /* Make sure overlay is above the image */
 }
 header > :nth-child(2) {
   position: absolute;
@@ -136,22 +148,44 @@ header > :nth-child(2) {
   animation: headerAnimation2 0.75s linear;
   display: flex;
   flex-flow: column wrap;
-  gap: 2rem;
   width: 90%;
+  gap: 2rem;
   margin: 0 auto;
 }
 header > :nth-child(2) h1 {
   all: unset;
-  font-family: "Rubik Dirt", serif;
-  font-weight: 400;
-  font-size: 75px;
-  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 110px;
+}
+header > :nth-child(2) .glitch {
+  position: relative;
+  color: #fedb05;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+header > :nth-child(2) .glitch::before,
+header > :nth-child(2) .glitch::after {
+  content: "יום ההולדת שלך מתחילה כאן!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-shadow: -1px 0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff; /* Left (cyan) and right (magenta) shadows */
+  -webkit-clip-path: inset(0 0 50% 0);
+          clip-path: inset(0 0 50% 0);
+}
+header > :nth-child(2) .glitch::after {
+  text-shadow: -1px 0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff; /* Left and right shadow for the after pseudo-element */
+  -webkit-clip-path: inset(50% 0 0 0);
+          clip-path: inset(50% 0 0 0);
 }
 header > :nth-child(2) h2 {
   all: unset;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 45px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
   color: white;
 }
 header > :nth-child(2) a {
@@ -159,19 +193,21 @@ header > :nth-child(2) a {
 }
 header > :nth-child(2) a button {
   all: unset;
-  background-color: #ffffff;
-  font-family: "Poppins", sans-serif;
+  background-color: #fedb05;
+  color: #0aa14b;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
   padding: 0.35rem 2.25rem;
   cursor: pointer;
-  font-size: 35px;
+  font-size: 45px;
   border-radius: 12px;
   transition: 0.3s;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.35);
 }
 header > :nth-child(2) a button:hover {
   scale: 1.025;
   transition: 0.3s;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1200px) {
@@ -190,6 +226,9 @@ header > :nth-child(2) a button:hover {
   }
 }
 @media (max-width: 900px) {
+  header > :nth-child(1) {
+    background: url("../IMG/1PHONE.jpg") center fixed no-repeat;
+  }
   header > :nth-child(2) {
     gap: 1.5rem;
   }
@@ -240,12 +279,25 @@ main {
 }
 main > :nth-child(1) {
   text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
   animation: headerAnimation2 0.75s linear;
+  justify-content: center;
+}
+main > :nth-child(1) > :nth-child(2) {
+  margin-bottom: -0.5rem;
+}
+main > :nth-child(1) > :nth-child(2) img {
+  width: 100%;
+  max-width: 275px;
 }
 main > :nth-child(1) h2 {
   all: unset;
-  font-weight: 500;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: #0aa14b;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
   font-size: 75px;
 }
 main > :nth-child(2) {
@@ -315,12 +367,13 @@ main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) {
 main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) h4 {
   all: unset;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "Heebo", serif;
   font-size: 18px;
+  color: #d2272b;
 }
 main > :nth-child(3) > div > :nth-child(2) p {
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: "Heebo", serif;
   font-size: 19px;
 }
 main > :nth-child(3) > :nth-child(1) {
@@ -372,20 +425,36 @@ main > :nth-child(4) {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  gap: 2.25rem;
+  gap: 2rem;
+  background: red;
 }
-main > :nth-child(4) > div {
-  display: flex;
-  flex-flow: column wrap;
-}
-main > :nth-child(4) > div h5 {
+main > :nth-child(4) > :nth-child(1) h2 {
   all: unset;
-  font-family: "Poppins", sans-serif;
-  font-size: 24px;
+  color: #0aa14b;
+  font-family: "Rubik", sans-serif;
   font-weight: 600;
+  font-size: 55px;
 }
-main > :nth-child(4) > div > :nth-child(1) {
-  text-decoration: underline;
+main > :nth-child(4) > :nth-child(2) {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  width: 100%;
+}
+main > :nth-child(4) > :nth-child(2) > div {
+  background-color: #00ffff;
+  flex: 1;
+}
+main > :nth-child(4) > :nth-child(2) > div > div img {
+  width: 100%;
+  max-width: 200px;
+}
+main > :nth-child(4) > :nth-child(2) > div h3 {
+  color: peru;
+  font-family: "Heebo", serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #d2272b;
 }
 main > :nth-child(5) {
   display: flex;
@@ -396,6 +465,9 @@ main > :nth-child(5) {
 @media (max-width: 1050px) {
   main {
     gap: 2.5rem;
+  }
+  main > :nth-child(1) > :nth-child(2) img {
+    max-width: 200px;
   }
   main > :nth-child(1) h2 {
     font-size: 45px;
@@ -434,12 +506,6 @@ main > :nth-child(5) {
   main > :nth-child(3) > div > :nth-child(2) p {
     font-size: 18px;
   }
-  main > :nth-child(4) {
-    gap: 1.75rem;
-  }
-  main > :nth-child(4) > div h5 {
-    font-size: 20px;
-  }
   main > :nth-child(5) {
     padding: 0.75rem;
   }
@@ -447,6 +513,9 @@ main > :nth-child(5) {
 @media (max-width: 575px) {
   main {
     gap: 1.75rem;
+  }
+  main > :nth-child(1) > :nth-child(2) img {
+    max-width: 150px;
   }
   main > :nth-child(1) h2 {
     font-size: 22.5px;
@@ -476,14 +545,16 @@ main > :nth-child(5) {
   main > :nth-child(3) > div > :nth-child(2) p {
     font-size: 15px;
   }
-  main > :nth-child(4) {
-    gap: 1.5rem;
-  }
-  main > :nth-child(4) > div h5 {
-    font-size: 16px;
-  }
   main > :nth-child(5) {
     padding: 0.5rem;
+  }
+}
+@media (max-width: 475px) {
+  main {
+    gap: 1.75rem;
+  }
+  main > :nth-child(1) > :nth-child(2) img {
+    max-width: 125px;
   }
 }
 .beforeSection {
