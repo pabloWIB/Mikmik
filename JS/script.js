@@ -43,12 +43,13 @@ $(document).ready(function () {
     });
 });
 
-// var date = new Date();
-// var dateAño = date.getFullYear();
-// document.getElementById('upDate').textContent = dateAño;
+const thankContainer =document.getElementById('thankContainer');
 
+const closeWindow = document.getElementById('closeWindow').addEventListener('click', function() {
+    alert("Gracias");
+    thankContainer.addClassList('Cerrar');
+});
 
-// VIEWPORT FUNCTION
 
 function isElementInViewport(element) {
     var rect = element.getBoundingClientRect();

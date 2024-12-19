@@ -1,5 +1,71 @@
 @charset "UTF-8";
 @import "Fonts/fontSizes.css";
+.thank-you-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+.thank-you-container > :nth-child(1) {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+  width: 100%;
+  place-content: center;
+  align-items: center;
+}
+.thank-you-container > :nth-child(1) .close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0.5rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+.thank-you-container > :nth-child(1) .close-button:hover {
+  color: #333;
+}
+.thank-you-container > :nth-child(1) h2 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+.thank-you-container > :nth-child(1) p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.thank-you-container > :nth-child(1) .checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #4caf50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 2rem;
+}
+.thank-you-container > :nth-child(1) .checkmark::after {
+  content: "";
+  width: 30px;
+  height: 60px;
+  border: solid white;
+  border-width: 0 6px 6px 0;
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,88 +89,90 @@ body {
   }
 }
 form {
-  background-color: #fff;
+  background-color: #fedb05;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
+  text-align: center;
+  gap: 1.125rem;
+}
+form h4 {
+  all: unset;
+  text-align: center;
 }
 form > :nth-child(2) {
   display: flex;
-  flex-flow: column wrap;
-  gap: 1rem;
+  flex-flow: row nowrap;
+  gap: 1.75rem;
 }
-form h4 {
-  text-align: center;
-  font-size: 30px;
-  color: #333;
-  padding: 0rem 0rem 3rem 0rem;
+form .submitInp {
+  margin: 0 auto;
 }
-form input[type=submit] {
-  width: 100%;
-  margin-top: 1.5rem;
-  padding: 15px;
-  background-color: #dd9048;
-  color: #fff;
+form .submitInp input[type=submit] {
+  padding: 1rem 5rem;
   border: none;
   border-radius: 4px;
-  font-size: 22px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-form input[type=submit]:hover {
-  background-color: #d1843d;
+  transition: 0.3s ease;
+  background: #d2272b;
+  color: #fedb05;
 }
 form input[type=text],
 form input[type=tel] {
   width: 100%;
   padding: 12px;
-  font-size: 22px;
-  border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
   outline: none;
-  background-color: #eaeced;
   border-radius: 6px;
   color: black;
   cursor: pointer;
 }
-form input[type=text]:focus,
-form input[type=tel]:focus {
-  border-color: #dd9048;
-}
-
 @media screen and (max-width: 900px) {
   form {
-    padding: 20px;
+    padding: 25px;
+    gap: 1.125rem;
   }
-  form h4 {
-    font-size: 26px;
-    padding: 0rem 0rem 2rem 0rem;
+  form > :nth-child(2) {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
   }
-  form input[type=submit],
+  form .submitInp {
+    margin: 0 auto;
+  }
+  form .submitInp input[type=submit] {
+    padding: 1rem 5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background: #d2272b;
+    color: #fedb05;
+  }
   form input[type=text],
   form input[type=tel] {
-    font-size: 20px;
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 575px) {
   form {
     padding: 15px;
     width: 100%;
-    box-sizing: border-box;
-  }
-  form h4 {
-    font-size: 22px;
-    padding: 0rem 0rem 1.5rem 0rem;
   }
   form input[type=submit],
   form input[type=text],
   form input[type=tel] {
-    font-size: 18px;
     padding: 8px;
   }
 }
@@ -138,8 +206,10 @@ header > :nth-child(1)::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.27); /* Adjust opacity to darken */
-  z-index: 10; /* Make sure overlay is above the image */
+  background: rgba(0, 0, 0, 0.27);
+  /* Adjust opacity to darken */
+  z-index: 10;
+  /* Make sure overlay is above the image */
 }
 header > :nth-child(2) {
   position: absolute;
@@ -154,9 +224,7 @@ header > :nth-child(2) {
 }
 header > :nth-child(2) h1 {
   all: unset;
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
-  font-size: 110px;
+  font-size: 50px;
 }
 header > :nth-child(2) .glitch {
   position: relative;
@@ -172,21 +240,19 @@ header > :nth-child(2) .glitch::after {
   position: absolute;
   top: 0;
   left: 0;
-  text-shadow: -1px 0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff; /* Left (cyan) and right (magenta) shadows */
+  text-shadow: -1px 0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff;
+  /* Left (cyan) and right (magenta) shadows */
   -webkit-clip-path: inset(0 0 50% 0);
           clip-path: inset(0 0 50% 0);
 }
 header > :nth-child(2) .glitch::after {
-  text-shadow: -1px 0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff; /* Left and right shadow for the after pseudo-element */
+  text-shadow: -1px 0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff;
   -webkit-clip-path: inset(50% 0 0 0);
           clip-path: inset(50% 0 0 0);
 }
 header > :nth-child(2) h2 {
-  all: unset;
-  font-family: "Rubik", sans-serif;
-  font-weight: 600;
-  font-size: 60px;
   color: white;
+  font-size: 40px;
 }
 header > :nth-child(2) a {
   all: unset;
@@ -197,16 +263,16 @@ header > :nth-child(2) a button {
   color: #0aa14b;
   font-family: "Rubik", sans-serif;
   font-weight: 600;
+  font-size: 30px;
   padding: 0.35rem 2.25rem;
   cursor: pointer;
-  font-size: 45px;
   border-radius: 12px;
-  transition: 0.3s;
+  transition: 0.5s;
   box-shadow: 0 0px 12px rgba(0, 0, 0, 0.35);
 }
 header > :nth-child(2) a button:hover {
   scale: 1.025;
-  transition: 0.3s;
+  transition: 0.5s;
   box-shadow: 0 0px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -215,10 +281,10 @@ header > :nth-child(2) a button:hover {
     gap: 1.5rem;
   }
   header > :nth-child(2) h1 {
-    font-size: 55px;
+    font-size: 40px;
   }
   header > :nth-child(2) h2 {
-    font-size: 25px;
+    font-size: 30px;
   }
   header > :nth-child(2) a button {
     padding: 0.55rem 1.75rem;
@@ -233,14 +299,14 @@ header > :nth-child(2) a button:hover {
     gap: 1.5rem;
   }
   header > :nth-child(2) h1 {
-    font-size: 45px;
+    font-size: 35px;
   }
   header > :nth-child(2) h2 {
-    font-size: 22.5px;
+    font-size: 25px;
   }
   header > :nth-child(2) a button {
     padding: 0.55rem 1.75rem;
-    font-size: 22.5px;
+    font-size: 20px;
   }
 }
 @media (max-width: 750px) {
@@ -248,10 +314,11 @@ header > :nth-child(2) a button:hover {
     font-size: 30px;
   }
   header > :nth-child(2) h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
   header > :nth-child(2) a button {
-    font-size: 18px;
+    padding: 0.55rem 1.75rem;
+    font-size: 17.5px;
   }
 }
 @media (max-width: 575px) {
@@ -262,11 +329,11 @@ header > :nth-child(2) a button:hover {
     font-size: 22.5px;
   }
   header > :nth-child(2) h2 {
-    font-size: 15px;
+    font-size: 17.5px;
   }
   header > :nth-child(2) a button {
-    padding: 0.25rem 1.15rem;
-    font-size: 15px;
+    padding: 0.55rem 1.75rem;
+    font-size: 15.5px;
   }
 }
 main {
@@ -283,7 +350,7 @@ main > :nth-child(1) {
   flex-flow: row nowrap;
   align-items: center;
   gap: 1rem;
-  animation: headerAnimation2 0.75s linear;
+  animation: headerAnimation2 1s linear;
   justify-content: center;
 }
 main > :nth-child(1) > :nth-child(2) {
@@ -292,13 +359,6 @@ main > :nth-child(1) > :nth-child(2) {
 main > :nth-child(1) > :nth-child(2) img {
   width: 100%;
   max-width: 275px;
-}
-main > :nth-child(1) h2 {
-  all: unset;
-  color: #0aa14b;
-  font-family: "Rubik", sans-serif;
-  font-weight: 600;
-  font-size: 75px;
 }
 main > :nth-child(2) {
   width: 12.5%;
@@ -313,7 +373,7 @@ main > :nth-child(3) {
   flex-flow: row nowrap;
   flex: 1;
   gap: 1.15rem;
-  padding: 0.5rem 0rem 2.5rem 0rem;
+  padding: 0.5rem 0rem;
 }
 main > :nth-child(3) > div {
   display: flex;
@@ -327,8 +387,6 @@ main > :nth-child(3) > div {
   border-radius: 15px;
   background: white;
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  transform: translateY(-17.5%);
 }
 main > :nth-child(3) > div > :nth-child(1) {
   width: 100%;
@@ -364,20 +422,8 @@ main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) {
   display: flex;
   flex-flow: column wrap;
 }
-main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) h4 {
-  all: unset;
-  font-weight: 600;
-  font-family: "Heebo", serif;
-  font-size: 18px;
-  color: #d2272b;
-}
-main > :nth-child(3) > div > :nth-child(2) p {
-  font-weight: 400;
-  font-family: "Heebo", serif;
-  font-size: 19px;
-}
 main > :nth-child(3) > :nth-child(1) {
-  transition: 0.5s;
+  transition: 1.4s;
 }
 main > :nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/2.jpg") center center;
@@ -385,7 +431,7 @@ main > :nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-chil
   background-repeat: no-repeat;
 }
 main > :nth-child(3) > :nth-child(2) {
-  transition: 0.8s;
+  transition: 1.8s;
 }
 main > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/3.jpg") center center;
@@ -393,7 +439,7 @@ main > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-chil
   background-repeat: no-repeat;
 }
 main > :nth-child(3) > :nth-child(3) {
-  transition: 1.2s;
+  transition: 2.2s;
 }
 main > :nth-child(3) > :nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/4.jpg") center center;
@@ -401,7 +447,7 @@ main > :nth-child(3) > :nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-chil
   background-repeat: no-repeat;
 }
 main > :nth-child(3) > :nth-child(4) {
-  transition: 1.6s;
+  transition: 2.6s;
 }
 main > :nth-child(3) > :nth-child(4) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/5.jpg") center center;
@@ -409,7 +455,7 @@ main > :nth-child(3) > :nth-child(4) > :nth-child(1) > :nth-child(1) > :nth-chil
   background-repeat: no-repeat;
 }
 main > :nth-child(3) > :nth-child(5) {
-  transition: 2s;
+  transition: 4s;
 }
 main > :nth-child(3) > :nth-child(5) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/6.jpg") center center;
@@ -426,14 +472,6 @@ main > :nth-child(4) {
   flex-flow: column wrap;
   align-items: center;
   gap: 2rem;
-  background: red;
-}
-main > :nth-child(4) > :nth-child(1) h2 {
-  all: unset;
-  color: #0aa14b;
-  font-family: "Rubik", sans-serif;
-  font-weight: 600;
-  font-size: 55px;
 }
 main > :nth-child(4) > :nth-child(2) {
   display: flex;
@@ -442,21 +480,80 @@ main > :nth-child(4) > :nth-child(2) {
   width: 100%;
 }
 main > :nth-child(4) > :nth-child(2) > div {
-  background-color: #00ffff;
   flex: 1;
+  flex-flow: column wrap;
+  place-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+}
+main > :nth-child(4) > :nth-child(2) > div > div {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  min-height: 200px;
+  max-height: 150px;
 }
 main > :nth-child(4) > :nth-child(2) > div > div img {
-  width: 100%;
-  max-width: 200px;
+  width: 90%;
+  max-width: 150px;
 }
 main > :nth-child(4) > :nth-child(2) > div h3 {
-  color: peru;
-  font-family: "Heebo", serif;
-  font-size: 25px;
-  font-weight: 600;
   color: #d2272b;
+  font-weight: 600;
 }
 main > :nth-child(5) {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+main > :nth-child(5) > :nth-child(1),
+main > :nth-child(5) > :nth-child(2),
+main > :nth-child(5) > :nth-child(3),
+main > :nth-child(5) > :nth-child(4) {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+main > :nth-child(5) > :nth-child(1) > div,
+main > :nth-child(5) > :nth-child(2) > div,
+main > :nth-child(5) > :nth-child(3) > div,
+main > :nth-child(5) > :nth-child(4) > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+main > :nth-child(5) > :nth-child(1) > div > :nth-child(1) img,
+main > :nth-child(5) > :nth-child(1) > div > :nth-child(3) img,
+main > :nth-child(5) > :nth-child(2) > div > :nth-child(1) img,
+main > :nth-child(5) > :nth-child(2) > div > :nth-child(3) img,
+main > :nth-child(5) > :nth-child(3) > div > :nth-child(1) img,
+main > :nth-child(5) > :nth-child(3) > div > :nth-child(3) img,
+main > :nth-child(5) > :nth-child(4) > div > :nth-child(1) img,
+main > :nth-child(5) > :nth-child(4) > div > :nth-child(3) img {
+  width: 100%;
+  max-width: 37.5px;
+}
+main > :nth-child(5) > :nth-child(1) > div p,
+main > :nth-child(5) > :nth-child(2) > div p,
+main > :nth-child(5) > :nth-child(3) > div p,
+main > :nth-child(5) > :nth-child(4) > div p {
+  all: unset;
+  font-weight: 600;
+  font-size: 20px;
+  color: #0aa14b;
+}
+main > :nth-child(5) > :nth-child(4) {
+  padding: 1rem 0rem;
+}
+main > :nth-child(6) {
   display: flex;
   padding: 1rem;
   margin: 0 auto;
@@ -467,10 +564,7 @@ main > :nth-child(5) {
     gap: 2.5rem;
   }
   main > :nth-child(1) > :nth-child(2) img {
-    max-width: 200px;
-  }
-  main > :nth-child(1) h2 {
-    font-size: 45px;
+    max-width: 150px;
   }
   main > :nth-child(3) {
     display: flex;
@@ -487,8 +581,6 @@ main > :nth-child(5) {
     place-content: center;
     text-align: center;
     padding: 1rem 0rem;
-    opacity: 0;
-    transform: translateY(-10.5%);
     width: 90%;
     max-width: 350px;
     margin: 0 auto;
@@ -497,17 +589,80 @@ main > :nth-child(5) {
     padding: 0.75rem 0rem;
   }
   main > :nth-child(3) > div > :nth-child(1) > :nth-child(1) {
-    max-width: 315px;
-    height: 315px;
+    max-width: 200px;
+    height: 200px;
   }
-  main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) h4 {
-    font-size: 19px;
+  main > :nth-child(4) {
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1rem;
   }
-  main > :nth-child(3) > div > :nth-child(2) p {
-    font-size: 18px;
+  main > :nth-child(4) > :nth-child(2) {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+  main > :nth-child(4) > :nth-child(2) > div {
+    flex: 1;
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+    flex-flow: column wrap;
+    place-content: center;
+    align-items: center;
+    padding: 1rem 0rem;
+  }
+  main > :nth-child(4) > :nth-child(2) > div > div {
+    min-height: 150px;
+    max-height: 125px;
+  }
+  main > :nth-child(4) > :nth-child(2) > div > div img {
+    width: 90%;
+    max-width: 125px;
+  }
+  main > :nth-child(4) > :nth-child(2) > div h3 {
+    color: #d2272b;
+    font-weight: 600;
   }
   main > :nth-child(5) {
-    padding: 0.75rem;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+  }
+  main > :nth-child(5) > :nth-child(1),
+  main > :nth-child(5) > :nth-child(2),
+  main > :nth-child(5) > :nth-child(3),
+  main > :nth-child(5) > :nth-child(4) {
+    flex-flow: column wrap;
+    gap: 1rem;
+  }
+  main > :nth-child(5) > :nth-child(1) > div,
+  main > :nth-child(5) > :nth-child(2) > div,
+  main > :nth-child(5) > :nth-child(3) > div,
+  main > :nth-child(5) > :nth-child(4) > div {
+    gap: 1rem;
+  }
+  main > :nth-child(5) > :nth-child(1) > div > :nth-child(1) img,
+  main > :nth-child(5) > :nth-child(1) > div > :nth-child(3) img,
+  main > :nth-child(5) > :nth-child(2) > div > :nth-child(1) img,
+  main > :nth-child(5) > :nth-child(2) > div > :nth-child(3) img,
+  main > :nth-child(5) > :nth-child(3) > div > :nth-child(1) img,
+  main > :nth-child(5) > :nth-child(3) > div > :nth-child(3) img,
+  main > :nth-child(5) > :nth-child(4) > div > :nth-child(1) img,
+  main > :nth-child(5) > :nth-child(4) > div > :nth-child(3) img {
+    max-width: 30px;
+  }
+  main > :nth-child(5) > :nth-child(1) > div p,
+  main > :nth-child(5) > :nth-child(2) > div p,
+  main > :nth-child(5) > :nth-child(3) > div p,
+  main > :nth-child(5) > :nth-child(4) > div p {
+    font-size: 18px;
+  }
+  main > :nth-child(5) > :nth-child(4) {
+    padding: 1rem 0rem;
   }
 }
 @media (max-width: 575px) {
@@ -515,10 +670,7 @@ main > :nth-child(5) {
     gap: 1.75rem;
   }
   main > :nth-child(1) > :nth-child(2) img {
-    max-width: 150px;
-  }
-  main > :nth-child(1) h2 {
-    font-size: 22.5px;
+    max-width: 135px;
   }
   main > :nth-child(3) {
     gap: 0.75rem;
@@ -526,8 +678,6 @@ main > :nth-child(5) {
   main > :nth-child(3) > div {
     gap: 0.65rem;
     padding: 0.75rem 0rem;
-    opacity: 0;
-    transform: translateY(-10.5%);
     width: 90%;
     max-width: 350px;
     margin: 0 auto;
@@ -536,17 +686,76 @@ main > :nth-child(5) {
     padding: 0.65rem 0rem;
   }
   main > :nth-child(3) > div > :nth-child(1) > :nth-child(1) {
-    max-width: 275px;
-    height: 275px;
+    max-width: 150px;
+    height: 150px;
   }
-  main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) h4 {
-    font-size: 16px;
+  main > :nth-child(4) {
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1rem;
   }
-  main > :nth-child(3) > div > :nth-child(2) p {
-    font-size: 15px;
+  main > :nth-child(4) > :nth-child(2) {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+  main > :nth-child(4) > :nth-child(2) > div {
+    flex: 1;
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+    flex-flow: column wrap;
+    place-content: center;
+    align-items: center;
+    padding: 1rem 0rem;
+  }
+  main > :nth-child(4) > :nth-child(2) > div > div {
+    min-height: 125px;
+    max-height: 100px;
+  }
+  main > :nth-child(4) > :nth-child(2) > div > div img {
+    width: 90%;
+    max-width: 100px;
   }
   main > :nth-child(5) {
-    padding: 0.5rem;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+  }
+  main > :nth-child(5) > :nth-child(1),
+  main > :nth-child(5) > :nth-child(2),
+  main > :nth-child(5) > :nth-child(3),
+  main > :nth-child(5) > :nth-child(4) {
+    flex-flow: column wrap;
+    gap: 1rem;
+  }
+  main > :nth-child(5) > :nth-child(1) > div,
+  main > :nth-child(5) > :nth-child(2) > div,
+  main > :nth-child(5) > :nth-child(3) > div,
+  main > :nth-child(5) > :nth-child(4) > div {
+    gap: 1rem;
+  }
+  main > :nth-child(5) > :nth-child(1) > div > :nth-child(1) img,
+  main > :nth-child(5) > :nth-child(1) > div > :nth-child(3) img,
+  main > :nth-child(5) > :nth-child(2) > div > :nth-child(1) img,
+  main > :nth-child(5) > :nth-child(2) > div > :nth-child(3) img,
+  main > :nth-child(5) > :nth-child(3) > div > :nth-child(1) img,
+  main > :nth-child(5) > :nth-child(3) > div > :nth-child(3) img,
+  main > :nth-child(5) > :nth-child(4) > div > :nth-child(1) img,
+  main > :nth-child(5) > :nth-child(4) > div > :nth-child(3) img {
+    max-width: 25px;
+  }
+  main > :nth-child(5) > :nth-child(1) > div p,
+  main > :nth-child(5) > :nth-child(2) > div p,
+  main > :nth-child(5) > :nth-child(3) > div p,
+  main > :nth-child(5) > :nth-child(4) > div p {
+    font-size: 17px;
+  }
+  main > :nth-child(5) > :nth-child(4) {
+    padding: 1rem 0rem;
   }
 }
 @media (max-width: 475px) {
@@ -554,7 +763,7 @@ main > :nth-child(5) {
     gap: 1.75rem;
   }
   main > :nth-child(1) > :nth-child(2) img {
-    max-width: 125px;
+    max-width: 100px;
   }
 }
 .beforeSection {
@@ -569,12 +778,6 @@ main > :nth-child(5) {
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
-}
-.beforeSection section > :nth-child(1) h2 {
-  all: unset;
-  font-weight: 500;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-size: 75px;
 }
 .beforeSection section > :nth-child(2) {
   width: 12.5%;
@@ -653,9 +856,6 @@ main > :nth-child(5) {
     gap: 1.5rem;
     width: 90%;
   }
-  .beforeSection section > :nth-child(1) h2 {
-    font-size: 45px;
-  }
   .beforeSection section > :nth-child(3) {
     display: flex;
     flex-flow: column wrap;
@@ -721,9 +921,6 @@ main > :nth-child(5) {
     gap: 1rem;
     width: 90%;
   }
-  .beforeSection section > :nth-child(1) h2 {
-    font-size: 22.5px;
-  }
   .beforeSection section > :nth-child(3) {
     gap: 0.65rem;
   }
@@ -737,19 +934,13 @@ main > :nth-child(5) {
 aside {
   display: flex;
   flex-flow: column wrap;
-  gap: 2.25rem;
+  gap: 2rem;
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
   opacity: 0;
   transform: translateY(-5%);
   transition: 2s;
-}
-aside h2 {
-  all: unset;
-  font-weight: 500;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-size: 70px;
 }
 aside > :nth-child(2) {
   display: flex;
@@ -772,12 +963,20 @@ aside > :nth-child(2) > :nth-child(1) img {
 }
 aside > :nth-child(2) > :nth-child(2) {
   flex: 1;
-}
-aside > :nth-child(2) > :nth-child(2) p {
-  font-family: "Poppins", sans-serif;
-  font-size: 32px;
+  text-align: center;
 }
 aside > :nth-child(3) {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  place-content: center;
+}
+aside > :nth-child(3) img {
+  width: 100%;
+  max-width: 550px;
+  filter: drop-shadow(0px 0px 10px #75b507);
+}
+aside > :nth-child(4) {
   display: flex;
   padding: 1rem;
   margin: 0 auto;
@@ -789,7 +988,6 @@ aside > :nth-child(3) {
     transform: translateY(-2.5%);
   }
   aside h2 {
-    font-size: 40px;
     text-align: center;
   }
   aside > :nth-child(2) {
@@ -808,9 +1006,6 @@ aside > :nth-child(3) {
     width: 100%;
     max-width: 350px;
   }
-  aside > :nth-child(2) > :nth-child(2) p {
-    font-size: 20px;
-  }
   aside > :nth-child(3) {
     padding: 0.75rem;
   }
@@ -819,9 +1014,6 @@ aside > :nth-child(3) {
   aside {
     gap: 1.15rem;
     transform: translateY(-2%);
-  }
-  aside h2 {
-    font-size: 22.5px;
   }
   aside > :nth-child(2) {
     flex-flow: column wrap;
@@ -833,9 +1025,6 @@ aside > :nth-child(3) {
   aside > :nth-child(2) > :nth-child(1) img {
     width: 100%;
     max-width: 350px;
-  }
-  aside > :nth-child(2) > :nth-child(2) p {
-    font-size: 15px;
   }
   aside > :nth-child(3) {
     padding: 0.55rem;
@@ -860,13 +1049,6 @@ footer {
 footer > :nth-child(1) {
   text-align: center;
   padding: 2rem 0rem;
-}
-footer > :nth-child(1) h2 {
-  all: unset;
-  font-weight: 500;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-size: 75px;
-  text-align: center;
 }
 footer > :nth-child(2) {
   width: 12.5%;
@@ -900,10 +1082,6 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) {
   width: 90%;
   margin: 0 auto;
 }
-footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) h4 {
-  font-size: 25px;
-  font-family: "Poppins", sans-serif;
-}
 footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
   width: 90%;
   margin: 0 auto;
@@ -935,12 +1113,6 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
   margin: 0 auto;
   width: 90%;
 }
-footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 {
-  all: unset;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-}
 
 @media (max-width: 900px) {
   footer {
@@ -948,9 +1120,6 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 
   }
   footer > :nth-child(1) {
     padding: 1.15rem 0rem;
-  }
-  footer > :nth-child(1) h2 {
-    font-size: 45px;
   }
   footer .swiper-container .swiper-wrapper .swiper-slide {
     padding: 2rem 0rem;
@@ -962,14 +1131,8 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 
     padding: 0.9rem 0rem;
     flex: 0.95;
   }
-  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) h4 {
-    font-size: 20px;
-  }
   footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
     padding: 0.9rem 0rem;
-  }
-  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 {
-    font-size: 16px;
   }
 }
 @media (max-width: 575px) {
@@ -979,9 +1142,6 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 
   footer > :nth-child(1) {
     padding: 1.15rem 0rem;
   }
-  footer > :nth-child(1) h2 {
-    font-size: 22.5px;
-  }
   footer .swiper-container .swiper-wrapper .swiper-slide {
     padding: 2rem 0rem;
     display: flex;
@@ -992,78 +1152,96 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 
     padding: 0.9rem 0rem;
     flex: 0.95;
   }
-  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) h4 {
-    font-size: 18px;
-  }
   footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
     padding: 0.9rem 0rem;
   }
-  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) h4 {
-    font-size: 15px;
-  }
 }
-article {
+.videoSection {
+  width: 90%;
+  max-width: 1450px;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+  margin: 0 auto;
+  padding: 1.5rem 0rem;
+}
+.videoSection h2 {
+  text-align: center;
+}
+.videoSection > :nth-child(2) {
+  width: 100%;
+  overflow: hidden;
+}
+.videoSection > :nth-child(2) iframe {
+  width: 100%;
+}
+
+.footerFinal {
+  text-align: center;
+}
+.footerFinal a {
+  all: unset;
+}
+.footerFinal a button {
+  all: unset;
+  background: #fedb05;
+  font-weight: 600;
+  padding: 1rem 1.75rem;
+  color: #0aa14b;
+  border-radius: 12px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.footerFinal .logoFooter {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  place-content: center;
+}
+.footerFinal .logoFooter img {
+  width: 100%;
+  max-width: 475px;
+}
+.footerFinal .socialMedias {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  place-self: center;
   place-content: center;
-  gap: 2rem;
-  width: 90%;
-  max-width: 1450px;
+  align-items: center;
+  gap: 1rem;
 }
-article div a {
+.footerFinal .socialMedias div img {
   width: 100%;
+  max-width: 55px;
+  transition: 0.35s;
+  cursor: pointer;
 }
-article div a img {
-  width: 100%;
-  max-width: 35px;
-  transition: 0.3s;
-}
-article div a img:hover {
-  scale: 1.05;
-  transition: 0.3s;
+.footerFinal .socialMedias div img:hover {
+  scale: 1.09;
+  transition: 0.35s;
 }
 
-@media (max-width: 900px) {
-  article {
-    gap: 1.5rem;
-  }
-  article div a img {
-    max-width: 30px;
-  }
+.whatsappFixed {
+  position: fixed;
+  bottom: 3%;
+  right: 1.5%;
+  z-index: 0;
+  display: flex;
+  flex-flow: row wrap;
+  place-content: center;
+  align-items: center;
 }
-.footerFinal {
-  background-color: black;
+.whatsappFixed a {
+  display: flex;
+  place-content: center;
+}
+.whatsappFixed a img {
   width: 100%;
-  color: white;
-  padding: 1rem 0rem;
+  transition: 0.75s;
 }
-.footerFinal div {
-  width: 90%;
-  max-width: 1450px;
-  margin: 0 auto;
-}
-.footerFinal div p {
-  font-size: 22px;
+.whatsappFixed a img:hover {
+  scale: 1.1;
+  transition: 0.75s;
 }
 
-@media (max-width: 900px) {
-  .footerFinal {
-    padding: 0.85rem 0rem;
-  }
-  .footerFinal div p {
-    font-size: 18px;
-  }
-}
-@media (max-width: 575px) {
-  .footerFinal {
-    padding: 0.75rem 0rem;
-  }
-  .footerFinal div p {
-    font-size: 16px;
-  }
-}
 @keyframes headerAnimation {
   0% {
     transform: scale(1.15);
