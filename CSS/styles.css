@@ -13,6 +13,7 @@
   display: flex;
   place-content: center;
   align-items: center;
+  display: none;
 }
 .thank-you-container > :nth-child(1) {
   display: flex;
@@ -64,6 +65,10 @@
   border: solid white;
   border-width: 0 6px 6px 0;
   transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.Cerrar {
+  display: none;
 }
 
 html {
@@ -207,9 +212,7 @@ header > :nth-child(1)::before {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.27);
-  /* Adjust opacity to darken */
   z-index: 10;
-  /* Make sure overlay is above the image */
 }
 header > :nth-child(2) {
   position: absolute;
@@ -372,7 +375,7 @@ main > :nth-child(3) {
   display: flex;
   flex-flow: row nowrap;
   flex: 1;
-  gap: 1.15rem;
+  gap: 1rem;
   padding: 0.5rem 0rem;
 }
 main > :nth-child(3) > div {
@@ -386,7 +389,7 @@ main > :nth-child(3) > div {
   padding: 1rem 0rem;
   border-radius: 15px;
   background: white;
-  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
 }
 main > :nth-child(3) > div > :nth-child(1) {
   width: 100%;
@@ -422,49 +425,30 @@ main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) {
   display: flex;
   flex-flow: column wrap;
 }
-main > :nth-child(3) > :nth-child(1) {
-  transition: 1.4s;
-}
 main > :nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/2.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-main > :nth-child(3) > :nth-child(2) {
-  transition: 1.8s;
 }
 main > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/3.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-main > :nth-child(3) > :nth-child(3) {
-  transition: 2.2s;
-}
 main > :nth-child(3) > :nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/4.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-main > :nth-child(3) > :nth-child(4) {
-  transition: 2.6s;
 }
 main > :nth-child(3) > :nth-child(4) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/5.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-main > :nth-child(3) > :nth-child(5) {
-  transition: 4s;
-}
 main > :nth-child(3) > :nth-child(5) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background: url("../IMG/6.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-main > :nth-child(3) .animationN1 {
-  transform: translateY(0%);
-  opacity: 1;
 }
 main > :nth-child(4) {
   text-align: center;
@@ -487,7 +471,7 @@ main > :nth-child(4) > :nth-child(2) > div {
   padding: 1rem 0rem;
   border-radius: 15px;
   background: white;
-  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
 }
 main > :nth-child(4) > :nth-child(2) > div > div {
   display: flex;
@@ -766,11 +750,7 @@ main > :nth-child(6) {
     max-width: 100px;
   }
 }
-.beforeSection {
-  width: 100%;
-  padding: 2.5rem 0rem 2.75rem 0rem;
-}
-.beforeSection section {
+section {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -779,19 +759,19 @@ main > :nth-child(6) {
   max-width: 1450px;
   margin: 0 auto;
 }
-.beforeSection section > :nth-child(2) {
+section > :nth-child(2) {
   width: 12.5%;
   height: 5px;
   margin: 0 auto;
   background-color: #e9e9e9;
   border-radius: 20px;
 }
-.beforeSection section > :nth-child(3) {
+section > :nth-child(3) {
   display: flex;
   flex-flow: column wrap;
   gap: 1rem;
 }
-.beforeSection section > :nth-child(3) div {
+section > :nth-child(3) div {
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
@@ -799,7 +779,7 @@ main > :nth-child(6) {
   border-radius: 4px;
   transition: 0.65s;
 }
-.beforeSection section > :nth-child(3) div div {
+section > :nth-child(3) div div {
   width: 100%;
   height: 300px;
   box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.15);
@@ -807,68 +787,59 @@ main > :nth-child(6) {
   overflow: hidden;
   transition: 1s;
 }
-.beforeSection section > :nth-child(3) div div > :nth-child(1) {
+section > :nth-child(3) div div > :nth-child(1) {
   height: 100%;
   width: 100%;
   border-radius: 4px;
   transition: 0.3s;
 }
-.beforeSection section > :nth-child(3) div div > :nth-child(1) img {
+section > :nth-child(3) div div > :nth-child(1) img {
   width: 100%;
 }
-.beforeSection section > :nth-child(3) div div > :nth-child(1):hover {
+section > :nth-child(3) div div > :nth-child(1):hover {
   transform: scale(1.025);
   transition: 0.3s;
 }
-.beforeSection section > :nth-child(3) > :nth-child(1) > :nth-child(2) {
-  width: 90%;
-}
-.beforeSection section > :nth-child(3) .animationN2 > :nth-child(2) {
-  width: 50%;
-}
-.beforeSection section > :nth-child(3) > :nth-child(2) > :nth-child(1) {
+section > :nth-child(3) > :nth-child(1) > :nth-child(1) {
   width: 100%;
 }
-.beforeSection section > :nth-child(3) .animationN3 > :nth-child(1) {
-  width: 65%;
+section > :nth-child(3) > :nth-child(1) > :nth-child(2) {
+  width: 57.5%;
 }
-.beforeSection section > :nth-child(3) > :nth-child(3) > :nth-child(1) {
-  width: 35%;
+section > :nth-child(3) > :nth-child(2) > :nth-child(1) {
+  width: 57.5%;
 }
-.beforeSection section > :nth-child(3) > :nth-child(3) > :nth-child(2) {
+section > :nth-child(3) > :nth-child(2) > :nth-child(2) {
   width: 100%;
 }
-.beforeSection section > :nth-child(3) .animationN4 > :nth-child(1) {
-  width: 55%;
-}
-.beforeSection section > :nth-child(3) .animationN4 > :nth-child(2) {
+section > :nth-child(3) > :nth-child(3) > :nth-child(1) {
   width: 65%;
 }
-.beforeSection section > :nth-child(3) .animationN2 .animationN3 .animationN4 {
-  transition: 0.65s;
+section > :nth-child(3) > :nth-child(3) > :nth-child(2) {
+  width: 80%;
+}
+section > :nth-child(3) > :nth-child(3) > :nth-child(3) {
+  width: 100%;
 }
 
 @media (max-width: 900px) {
-  .beforeSection {
-    padding: 1.5rem 0rem 0.75rem 0rem;
-  }
-  .beforeSection section {
+  section {
     gap: 1.5rem;
     width: 90%;
   }
-  .beforeSection section > :nth-child(3) {
+  section > :nth-child(3) {
     display: flex;
     flex-flow: column wrap;
     gap: 0.75rem;
   }
-  .beforeSection section > :nth-child(3) div {
+  section > :nth-child(3) div {
     display: flex;
     flex-flow: column wrap;
     gap: 0.75rem;
     width: 100%;
     transition: 0.65s;
   }
-  .beforeSection section > :nth-child(3) div div {
+  section > :nth-child(3) div div {
     width: 100%;
     height: 300px;
     box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.15);
@@ -876,70 +847,50 @@ main > :nth-child(6) {
     overflow: hidden;
     transition: 1s;
   }
-  .beforeSection section > :nth-child(3) div div > :nth-child(1) {
+  section > :nth-child(3) div div > :nth-child(1) {
     height: 100%;
     width: 100%;
     border-radius: 4px;
     transition: 0.3s;
   }
-  .beforeSection section > :nth-child(3) div div > :nth-child(1) img {
+  section > :nth-child(3) div div > :nth-child(1) img {
     width: 100%;
   }
-  .beforeSection section > :nth-child(3) > :nth-child(1) > :nth-child(2) {
+  section > :nth-child(3) > :nth-child(1) > :nth-child(2) {
     width: 100%;
   }
-  .beforeSection section > :nth-child(3) .animationN2 > :nth-child(2) {
+  section > :nth-child(3) > :nth-child(2) > :nth-child(1) {
     width: 100%;
   }
-  .beforeSection section > :nth-child(3) > :nth-child(2) > :nth-child(1) {
+  section > :nth-child(3) > :nth-child(3) > :nth-child(1) {
     width: 100%;
   }
-  .beforeSection section > :nth-child(3) .animationN3 > :nth-child(1) {
+  section > :nth-child(3) > :nth-child(3) > :nth-child(2) {
     width: 100%;
-  }
-  .beforeSection section > :nth-child(3) > :nth-child(3) > :nth-child(1) {
-    width: 100%;
-  }
-  .beforeSection section > :nth-child(3) > :nth-child(3) > :nth-child(2) {
-    width: 100%;
-  }
-  .beforeSection section > :nth-child(3) .animationN4 > :nth-child(1) {
-    width: 100%;
-  }
-  .beforeSection section > :nth-child(3) .animationN4 > :nth-child(2) {
-    width: 100%;
-  }
-  .beforeSection section > :nth-child(3) .animationN2 .animationN3 .animationN4 {
-    transition: 0.65s;
   }
 }
 @media (max-width: 575px) {
-  .beforeSection {
-    padding: 1rem 0rem 0.65rem 0rem;
-  }
-  .beforeSection section {
+  section {
     gap: 1rem;
     width: 90%;
   }
-  .beforeSection section > :nth-child(3) {
+  section > :nth-child(3) {
     gap: 0.65rem;
   }
-  .beforeSection section > :nth-child(3) div {
+  section > :nth-child(3) div {
     gap: 0.65rem;
   }
-  .beforeSection section > :nth-child(3) div div {
+  section > :nth-child(3) div div {
     height: 300px;
   }
 }
 aside {
   display: flex;
   flex-flow: column wrap;
-  gap: 2rem;
+  gap: 1rem;
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
-  opacity: 0;
-  transform: translateY(-5%);
   transition: 2s;
 }
 aside > :nth-child(2) {
@@ -974,7 +925,6 @@ aside > :nth-child(3) {
 aside > :nth-child(3) img {
   width: 100%;
   max-width: 550px;
-  filter: drop-shadow(0px 0px 10px #75b507);
 }
 aside > :nth-child(4) {
   display: flex;
@@ -1006,8 +956,9 @@ aside > :nth-child(4) {
     width: 100%;
     max-width: 350px;
   }
-  aside > :nth-child(3) {
-    padding: 0.75rem;
+  aside > :nth-child(3) img {
+    width: 100%;
+    max-width: 400px;
   }
 }
 @media (max-width: 575px) {
@@ -1026,20 +977,11 @@ aside > :nth-child(4) {
     width: 100%;
     max-width: 350px;
   }
-  aside > :nth-child(3) {
-    padding: 0.55rem;
+  aside > :nth-child(3) img {
+    width: 100%;
+    max-width: 225px;
   }
 }
-.animationN5 {
-  transition: 2s;
-  opacity: 1;
-  transform: translateY(0%);
-}
-.animationN5 > :nth-child(2) > :nth-child(1) {
-  transition: 2.25s;
-  scale: 1;
-}
-
 footer {
   width: 90%;
   max-width: 1450px;
@@ -1178,6 +1120,10 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
 
 .footerFinal {
   text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 1.5rem;
 }
 .footerFinal a {
   all: unset;
@@ -1199,7 +1145,7 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
 }
 .footerFinal .logoFooter img {
   width: 100%;
-  max-width: 475px;
+  max-width: 425px;
 }
 .footerFinal .socialMedias {
   display: flex;
@@ -1207,6 +1153,7 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
   place-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 1rem 0rem;
 }
 .footerFinal .socialMedias div img {
   width: 100%;
@@ -1219,6 +1166,58 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
   transition: 0.35s;
 }
 
+@media (max-width: 900px) {
+  .footerFinal {
+    gap: 1rem;
+  }
+  .footerFinal a button {
+    padding: 1rem 1.5rem;
+  }
+  .footerFinal .logoFooter {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    place-content: center;
+  }
+  .footerFinal .logoFooter img {
+    width: 100%;
+    max-width: 325px;
+  }
+  .footerFinal .socialMedias {
+    gap: 0.75rem;
+    padding: 0.75rem 0rem;
+  }
+  .footerFinal .socialMedias div img {
+    width: 100%;
+    max-width: 45px;
+  }
+}
+@media (max-width: 575px) {
+  .footerFinal {
+    gap: 0.75rem;
+  }
+  .footerFinal a button {
+    padding: 0.85rem 1.35rem;
+  }
+  .footerFinal .logoFooter {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    place-content: center;
+  }
+  .footerFinal .logoFooter img {
+    width: 100%;
+    max-width: 225px;
+  }
+  .footerFinal .socialMedias {
+    gap: 0.75rem;
+    padding: 0.75rem 0rem;
+  }
+  .footerFinal .socialMedias div img {
+    width: 100%;
+    max-width: 40px;
+  }
+}
 .whatsappFixed {
   position: fixed;
   bottom: 3%;
