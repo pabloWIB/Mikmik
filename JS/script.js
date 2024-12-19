@@ -43,14 +43,14 @@ $(document).ready(function () {
     });
 });
 
-var date = new Date();
-var dateAño = date.getFullYear();
-document.getElementById('upDate').textContent = dateAño;
+// var date = new Date();
+// var dateAño = date.getFullYear();
+// document.getElementById('upDate').textContent = dateAño;
 
 
- // VIEWPORT FUNCTION
+// VIEWPORT FUNCTION
 
- function isElementInViewport(element) {
+function isElementInViewport(element) {
     var rect = element.getBoundingClientRect();
     return (
         rect.top >= 0 &&
@@ -68,7 +68,7 @@ function toggleAnimationN1() {
     var targetSection = document.getElementById("mainID1");
     if (isElementInViewport(targetSection)) {
         targetSection.classList.add('animationN1');
-    } 
+    }
 }
 
 window.addEventListener("scroll", toggleAnimationN1);
@@ -84,7 +84,7 @@ function toggleAnimationN2() {
     var targetSection = document.getElementById("mainID2");
     if (isElementInViewport(targetSection)) {
         targetSection.classList.add('animationN1');
-    } 
+    }
 }
 
 window.addEventListener("scroll", toggleAnimationN2);
@@ -100,7 +100,7 @@ function toggleAnimationN3() {
     var targetSection = document.getElementById("mainID3");
     if (isElementInViewport(targetSection)) {
         targetSection.classList.add('animationN1');
-    } 
+    }
 }
 
 window.addEventListener("scroll", toggleAnimationN3);
@@ -116,7 +116,7 @@ function toggleAnimationN4() {
     var targetSection = document.getElementById("mainID4");
     if (isElementInViewport(targetSection)) {
         targetSection.classList.add('animationN1');
-    } 
+    }
 }
 
 window.addEventListener("scroll", toggleAnimationN4);
@@ -132,7 +132,7 @@ function toggleAnimationN5() {
     var targetSection = document.getElementById("mainID5");
     if (isElementInViewport(targetSection)) {
         targetSection.classList.add('animationN1');
-    } 
+    }
 }
 
 window.addEventListener("scroll", toggleAnimationN5);
@@ -148,7 +148,7 @@ function toggleAnimationN6() {
     var targetSection = document.getElementById("mainID6");
     if (isElementInViewport(targetSection)) {
         targetSection.classList.add('animationN2');
-    } 
+    }
 }
 
 window.addEventListener("scroll", toggleAnimationN6);
@@ -164,7 +164,7 @@ function toggleAnimationN7() {
     var targetSection = document.getElementById("mainID7");
     if (isElementInViewport(targetSection)) {
         targetSection.classList.add('animationN3');
-    } 
+    }
 }
 
 window.addEventListener("scroll", toggleAnimationN7);
@@ -180,7 +180,7 @@ function toggleAnimationN8() {
     var targetSection = document.getElementById("mainID8");
     if (isElementInViewport(targetSection)) {
         targetSection.classList.add('animationN4');
-    } 
+    }
 }
 
 window.addEventListener("scroll", toggleAnimationN8);
@@ -197,7 +197,7 @@ function toggleAnimationN9() {
     var targetSectionSee = document.getElementById("mainID9See");
     if (isElementInViewport(targetSectionSee)) {
         targetSection.classList.add('animationN5');
-    } 
+    }
 }
 
 window.addEventListener("scroll", toggleAnimationN9);
@@ -231,7 +231,7 @@ function scrollValue() {
         mainID7.classList.remove('animationN3');
         mainID8.classList.remove('animationN4');
         mainID9.classList.remove('animationN5');
-    } 
+    }
 }
 
 window.addEventListener('scroll', scrollValue);

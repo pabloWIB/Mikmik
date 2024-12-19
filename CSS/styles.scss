@@ -1,5 +1,10 @@
 @import "Fonts/fontSizes.css";
 
+$amarillo: #fedb05;
+$verde: #0aa14b;
+$rojo: #d2272b;
+$verdeOscuro: #48673e;
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,62 +30,53 @@ body {
 }
 
 form {
-  background-color: #fff;
+  background-color: $amarillo;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
+
   > :nth-child(2) {
     display: flex;
     flex-flow: column wrap;
     gap: 1rem;
   }
-  h4 {
-    text-align: center;
-    font-size: 30px;
-    color: #333;
-    padding: 0rem 0rem 3rem 0rem;
-  }
-  // label {
-  //   font-size: 25px;
-  //   color: #555;
-  //   display: block;
-  //   margin: 1rem 0rem 0.5rem 0rem;
-  // }
+
+  h4 {}
+
   input[type="submit"] {
     width: 100%;
     margin-top: 1.5rem;
     padding: 15px;
-    background-color: #dd9048;
-    color: #fff;
     border: none;
     border-radius: 4px;
-    font-size: 22px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+
   input[type="submit"]:hover {
-    background-color: #d1843d;
+    // background-color: #d1843d;
   }
+
   input[type="text"],
   input[type="tel"] {
     width: 100%;
     padding: 12px;
-    font-size: 22px;
-    border: 1px solid #ddd;
+    // border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
     outline: none;
-    background-color: #eaeced;
+    // background-color: #eaeced;
     border-radius: 6px;
     color: black;
     cursor: pointer;
   }
+
   input[type="text"]:focus,
   input[type="tel"]:focus {
-    border-color: #dd9048;
+    // border-color: #dd9048;
   }
 }
 
@@ -90,14 +86,12 @@ form {
   }
 
   form h4 {
-    font-size: 26px;
-    padding: 0rem 0rem 2rem 0rem;
+    // padding: 0rem 0rem 2rem 0rem;
   }
 
   form input[type="submit"],
   form input[type="text"],
   form input[type="tel"] {
-    font-size: 20px;
     padding: 10px;
   }
 }
@@ -106,18 +100,15 @@ form {
   form {
     padding: 15px;
     width: 100%;
-    box-sizing: border-box;
   }
 
   form h4 {
-    font-size: 22px;
-    padding: 0rem 0rem 1.5rem 0rem;
+    // padding: 0rem 0rem 1.5rem 0rem;
   }
 
   form input[type="submit"],
   form input[type="text"],
   form input[type="tel"] {
-    font-size: 18px;
     padding: 8px;
   }
 }
@@ -130,6 +121,7 @@ header {
   align-items: center;
   overflow: hidden;
   position: relative;
+
   > :nth-child(1) {
     position: absolute;
     top: 0;
@@ -142,6 +134,7 @@ header {
     background-size: cover;
     transform-origin: center;
     animation: headerAnimation 0.75s linear;
+
     &::before {
       content: "";
       position: absolute;
@@ -149,10 +142,13 @@ header {
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.27); /* Adjust opacity to darken */
-      z-index: 10; /* Make sure overlay is above the image */
+      background: rgba(0, 0, 0, 0.27);
+      /* Adjust opacity to darken */
+      z-index: 10;
+      /* Make sure overlay is above the image */
     }
   }
+
   > :nth-child(2) {
     position: absolute;
     z-index: 10;
@@ -163,54 +159,55 @@ header {
     width: 90%;
     gap: 2rem;
     margin: 0 auto;
+
     h1 {
       all: unset;
-      font-family: "Rubik", sans-serif;
-      font-weight: 500;
-      font-size: 110px;
     }
+
     .glitch {
       position: relative;
-      color: #fedb05;
+      color: $amarillo;
       letter-spacing: 2px;
       font-weight: bold;
       text-transform: uppercase;
       display: inline-block;
     }
+
     .glitch::before,
     .glitch::after {
       content: "יום ההולדת שלך מתחילה כאן!";
       position: absolute;
       top: 0;
       left: 0;
-      text-shadow: -1px -0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff; /* Left (cyan) and right (magenta) shadows */
+      text-shadow: -1px -0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff;
+      /* Left (cyan) and right (magenta) shadows */
       clip-path: inset(0 0 50% 0);
     }
+
     .glitch::after {
-      text-shadow: -1px -0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff; /* Left and right shadow for the after pseudo-element */
+      text-shadow: -1px -0px 1.25px #00ffff, 1.25px 0px 1.25px #ff00ff;
       clip-path: inset(50% 0 0 0);
     }
+
     h2 {
-      all: unset;
-      font-family: "Rubik", sans-serif;
-      font-weight: 600;
-      font-size: 60px;
       color: white;
     }
+
     a {
       all: unset;
+
       button {
         all: unset;
         background-color: #fedb05;
-        color: #0aa14b;
+        color: $verde;
         font-family: "Rubik", sans-serif;
         font-weight: 600;
         padding: 0.35rem 2.25rem;
         cursor: pointer;
-        font-size: 45px;
         border-radius: 12px;
         transition: 0.3s;
         box-shadow: 0 0px 12px rgba(0, 0, 0, 0.35);
+
         &:hover {
           scale: 1.025;
           transition: 0.3s;
@@ -225,16 +222,10 @@ header {
   header {
     > :nth-child(2) {
       gap: 1.5rem;
-      h1 {
-        font-size: 55px;
-      }
-      h2 {
-        font-size: 25px;
-      }
+
       a {
         button {
           padding: 0.55rem 1.75rem;
-          font-size: 25px;
         }
       }
     }
@@ -246,18 +237,13 @@ header {
     > :nth-child(1) {
       background: url("../IMG/1PHONE.jpg") center fixed no-repeat;
     }
+
     > :nth-child(2) {
       gap: 1.5rem;
-      h1 {
-        font-size: 45px;
-      }
-      h2 {
-        font-size: 22.5px;
-      }
+
       a {
         button {
           padding: 0.55rem 1.75rem;
-          font-size: 22.5px;
         }
       }
     }
@@ -267,15 +253,9 @@ header {
 @media (max-width: 750px) {
   header {
     > :nth-child(2) {
-      h1 {
-        font-size: 30px;
-      }
-      h2 {
-        font-size: 18px;
-      }
       a {
         button {
-          font-size: 18px;
+          padding: 0.55rem 1.75rem;
         }
       }
     }
@@ -285,17 +265,11 @@ header {
 @media (max-width: 575px) {
   header {
     height: 75vh;
+
     > :nth-child(2) {
-      h1 {
-        font-size: 22.5px;
-      }
-      h2 {
-        font-size: 15px;
-      }
       a {
         button {
-          padding: 0.25rem 1.15rem;
-          font-size: 15px;
+          padding: 0.55rem 1.75rem;
         }
       }
     }
@@ -309,6 +283,7 @@ main {
   width: 95%;
   max-width: 1450px;
   margin: 0 auto;
+
   > :nth-child(1) {
     text-align: center;
     display: flex;
@@ -317,21 +292,17 @@ main {
     gap: 1rem;
     animation: headerAnimation2 0.75s linear;
     justify-content: center;
-    >:nth-child(2){
+
+    >:nth-child(2) {
       margin-bottom: -.5rem;
-      img{
+
+      img {
         width: 100%;
         max-width: 275px;
       }
     }
-    h2 {
-      all: unset;
-      color: #0aa14b;
-      font-family: "Rubik", sans-serif;
-      font-weight: 600;
-      font-size: 75px;
-    }
   }
+
   > :nth-child(2) {
     width: 12.5%;
     height: 5px;
@@ -340,13 +311,15 @@ main {
     border-radius: 20px;
     animation: mainAnimation 0.75s linear;
   }
+
   > :nth-child(3) {
     display: flex;
     flex-flow: row nowrap;
     flex: 1;
     gap: 1.15rem;
     padding: 0.5rem 0rem 2.5rem 0rem;
-    > div {
+
+    >div {
       display: flex;
       flex-flow: column wrap;
       flex: 1;
@@ -360,12 +333,14 @@ main {
       box-shadow: 0 0px 8px rgba(0, 0, 0, 0.25);
       opacity: 0;
       transform: translateY(-17.5%);
+
       > :nth-child(1) {
         width: 100%;
         display: flex;
         align-items: center;
         place-content: center;
         padding: 1rem 0rem;
+
         > :nth-child(1) {
           width: 95%;
           max-width: 175px;
@@ -373,12 +348,14 @@ main {
           overflow: hidden;
           border-radius: 50%;
           box-shadow: 0 0px 10px 0.1px rgba(0, 0, 0, 0.1);
+
           > :nth-child(1) {
             background-size: cover;
             background-repeat: no-repeat;
             height: 100%;
             width: 100%;
             transition: 0.3s;
+
             &:hover {
               transform: scale(1.1);
               transition: 0.3s;
@@ -386,29 +363,21 @@ main {
           }
         }
       }
+
       > :nth-child(2) {
         margin: 0 auto;
         width: 92.5%;
+
         > :nth-child(1) {
           display: flex;
           flex-flow: column wrap;
-          h4 {
-            all: unset;
-            font-weight: 600;
-            font-family: "Heebo", serif;
-            font-size: 18px;
-            color: #d2272b;
-          }
-        }
-        p {
-          font-weight: 400;
-          font-family: "Heebo", serif;
-          font-size: 19px;
         }
       }
     }
+
     > :nth-child(1) {
       transition: 0.5s;
+
       > :nth-child(1) {
         > :nth-child(1) {
           > :nth-child(1) {
@@ -419,8 +388,10 @@ main {
         }
       }
     }
+
     > :nth-child(2) {
       transition: 0.8s;
+
       > :nth-child(1) {
         > :nth-child(1) {
           > :nth-child(1) {
@@ -431,8 +402,10 @@ main {
         }
       }
     }
+
     > :nth-child(3) {
       transition: 1.2s;
+
       > :nth-child(1) {
         > :nth-child(1) {
           > :nth-child(1) {
@@ -443,8 +416,10 @@ main {
         }
       }
     }
+
     > :nth-child(4) {
       transition: 1.6s;
+
       > :nth-child(1) {
         > :nth-child(1) {
           > :nth-child(1) {
@@ -455,8 +430,10 @@ main {
         }
       }
     }
+
     > :nth-child(5) {
       transition: 2s;
+
       > :nth-child(1) {
         > :nth-child(1) {
           > :nth-child(1) {
@@ -467,11 +444,13 @@ main {
         }
       }
     }
+
     .animationN1 {
       transform: translateY(0%);
       opacity: 1;
     }
   }
+
   > :nth-child(4) {
     text-align: center;
     display: flex;
@@ -479,43 +458,27 @@ main {
     align-items: center;
     gap: 2rem;
     background: red;
-    >:nth-child(1){
-      h2{
-        all: unset;
-        color: #0aa14b;
-        font-family: "Rubik", sans-serif;
-        font-weight: 600;
-        font-size: 55px;
-      }
-    }
-    >:nth-child(2){
+
+    >:nth-child(2) {
       display: flex;
       flex-flow: row wrap;
       gap: 1rem;
       width: 100%;
-      >div{
+
+      >div {
         background-color: #00ffff;
         flex: 1;
-        >div{
-          img{
+
+        >div {
+          img {
             width: 100%;
             max-width: 200px;
           }
         }
-        h3{
-          color: peru;
-          font-family: "Heebo", serif;
-          font-size: 25px;
-          font-weight: 600;
-          color: #d2272b;
-        }
       }
     }
-    >:nth-child(3){
-
-    }
-    
   }
+
   > :nth-child(5) {
     display: flex;
     padding: 1rem;
@@ -526,23 +489,23 @@ main {
 @media (max-width: 1050px) {
   main {
     gap: 2.5rem;
+
     > :nth-child(1) {
-      >:nth-child(2){
-        img{
+      >:nth-child(2) {
+        img {
           max-width: 200px;
         }
       }
-      h2 {
-        font-size: 45px;
-      }
     }
+
     > :nth-child(3) {
       display: flex;
       flex-flow: column wrap;
       flex: 1;
       gap: 1rem;
       padding: 0rem;
-      > div {
+
+      >div {
         gap: 0.75rem;
         display: flex;
         flex-flow: row wrap;
@@ -555,28 +518,18 @@ main {
         width: 90%;
         max-width: 350px;
         margin: 0 auto;
+
         > :nth-child(1) {
           padding: 0.75rem 0rem;
+
           > :nth-child(1) {
             max-width: 315px;
             height: 315px;
           }
         }
-        > :nth-child(2) {
-          > :nth-child(1) {
-            h4 {
-              font-size: 19px;
-            }
-          }
-          p {
-            font-size: 18px;
-          }
-        }
       }
     }
-    > :nth-child(4) {
-     
-    }
+
     > :nth-child(5) {
       padding: 0.75rem;
     }
@@ -586,19 +539,19 @@ main {
 @media (max-width: 575px) {
   main {
     gap: 1.75rem;
+
     > :nth-child(1) {
-      >:nth-child(2){
-        img{
+      >:nth-child(2) {
+        img {
           max-width: 150px;
         }
       }
-      h2 {
-        font-size: 22.5px;
-      }
     }
+
     > :nth-child(3) {
       gap: 0.75rem;
-      > div {
+
+      >div {
         gap: 0.65rem;
         padding: 0.75rem 0rem;
         opacity: 0;
@@ -606,27 +559,18 @@ main {
         width: 90%;
         max-width: 350px;
         margin: 0 auto;
+
         > :nth-child(1) {
           padding: 0.65rem 0rem;
+
           > :nth-child(1) {
             max-width: 275px;
             height: 275px;
           }
         }
-        > :nth-child(2) {
-          > :nth-child(1) {
-            h4 {
-              font-size: 16px;
-            }
-          }
-          p {
-            font-size: 15px;
-          }
-        }
       }
     }
-    > :nth-child(4) {
-    }
+
     > :nth-child(5) {
       padding: 0.5rem;
     }
@@ -636,9 +580,10 @@ main {
 @media (max-width: 475px) {
   main {
     gap: 1.75rem;
+
     > :nth-child(1) {
-      >:nth-child(2){
-        img{
+      >:nth-child(2) {
+        img {
           max-width: 125px;
         }
       }
@@ -649,6 +594,7 @@ main {
 .beforeSection {
   width: 100%;
   padding: 2.5rem 0rem 2.75rem 0rem;
+
   section {
     display: flex;
     flex-flow: column wrap;
@@ -657,14 +603,7 @@ main {
     width: 90%;
     max-width: 1450px;
     margin: 0 auto;
-    > :nth-child(1) {
-      h2 {
-        all: unset;
-        font-weight: 500;
-        font-family: "M PLUS Rounded 1c", sans-serif;
-        font-size: 75px;
-      }
-    }
+
     > :nth-child(2) {
       width: 12.5%;
       height: 5px;
@@ -672,10 +611,12 @@ main {
       background-color: #e9e9e9;
       border-radius: 20px;
     }
+
     > :nth-child(3) {
       display: flex;
       flex-flow: column wrap;
       gap: 1rem;
+
       div {
         display: flex;
         flex-flow: row nowrap;
@@ -683,6 +624,7 @@ main {
         width: 100%;
         border-radius: 4px;
         transition: 0.65s;
+
         div {
           width: 100%;
           height: 300px;
@@ -690,14 +632,17 @@ main {
           border-radius: 4px;
           overflow: hidden;
           transition: 1s;
+
           > :nth-child(1) {
             height: 100%;
             width: 100%;
             border-radius: 4px;
             transition: 0.3s;
+
             img {
               width: 100%;
             }
+
             &:hover {
               transform: scale(1.025);
               transition: 0.3s;
@@ -705,42 +650,51 @@ main {
           }
         }
       }
+
       > :nth-child(1) {
         > :nth-child(2) {
           width: 90%;
         }
       }
+
       .animationN2 {
         > :nth-child(2) {
           width: 50%;
         }
       }
+
       > :nth-child(2) {
         > :nth-child(1) {
           width: 100%;
         }
       }
+
       .animationN3 {
         > :nth-child(1) {
           width: 65%;
         }
       }
+
       > :nth-child(3) {
         > :nth-child(1) {
           width: 35%;
         }
+
         > :nth-child(2) {
           width: 100%;
         }
       }
+
       .animationN4 {
         > :nth-child(1) {
           width: 55%;
         }
+
         > :nth-child(2) {
           width: 65%;
         }
       }
+
       .animationN2 .animationN3 .animationN4 {
         transition: 0.65s;
       }
@@ -751,24 +705,23 @@ main {
 @media (max-width: 900px) {
   .beforeSection {
     padding: 1.5rem 0rem 0.75rem 0rem;
+
     section {
       gap: 1.5rem;
       width: 90%;
-      > :nth-child(1) {
-        h2 {
-          font-size: 45px;
-        }
-      }
+
       > :nth-child(3) {
         display: flex;
         flex-flow: column wrap;
         gap: 0.75rem;
+
         div {
           display: flex;
           flex-flow: column wrap;
           gap: 0.75rem;
           width: 100%;
           transition: 0.65s;
+
           div {
             width: 100%;
             height: 300px;
@@ -776,53 +729,64 @@ main {
             border-radius: 4px;
             overflow: hidden;
             transition: 1s;
+
             > :nth-child(1) {
               height: 100%;
               width: 100%;
               border-radius: 4px;
               transition: 0.3s;
+
               img {
                 width: 100%;
               }
             }
           }
         }
+
         > :nth-child(1) {
           > :nth-child(2) {
             width: 100%;
           }
         }
+
         .animationN2 {
           > :nth-child(2) {
             width: 100%;
           }
         }
+
         > :nth-child(2) {
           > :nth-child(1) {
             width: 100%;
           }
         }
+
         .animationN3 {
           > :nth-child(1) {
             width: 100%;
           }
         }
+
         > :nth-child(3) {
           > :nth-child(1) {
             width: 100%;
           }
+
           > :nth-child(2) {
             width: 100%;
           }
         }
+
         .animationN4 {
           > :nth-child(1) {
             width: 100%;
           }
+
           > :nth-child(2) {
             width: 100%;
           }
         }
+
         .animationN2 .animationN3 .animationN4 {
           transition: 0.65s;
         }
@@ -834,18 +798,17 @@ main {
 @media (max-width: 575px) {
   .beforeSection {
     padding: 1rem 0rem 0.65rem 0rem;
+
     section {
       gap: 1rem;
       width: 90%;
-      > :nth-child(1) {
-        h2 {
-          font-size: 22.5px;
-        }
-      }
+
       > :nth-child(3) {
         gap: 0.65rem;
+
         div {
           gap: 0.65rem;
+
           div {
             height: 300px;
           }
@@ -865,17 +828,13 @@ aside {
   opacity: 0;
   transform: translateY(-5%);
   transition: 2s;
-  h2 {
-    all: unset;
-    font-weight: 500;
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: 70px;
-  }
+
   > :nth-child(2) {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     gap: 1.5rem;
+
     > :nth-child(1) {
       flex: 1;
       width: 100%;
@@ -883,21 +842,34 @@ aside {
       place-content: center;
       align-items: center;
       scale: 0.75;
+
       img {
         width: 100%;
         max-width: 550px;
         filter: drop-shadow(0px 0px 10px #75b507);
       }
     }
+
     > :nth-child(2) {
       flex: 1;
-      p {
-        font-family: "Poppins", sans-serif;
-        font-size: 32px;
-      }
     }
   }
-  > :nth-child(3) {
+
+  >:nth-child(3) {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    place-content: center;
+
+    img {
+      width: 100%;
+      max-width: 550px;
+      filter: drop-shadow(0px 0px 10px #75b507);
+
+    }
+  }
+
+  > :nth-child(4) {
     display: flex;
     padding: 1rem;
     margin: 0 auto;
@@ -908,13 +880,15 @@ aside {
   aside {
     gap: 1.5rem;
     transform: translateY(-2.5%);
+
     h2 {
-      font-size: 40px;
       text-align: center;
     }
+
     > :nth-child(2) {
       flex-flow: column wrap;
       gap: 1rem;
+
       > :nth-child(1) {
         flex: 1;
         width: 100%;
@@ -922,17 +896,14 @@ aside {
         place-content: center;
         align-items: center;
         scale: 0.75;
+
         img {
           width: 100%;
           max-width: 350px;
         }
       }
-      > :nth-child(2) {
-        p {
-          font-size: 20px;
-        }
-      }
     }
+
     > :nth-child(3) {
       padding: 0.75rem;
     }
@@ -943,25 +914,21 @@ aside {
   aside {
     gap: 1.15rem;
     transform: translateY(-2%);
-    h2 {
-      font-size: 22.5px;
-    }
+
     > :nth-child(2) {
       flex-flow: column wrap;
       gap: 0.85rem;
+
       > :nth-child(1) {
         scale: 0.75;
+
         img {
           width: 100%;
           max-width: 350px;
         }
       }
-      > :nth-child(2) {
-        p {
-          font-size: 15px;
-        }
-      }
     }
+
     > :nth-child(3) {
       padding: 0.55rem;
     }
@@ -972,6 +939,7 @@ aside {
   transition: 2s;
   opacity: 1;
   transform: translateY(0%);
+
   > :nth-child(2) {
     > :nth-child(1) {
       transition: 2.25s;
@@ -985,17 +953,12 @@ footer {
   max-width: 1450px;
   margin: 0 auto;
   padding: 1.5rem 0rem;
+
   > :nth-child(1) {
     text-align: center;
     padding: 2rem 0rem;
-    h2 {
-      all: unset;
-      font-weight: 500;
-      font-family: "M PLUS Rounded 1c", sans-serif;
-      font-size: 75px;
-      text-align: center;
-    }
   }
+
   > :nth-child(2) {
     width: 12.5%;
     height: 5px;
@@ -1004,6 +967,7 @@ footer {
     background-color: #e9e9e9;
     border-radius: 20px;
   }
+
   .swiper-container {
     .swiper-wrapper {
       .swiper-slide {
@@ -1013,7 +977,8 @@ footer {
         display: flex;
         flex-flow: row wrap;
         gap: 1rem;
-        > div {
+
+        >div {
           display: flex;
           flex-flow: column wrap;
           align-items: flex-start;
@@ -1023,15 +988,13 @@ footer {
           border-radius: 12px;
           text-align: center;
           flex: 0.75;
+
           > :nth-child(1) {
             text-align: center;
             width: 90%;
             margin: 0 auto;
-            h4 {
-              font-size: 25px;
-              font-family: "Poppins", sans-serif;
-            }
           }
+
           > :nth-child(2) {
             width: 90%;
             margin: 0 auto;
@@ -1039,12 +1002,14 @@ footer {
             align-items: center;
             place-content: center;
             padding: 1rem 0rem;
+
             > :nth-child(1) {
               width: 95%;
               height: 200px;
               overflow: hidden;
               border-radius: 16px;
               box-shadow: 0 0px 10px 0.1px rgba(0, 0, 0, 0.35);
+
               > :nth-child(1) {
                 background: url("../IMG/Mountains.jpg");
                 background-size: cover;
@@ -1052,6 +1017,7 @@ footer {
                 height: 100%;
                 width: 100%;
                 transition: 0.3s;
+
                 &:hover {
                   transform: scale(1.1);
                   transition: 0.3s;
@@ -1059,15 +1025,10 @@ footer {
               }
             }
           }
+
           > :nth-child(3) {
             margin: 0 auto;
             width: 90%;
-            h4 {
-              all: unset;
-              font-weight: 600;
-              font-family: "Poppins", sans-serif;
-              font-size: 18px;
-            }
           }
         }
       }
@@ -1078,12 +1039,11 @@ footer {
 @media (max-width: 900px) {
   footer {
     padding: 1.15rem 0rem;
+
     > :nth-child(1) {
       padding: 1.15rem 0rem;
-      h2 {
-        font-size: 45px;
-      }
     }
+
     .swiper-container {
       .swiper-wrapper {
         .swiper-slide {
@@ -1091,21 +1051,13 @@ footer {
           display: flex;
           flex-flow: row wrap;
           gap: 1rem;
-          > div {
+
+          >div {
             padding: 0.9rem 0rem;
             flex: 0.95;
-            > :nth-child(1) {
-              h4 {
-                font-size: 20px;
-              }
-            }
+
             > :nth-child(2) {
               padding: 0.9rem 0rem;
-            }
-            > :nth-child(3) {
-              h4 {
-                font-size: 16px;
-              }
             }
           }
         }
@@ -1117,12 +1069,11 @@ footer {
 @media (max-width: 575px) {
   footer {
     padding: 1.15rem 0rem;
+
     > :nth-child(1) {
       padding: 1.15rem 0rem;
-      h2 {
-        font-size: 22.5px;
-      }
     }
+
     .swiper-container {
       .swiper-wrapper {
         .swiper-slide {
@@ -1130,21 +1081,13 @@ footer {
           display: flex;
           flex-flow: row wrap;
           gap: 1rem;
-          > div {
+
+          >div {
             padding: 0.9rem 0rem;
             flex: 0.95;
-            > :nth-child(1) {
-              h4 {
-                font-size: 18px;
-              }
-            }
+
             > :nth-child(2) {
               padding: 0.9rem 0rem;
-            }
-            > :nth-child(3) {
-              h4 {
-                font-size: 15px;
-              }
             }
           }
         }
@@ -1153,78 +1096,90 @@ footer {
   }
 }
 
-article {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  place-self: center;
-  place-content: center;
-  gap: 2rem;
+.videoSection {
   width: 90%;
   max-width: 1450px;
-  div {
-    a {
-      width: 100%;
-      img {
-        width: 100%;
-        max-width: 35px;
-        transition: 0.3s;
-        &:hover {
-          scale: 1.05;
-          transition: 0.3s;
-        }
-      }
-    }
-  }
-}
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 1.5rem 0rem;
 
-@media (max-width: 900px) {
-  article {
-    gap: 1.5rem;
-    div {
-      a {
-        img {
-          max-width: 30px;
-        }
-      }
+  >:nth-child(2) {
+    width: 100%;
+    overflow: hidden;
+
+    iframe {
+      width: 100%;
     }
   }
 }
 
 .footerFinal {
-  background-color: black;
-  width: 100%;
-  color: white;
-  padding: 1rem 0rem;
-  div {
+  text-align: center;
+
+  .logoFooter {
     width: 90%;
-    max-width: 1450px;
     margin: 0 auto;
-    p {
-      font-size: 22px;
+    background-color: red;
+    display: flex;
+    place-content: center;
+
+    img {
+      width: 100%;
+      max-width: 475px;
     }
   }
-}
 
-@media (max-width: 900px) {
-  .footerFinal {
-    padding: 0.85rem 0rem;
+  .socialMedias {
+    background-color: red;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center;
+    align-items: center;
+    gap: 1rem;
+
     div {
-      p {
-        font-size: 18px;
+      img {
+        width: 100%;
+        max-width: 55px;
+        transition: .35s;
+        cursor: pointer;
+
+        &:hover {
+          scale: 1.09;
+          transition: .35s;
+        }
       }
     }
   }
 }
 
-@media (max-width: 575px) {
-  .footerFinal {
-    padding: 0.75rem 0rem;
-    div {
-      p {
-        font-size: 16px;
-      }
-    }
+@media (max-width: 900px) {}
+
+@media (max-width: 575px) {}
+
+.whatsappFixed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: red;
+  z-index: 90;
+  display: flex;
+  flex-flow: row wrap;
+  place-content: center;
+  align-items: center;
+
+  >:nth-child(1) {
+    margin: 0 auto;
+    width: 95%;
+    height: 90%;
+    background: orange;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
   }
 }
 
@@ -1232,6 +1187,7 @@ article {
   0% {
     transform: scale(1.15);
   }
+
   100% {
     transform: scale(1);
   }
@@ -1242,6 +1198,7 @@ article {
     transform: scale(0.75);
     opacity: 0;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -1256,6 +1213,7 @@ article {
     background-color: #e9e9e9;
     border-radius: 20px;
   }
+
   100% {
     width: 12.5%;
     height: 5px;
