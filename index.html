@@ -61,12 +61,42 @@
 
 <body dir="rtl">
 
+	<div id="exitModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>!לפני שאתה עוזב</h2>
+			<p>רוצה להישאר בקשר? השאר את פרטי ההתקשרות שלך למטה:</p>
+			<form id="form2">
+				<h3 class="h3ClassGreen">השאירו פרטים ליומולדת חלומית</h3>
+				<div>
+					<div>
+						<input dir="rtl" type="text" name="name_id2" id="name_id2" placeholder="הכנס את שמך" required>
+					</div>
+					<div>
+						<input dir="rtl" type="text" name="city_id2" id="city_id2" placeholder="הכנס את העיר שלך"
+							required>
+					</div>
+					<div>
+						<input dir="rtl" type="tel" name="phone_id2" id="phone_id2"
+							placeholder="הכנס את מספר הטלפון שלך" required>
+					</div>
+				</div>
+				<div>
+					<div class="submitInp">
+						<input type="submit" id="button2" value="שלח">
+					</div>
+				</div>
+			</form>
+          
+        </div>
+    </div>
+
 	<div class="thank-you-container" id="thankContainer">
-        <div>
+        <div dir="ltr">
 			<button class="close-button" id="closeWindow">×</button>
 			<div class="checkmark"></div>
-			<h2>Thank You!</h2>
-			<p>Your submission has been received. We appreciate your time and will get back to you shortly.</p>
+			<h2>!תודה רבה</h2>
+			<p>פנייתך התקבלה. אנו מעריכים את זמנך וניצור איתך קשר בהקדם.</p>
 		</div>
     </div>
 
@@ -86,7 +116,7 @@
 	<main>
 
 		<div>
-			<h2>ההפעלות של</h2>
+			<h2 class="h2Class">ההפעלות של</h2>
 			<div>
 				<img src="IMG/logo.png" alt="ההפעלות של">
 			</div>
@@ -102,10 +132,9 @@
 				</div>
 				<div>
 					<div>
-						<h5>יום הולדת פרצופים </h5>
-						<h5>גילאי 4-7</h5>
+						<h5 class="h5RedClass">יום הולדת פרצופים  <br>גילאי 4-7</h5>
 					</div>
-					<p>מסע קומי מטורף<br>
+					<p class="pDarkGreen">מסע קומי מטורף<br>
 						שהופך כל הבעה<br>
 						לרגע של צחוק<br>
 						היסטרי, שבו החוגג<br>
@@ -121,11 +150,10 @@
 				</div>
 				<div>
 					<div>
-						<h5>יום הולדת קפיצים<br>
-							מסע בזמן <br></h5>
-						<h5>גילאי 4-7</h5>
+						<h5 class="h5RedClass">יום הולדת קפיצים<br>
+							מסע בזמן <br>גילאי 4-7</h5>
 					</div>
-					<p>מסע בציר הזמן של<br>
+					<p class="pDarkGreen">מסע בציר הזמן של<br>
 						החוגג עם ג'אמפי,<br>
 						שבו כל תחפושת<br>
 						ותמונה הופכים<br>
@@ -143,11 +171,10 @@
 				</div>
 				<div>
 					<div>
-						<h5>יום הולדת מתנות<br>
-							יום הולדת הפוך </h5>
-						<h5>גילאי 4-7</h5>
+						<h5 class="h5RedClass">יום הולדת מתנות<br>
+							יום הולדת הפוך   <br> גילאי 4-7</h5>
 					</div>
-					<p>הפעלה שהופכת את<br>
+					<p class="pDarkGreen">הפעלה שהופכת את<br>
 						סדר החגיגה, כשכל<br>
 						מתנה היא הפתעה<br>
 						והחוגג הופך לכוכב<br>
@@ -163,10 +190,9 @@
 				</div>
 				<div>
 					<div>
-						<h5>יום הולדת צינורות </h5>
-						<h5>גילאי 5-8</h5>
+						<h5 class="h5RedClass">יום הולדת צינורות <br> גילאי 5-8</h5>
 					</div>
-					<p>משימת חילוץ האוצר<br>
+					<p class="pDarkGreen">משימת חילוץ האוצר<br>
 						שבה כל צינור ומשימה<br>
 						הופכים למסע מרגש <br>
 						של גילוי ופתרון חידות!</p>
@@ -181,10 +207,9 @@
 				</div>
 				<div>
 					<div>
-						<h5>יום הולדת פולמון</h5>
-						<h5>גילאי 5-8</h5>
+						<h5 class="h5RedClass">יום הולדת פולמון <br>גילאי 5-8</h5>
 					</div>
-					<p>מסיבה זוהרת וצבעונית<br>
+					<p class="pDarkGreen">מסיבה זוהרת וצבעונית<br>
 						עם משחקי אתגר<br>
 						ותחרויות</p>
 				</div>
@@ -193,14 +218,14 @@
 
 		<div>
 			<div>
-				<h3>חבילת VIP כוללת להפקת יום הולדת מושלמת</h3>
+				<h3 class="h3ClassGreen">חבילת VIP כוללת להפקת יום הולדת מושלמת</h3>
 			</div>
 			<div dir="ltr">
 				<div>
 					<div>
 						<img src="IMG/balloonDog.png" alt="Balloon Dog">
 					</div>
-					<h3>עמדת איפור<br>
+					<h3 class="h5RedClass">עמדת איפור<br>
 						וקעקועים <br>
 						מקצועית </h3>
 				</div>
@@ -208,21 +233,21 @@
 					<div>
 						<img src="IMG/Bubles.webp" alt="Bubbles">
 					</div>
-					<h3>בובת ענק <br>
+					<h3 class="h5RedClass">בובת ענק <br>
 						שאתם בוחרים</h3>
 				</div>
 				<div>
 					<div>
 						<img src="IMG/doll.webp" alt="Doll">
 					</div>
-					<h3>מסיבת בועות<br>
+					<h3 class="h5RedClass">מסיבת בועות<br>
 						סבון מקפיצה</h3>
 				</div>
 				<div>
 					<div>
 						<img src="IMG/paint.webp" alt="Paint">
 					</div>
-					<h3>בלוני צורות<br>
+					<h3 class="h5RedClass">בלוני צורות<br>
 						מיוחדים לכל<br>
 						משתתף</h3>
 				</div>
@@ -334,7 +359,7 @@
 		<div>
 
 			<form id="form">
-				<h4>השאירו פרטים ליומולדת חלומית</h4>
+				<h3 class="h3ClassGreen">השאירו פרטים ליומולדת חלומית</h3>
 				<div>
 					<div>
 						<input dir="rtl" type="text" name="name_id" id="name_id" placeholder="הכנס את שמך" required>
@@ -359,48 +384,48 @@
 
 	<section>
 		<div>
-			<h2 dir="rtl">תמונות מההפעלות שלי</h2>
+			<h2 class="h2Class" dir="rtl">תמונות מההפעלות שלי</h2>
 		</div>
 		<div></div>
 		<div dir="ltr">
 			<div >
 				<div>
 					<div>
-						<img src="IMG/Mountains.jpg" alt="">
+						<img style="object-fit: cover;" src="IMG/10.jpg" alt="">
 					</div>
 				</div>
 				<div>
 					<div>
-						<img src="IMG/Mountains.jpg" alt="">
-					</div>
-				</div>
-			</div>
-			<div >
-				<div>
-					<div>
-						<img src="IMG/Mountains.jpg" alt="">
-					</div>
-				</div>
-				<div>
-					<div>
-						<img src="IMG/Mountains.jpg" alt="">
+						<img style="object-fit: cover;" src="IMG/8.jpg" alt="">
 					</div>
 				</div>
 			</div>
 			<div >
 				<div>
 					<div>
-						<img src="IMG/Mountains.jpg" alt="">
+						<img style="object-fit: cover;" src="IMG/9.jpg" alt="">
 					</div>
 				</div>
 				<div>
 					<div>
-						<img src="IMG/Mountains.jpg" alt="">
+						<img style="object-fit: cover;" src="IMG/7.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div >
+				<div>
+					<div>
+						<img style="object-fit: cover;" src="IMG/11.jpg" alt="">
 					</div>
 				</div>
 				<div>
 					<div>
-						<img src="IMG/Mountains.jpg" alt="">
+						<img style="object-fit: cover;" src="IMG/12.jpg" alt="">
+					</div>
+				</div>
+				<div>
+					<div>
+						<img style="object-fit: cover;" src="IMG/14.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -408,51 +433,27 @@
 	</section>
 
 	<aside>
-		<h2>נעים מאוד, אני מיקמיק</h2>
+		<h2 class="h2Class">נעים מאוד, אני מיקמיק</h2>
 		<div>
 			<div>
 				<img src="IMG/13.png" alt="Image #13">
 			</div>
 			<div>
-				<p>בוגרת תואר ראשון בבימוי והוראת תיאטרון עם תשוקה לעולם הילדים, ועם ניסיון כליצנית רפואית גיליתי את
+				<p class="miniRedText">בוגרת תואר ראשון בבימוי והוראת תיאטרון עם תשוקה לעולם הילדים, ועם ניסיון כליצנית רפואית גיליתי את
 					עולם ההפעלות וצמחתי לדרך משלי - יצירת חוויות מיוחדות לילדים. </p>
-				<p>עם 8 שנות ניסיון, הפכתי את ההפעלות למשהו יותר מסתם בידור - לסיפור, למסע, להרפתקה. כל יום הולדת הוא
+				<p class="miniRedText">עם 8 שנות ניסיון, הפכתי את ההפעלות למשהו יותר מסתם בידור - לסיפור, למסע, להרפתקה. כל יום הולדת הוא
 					במה קטנה, וכל ילד - גיבור ראשי.</p>
-				<p>מהשרון ועד באר שבע, אני מביאה קסם, צחוק ודמיון - לא סתם מפעילה, אלא יוצרת עולמות של שמחה.</p>
+				<p class="miniRedText">מהשרון ועד באר שבע, אני מביאה קסם, צחוק ודמיון - לא סתם מפעילה, אלא יוצרת עולמות של שמחה.</p>
 			</div>
 		</div>
 		<div>
-			<img src="IMG/FAVICON/L	ogo.png" alt="MikMik">
-		</div>
-		<div>
-
-			<form id="form2">
-				<h4>השאירו פרטים ליומולדת חלומית</h4>
-				<div>
-					<div>
-						<input dir="rtl" type="text" name="name_id2" id="name_id2" placeholder="הכנס את שמך" required>
-					</div>
-					<div>
-						<input dir="rtl" type="text" name="city_id2" id="city_id2" placeholder="הכנס את העיר שלך"
-							required>
-					</div>
-					<div>
-						<input dir="rtl" type="tel" name="phone_id2" id="phone_id2"
-							placeholder="הכנס את מספר הטלפון שלך" required>
-					</div>
-				</div>
-				<div class="submitInp">
-					<input type="submit" id="button2" value="שלח">
-				</div>
-			</form>
-
-
+			<img src="IMG/FAVICON/Logo.png" alt="MikMik">
 		</div>
 	</aside>
 
 	<footer>
 		<div>
-			<h2>לקוחות ממליצים</h2>
+			<h2 class="h2Class">לקוחות ממליצים</h2>
 		</div>
 		<div></div>
 		<div class="swiper-container">
@@ -464,12 +465,9 @@
 							<h4>המלצה</h4>
 						</div>
 						<div>
-							<div>
-								<div></div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/A.jpg" alt="">
 							</div>
-						</div>
-						<div>
-							<h4>שם הממליץ</h4>
 						</div>
 					</div>
 				</div>
@@ -480,12 +478,9 @@
 							<h4>המלצה</h4>
 						</div>
 						<div>
-							<div>
-								<div></div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/B.jpg" alt="">
 							</div>
-						</div>
-						<div>
-							<h4>שם הממליץ</h4>
 						</div>
 					</div>
 				</div>
@@ -496,16 +491,207 @@
 							<h4>המלצה</h4>
 						</div>
 						<div>
-							<div>
-								<div></div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/C.jpg" alt="">
 							</div>
-						</div>
-						<div>
-							<h4>שם הממליץ</h4>
 						</div>
 					</div>
 				</div>
 
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/D.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/E.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/F.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/G.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/H.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/I.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/J.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/K.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/L.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/M.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1040988556?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="O"></iframe></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1040988959?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Q"></iframe></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1040988799?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="P"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/R.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div>
+						<div>
+							<h4>המלצה</h4>
+						</div>
+						<div>
+							<div style="object-fit: cover;">
+								<img style="object-fit: cover;" src="IMG/recommendations/S.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="swiper-button-prev"></div>
@@ -515,27 +701,20 @@
 	</footer>
 
 	<div class="videoSection">
-		<h2>הצצה להפקת יום הולדת מושלמת</h2>
+		<h2 class="h2Class">הצצה להפקת יום הולדת מושלמת</h2>
 
-		<div style="padding:75% 0 0 0;position:relative;">
-			<iframe
-				src="https://player.vimeo.com/video/1040467015?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-				frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-				style="position:absolute;top:0;left:0;width:100%;height:100%;">
-			</iframe>
-		</div>
+		<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1040467015?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MikMik"></iframe></div>
 	</div>
 
 	<div class="footerFinal">
-		<h3></h3>
-		<p>רוצים להעניק לילד שלכם יום הולדת בלתי נשכח? </p>
-		<p>אל תתנו לתאריכים לברוח – שריינו מקום עכשיו וקבלו הטבה מיוחדת! <br>
+		<h3 class="mediumGreenText">רוצים להעניק לילד שלכם יום הולדת בלתי נשכח? </h3>
+		<p class="miniRedText">אל תתנו לתאריכים לברוח – שריינו מקום עכשיו וקבלו הטבה מיוחדת! <br>
 			השאירו פרטים ונחזור אליכם עם כל המידע:
 		</p>
 		<a>
 			<button>לסגירת התאריך המושלם >></button>
 		</a>
-		<p>אשמח לקחת אתכם למסע של צחוק, <br>
+		<p class="miniRedText">אשמח לקחת אתכם למסע של צחוק, <br>
 			כיף וחוויות שילדים לא מפסיקים לדבר עליהן	<br>
 			מיקמיק וצוות ההפעלות</p>
 		<div class="logoFooter">
@@ -573,7 +752,6 @@
 	<script src="https://player.vimeo.com/api/player.js"></script>
 
 	<script src="JS/script.js"></script>
-	<script src="JS/emailJS.js"></script>
 	<script src="JS/zoom.js"></script>
 </body>
 

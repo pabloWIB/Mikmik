@@ -6,14 +6,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 20;
+  z-index: 30;
   background: white;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: flex;
   place-content: center;
   align-items: center;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 .thank-you-container > :nth-child(1) {
   display: flex;
@@ -67,8 +69,9 @@
   transform: rotate(45deg) translate(-5px, -5px);
 }
 
-.Cerrar {
-  display: none;
+.thank-you-container-show {
+  opacity: 1;
+  pointer-events: all;
 }
 
 html {
@@ -103,15 +106,13 @@ form {
   flex-flow: column wrap;
   text-align: center;
   gap: 1.125rem;
-}
-form h4 {
-  all: unset;
-  text-align: center;
+  font-weight: 600;
 }
 form > :nth-child(2) {
   display: flex;
   flex-flow: row nowrap;
   gap: 1.75rem;
+  justify-content: space-between;
 }
 form .submitInp {
   margin: 0 auto;
@@ -125,10 +126,14 @@ form .submitInp input[type=submit] {
   background: #d2272b;
   color: #fedb05;
 }
+form .submitInp input[type=submit]:hover {
+  background-color: #b81e20;
+}
 form input[type=text],
 form input[type=tel] {
   width: 100%;
   padding: 12px;
+  border: 2px solid black;
   border-radius: 4px;
   box-sizing: border-box;
   outline: none;
@@ -136,6 +141,7 @@ form input[type=tel] {
   color: black;
   cursor: pointer;
 }
+
 @media screen and (max-width: 900px) {
   form {
     padding: 25px;
@@ -181,9 +187,29 @@ form input[type=tel] {
     padding: 8px;
   }
 }
+form {
+  font-size: 22.5px;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  form {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  form {
+    font-size: 18.5px;
+  }
+}
+@media (max-width: 575px) {
+  form {
+    font-size: 16.5px;
+  }
+}
 header {
   width: 100%;
-  height: 75vh;
+  height: 100vh;
   display: flex;
   place-content: center;
   align-items: center;
@@ -197,7 +223,7 @@ header > :nth-child(1) {
   z-index: 9;
   height: 100%;
   width: 100%;
-  background: url("../IMG/1PC.jpg") center fixed no-repeat;
+  background: url("../IMG/1PC.jpg") fixed no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
@@ -211,7 +237,7 @@ header > :nth-child(1)::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.27);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 10;
 }
 header > :nth-child(2) {
@@ -325,9 +351,6 @@ header > :nth-child(2) a button:hover {
   }
 }
 @media (max-width: 575px) {
-  header {
-    height: 75vh;
-  }
   header > :nth-child(2) h1 {
     font-size: 22.5px;
   }
@@ -781,7 +804,7 @@ section > :nth-child(3) div {
 }
 section > :nth-child(3) div div {
   width: 100%;
-  height: 300px;
+  max-height: 350px;
   box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   overflow: hidden;
@@ -986,7 +1009,7 @@ footer {
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
-  padding: 1.5rem 0rem;
+  padding: 0rem;
 }
 footer > :nth-child(1) {
   text-align: center;
@@ -1034,13 +1057,15 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
 }
 footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) > :nth-child(1) {
   width: 95%;
-  height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  place-content: center;
+  align-items: center;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 0px 10px 0.1px rgba(0, 0, 0, 0.35);
 }
 footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) > :nth-child(1) > :nth-child(1) {
-  background: url("../IMG/Mountains.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -1057,9 +1082,6 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
 }
 
 @media (max-width: 900px) {
-  footer {
-    padding: 1.15rem 0rem;
-  }
   footer > :nth-child(1) {
     padding: 1.15rem 0rem;
   }
@@ -1078,9 +1100,6 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
   }
 }
 @media (max-width: 575px) {
-  footer {
-    padding: 1.15rem 0rem;
-  }
   footer > :nth-child(1) {
     padding: 1.15rem 0rem;
   }
@@ -1105,7 +1124,6 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
   flex-flow: column wrap;
   gap: 0.5rem;
   margin: 0 auto;
-  padding: 1.5rem 0rem;
 }
 .videoSection h2 {
   text-align: center;
@@ -1136,6 +1154,7 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
   color: #0aa14b;
   border-radius: 12px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
 }
 .footerFinal .logoFooter {
   width: 90%;
@@ -1222,7 +1241,7 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
   position: fixed;
   bottom: 3%;
   right: 1.5%;
-  z-index: 0;
+  z-index: 100;
   display: flex;
   flex-flow: row wrap;
   place-content: center;
@@ -1231,14 +1250,18 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
 .whatsappFixed a {
   display: flex;
   place-content: center;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 0.25rem;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.15);
+  transition: 0.75s;
+}
+.whatsappFixed a:hover {
+  scale: 1.1;
+  transition: 0.75s;
 }
 .whatsappFixed a img {
   width: 100%;
-  transition: 0.75s;
-}
-.whatsappFixed a img:hover {
-  scale: 1.1;
-  transition: 0.75s;
 }
 
 @keyframes headerAnimation {
@@ -1274,4 +1297,32 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
     background-color: #e9e9e9;
     border-radius: 20px;
   }
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 800px;
+}
+.modal .modal-content .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

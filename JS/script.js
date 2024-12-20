@@ -44,8 +44,86 @@ $(document).ready(function () {
 });
 
 const closeWindow = document.getElementById('closeWindow');
-const thankContainer = document.getElementById('thankContainer'); // Ensure this is correctly defined
+const thankContainer = document.getElementById('thankContainer');
+let formSubmitted = false; // Variable para rastrear si un formulario fue enviado
 
-closeWindow.addEventListener('click', function() {
-    thankContainer.classList.add('Cerrar');
+function showThankYou() {
+  thankContainer.classList.remove('Cerrar');
+  thankContainer.classList.add('thank-you-container-show');
+}
+
+function hideThankYou() {
+  thankContainer.classList.remove('thank-you-container-show');
+  thankContainer.classList.add('Cerrar');
+}
+
+closeWindow.addEventListener('click', hideThankYou);
+
+emailjs.init('xLEH9I00DLXELEvbs');
+
+const btn = document.getElementById('button');
+
+document.getElementById('form').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  btn.value = 'שולח...';
+
+  const serviceID = 'default_service';
+  const templateID = 'template_bl3gc3t';
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'שלח';
+      formSubmitted = true; // Marcar que un formulario fue enviado
+      showThankYou();
+    }, (err) => {
+      btn.value = 'שלח';
+      alert(JSON.stringify(err));
+    });
 });
+
+const btn2 = document.getElementById('button2');
+
+document.getElementById('form2').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  btn2.value = 'שולח...';
+
+  const serviceID = 'default_service';
+  const templateID = 'template_vqfykbp';
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn2.value = 'שלח';
+      formSubmitted = true; // Marcar que un formulario fue enviado
+      showThankYou();
+    }, (err) => {
+      btn2.value = 'שלח';
+      alert(JSON.stringify(err));
+    });
+});
+
+let showModal = true;
+const modal = document.getElementById('exitModal');
+const closeBtn = document.querySelector('.close');
+
+// Show modal when mouse leaves the viewport from the top
+document.addEventListener('mouseleave', (e) => {
+    // Solo mostrar el modal si no se ha enviado ningún formulario y showModal es true
+    if (e.clientY <= 0 && showModal && !formSubmitted) {
+        modal.style.display = 'block';
+        showModal = false; // Only show once per session
+    }
+});
+
+// Close modal when clicking the close button
+closeBtn.onclick = () => {
+    modal.style.display = 'none';
+};
+
+// Close modal when clicking outside
+window.onclick = (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+};
