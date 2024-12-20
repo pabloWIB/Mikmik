@@ -243,6 +243,7 @@ header > :nth-child(2) {
 }
 header > :nth-child(2) h1 {
   all: unset;
+  font-family: "Rubik", serif;
   font-size: 50px;
 }
 header > :nth-child(2) .glitch {
@@ -312,7 +313,18 @@ header > :nth-child(2) a button:hover {
 }
 @media (max-width: 900px) {
   header > :nth-child(1) {
-    background: url("../IMG/1PHONE.jpg") center fixed no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    height: 100%;
+    width: 100%;
+    background: url("../IMG/1PHONE.jpg") fixed no-repeat;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-size: cover;
+    transform-origin: center;
+    animation: headerAnimation 0.75s linear;
   }
   header > :nth-child(2) {
     gap: 1.5rem;
@@ -326,30 +338,6 @@ header > :nth-child(2) a button:hover {
   header > :nth-child(2) a button {
     padding: 0.55rem 1.75rem;
     font-size: 20px;
-  }
-}
-@media (max-width: 750px) {
-  header > :nth-child(2) h1 {
-    font-size: 30px;
-  }
-  header > :nth-child(2) h2 {
-    font-size: 20px;
-  }
-  header > :nth-child(2) a button {
-    padding: 0.55rem 1.75rem;
-    font-size: 17.5px;
-  }
-}
-@media (max-width: 575px) {
-  header > :nth-child(2) h1 {
-    font-size: 22.5px;
-  }
-  header > :nth-child(2) h2 {
-    font-size: 17.5px;
-  }
-  header > :nth-child(2) a button {
-    padding: 0.55rem 1.75rem;
-    font-size: 15.5px;
   }
 }
 main {
@@ -505,13 +493,13 @@ main > :nth-child(5) {
   display: flex;
   flex-flow: column wrap;
   gap: 1rem;
+  font-family: "Heebo", serif;
 }
 main > :nth-child(5) > :nth-child(1),
 main > :nth-child(5) > :nth-child(2),
 main > :nth-child(5) > :nth-child(3),
 main > :nth-child(5) > :nth-child(4) {
   display: flex;
-  flex-flow: row wrap;
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
@@ -521,7 +509,7 @@ main > :nth-child(5) > :nth-child(2) > div,
 main > :nth-child(5) > :nth-child(3) > div,
 main > :nth-child(5) > :nth-child(4) > div {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -544,7 +532,7 @@ main > :nth-child(5) > :nth-child(3) > div p,
 main > :nth-child(5) > :nth-child(4) > div p {
   all: unset;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22.5px;
   color: #0aa14b;
 }
 main > :nth-child(5) > :nth-child(4) {
@@ -558,7 +546,7 @@ main > :nth-child(6) {
 
 @media (max-width: 1050px) {
   main {
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
   main > :nth-child(1) > :nth-child(2) img {
     max-width: 150px;
@@ -641,6 +629,9 @@ main > :nth-child(6) {
   main > :nth-child(5) > :nth-child(3) > div,
   main > :nth-child(5) > :nth-child(4) > div {
     gap: 1rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 90%;
   }
   main > :nth-child(5) > :nth-child(1) > div > :nth-child(1) img,
   main > :nth-child(5) > :nth-child(1) > div > :nth-child(3) img,
@@ -656,7 +647,7 @@ main > :nth-child(6) {
   main > :nth-child(5) > :nth-child(2) > div p,
   main > :nth-child(5) > :nth-child(3) > div p,
   main > :nth-child(5) > :nth-child(4) > div p {
-    font-size: 18px;
+    font-size: 20px;
   }
   main > :nth-child(5) > :nth-child(4) {
     padding: 1rem 0rem;
@@ -668,23 +659,6 @@ main > :nth-child(6) {
   }
   main > :nth-child(1) > :nth-child(2) img {
     max-width: 135px;
-  }
-  main > :nth-child(3) {
-    gap: 0.75rem;
-  }
-  main > :nth-child(3) > div {
-    gap: 0.65rem;
-    padding: 0.75rem 0rem;
-    width: 90%;
-    max-width: 350px;
-    margin: 0 auto;
-  }
-  main > :nth-child(3) > div > :nth-child(1) {
-    padding: 0.65rem 0rem;
-  }
-  main > :nth-child(3) > div > :nth-child(1) > :nth-child(1) {
-    max-width: 150px;
-    height: 150px;
   }
   main > :nth-child(4) {
     text-align: center;
@@ -749,18 +723,10 @@ main > :nth-child(6) {
   main > :nth-child(5) > :nth-child(2) > div p,
   main > :nth-child(5) > :nth-child(3) > div p,
   main > :nth-child(5) > :nth-child(4) > div p {
-    font-size: 17px;
+    font-size: 19.5px;
   }
   main > :nth-child(5) > :nth-child(4) {
     padding: 1rem 0rem;
-  }
-}
-@media (max-width: 475px) {
-  main {
-    gap: 1.75rem;
-  }
-  main > :nth-child(1) > :nth-child(2) img {
-    max-width: 100px;
   }
 }
 section {
@@ -900,17 +866,22 @@ section > :nth-child(3) > :nth-child(3) > :nth-child(3) {
 aside {
   display: flex;
   flex-flow: column wrap;
-  gap: 1rem;
+  gap: 0.5rem;
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
   transition: 2s;
 }
+aside > :nth-child(1) {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+}
 aside > :nth-child(2) {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 aside > :nth-child(2) > :nth-child(1) {
   flex: 1;
@@ -918,11 +889,10 @@ aside > :nth-child(2) > :nth-child(1) {
   display: flex;
   place-content: center;
   align-items: center;
-  scale: 0.75;
 }
 aside > :nth-child(2) > :nth-child(1) img {
   width: 100%;
-  max-width: 550px;
+  max-width: 425px;
   filter: drop-shadow(0px 0px 10px #75b507);
 }
 aside > :nth-child(2) > :nth-child(2) {
@@ -931,13 +901,14 @@ aside > :nth-child(2) > :nth-child(2) {
 }
 aside > :nth-child(3) {
   margin: 0 auto;
+  margin-top: 2.25rem;
   width: 90%;
   display: flex;
   place-content: center;
 }
 aside > :nth-child(3) img {
   width: 100%;
-  max-width: 550px;
+  max-width: 375px;
 }
 aside > :nth-child(4) {
   display: flex;
@@ -947,15 +918,16 @@ aside > :nth-child(4) {
 
 @media (max-width: 900px) {
   aside {
-    gap: 1.5rem;
-    transform: translateY(-2.5%);
+    gap: 0rem;
   }
   aside h2 {
+    margin: 0;
+    padding: 0;
     text-align: center;
   }
   aside > :nth-child(2) {
     flex-flow: column wrap;
-    gap: 1rem;
+    gap: 0rem;
   }
   aside > :nth-child(2) > :nth-child(1) {
     flex: 1;
@@ -963,36 +935,27 @@ aside > :nth-child(4) {
     display: flex;
     place-content: center;
     align-items: center;
-    scale: 0.75;
   }
   aside > :nth-child(2) > :nth-child(1) img {
     width: 100%;
-    max-width: 350px;
+    max-width: 275px;
   }
   aside > :nth-child(3) img {
     width: 100%;
-    max-width: 400px;
+    max-width: 250px;
   }
 }
 @media (max-width: 575px) {
   aside {
-    gap: 1.15rem;
-    transform: translateY(-2%);
-  }
-  aside > :nth-child(2) {
-    flex-flow: column wrap;
-    gap: 0.85rem;
-  }
-  aside > :nth-child(2) > :nth-child(1) {
-    scale: 0.75;
+    gap: 0rem;
   }
   aside > :nth-child(2) > :nth-child(1) img {
     width: 100%;
-    max-width: 350px;
+    max-width: 225px;
   }
   aside > :nth-child(3) img {
     width: 100%;
-    max-width: 225px;
+    max-width: 200px;
   }
 }
 footer {
@@ -1003,110 +966,54 @@ footer {
 }
 footer > :nth-child(1) {
   text-align: center;
-  padding: 2rem 0rem;
+  padding: 0rem;
 }
 footer > :nth-child(2) {
   width: 12.5%;
   height: 5px;
   margin: 0 auto;
-  margin-bottom: 2.25rem;
+  margin-bottom: 0rem;
   background-color: #e9e9e9;
   border-radius: 20px;
 }
 footer .swiper-container .swiper-wrapper .swiper-slide {
   place-content: center;
   text-align: center;
-  padding: 2rem 0rem;
+  padding: 0.5rem 0rem;
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
 }
 footer .swiper-container .swiper-wrapper .swiper-slide > div {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: flex-start;
   background-color: white;
-  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.25);
-  padding: 1rem 0rem;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   text-align: center;
   flex: 0.75;
-}
-footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) {
-  text-align: center;
-  width: 90%;
-  margin: 0 auto;
-}
-footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   place-content: center;
-  padding: 1rem 0rem;
+  padding: 1rem 0.5rem;
 }
-footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) > :nth-child(1) {
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) {
   width: 95%;
   display: flex;
   flex-flow: row wrap;
   place-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 0px 10px 0.1px rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  box-shadow: 0 0px 10px 0.1px rgba(0, 0, 0, 0.25);
 }
-footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) > :nth-child(1) {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-  transition: 0.3s;
-}
-footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) > :nth-child(1) > :nth-child(1):hover {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
-  margin: 0 auto;
-  width: 90%;
 }
 
-@media (max-width: 900px) {
-  footer > :nth-child(1) {
-    padding: 1.15rem 0rem;
-  }
-  footer .swiper-container .swiper-wrapper .swiper-slide {
-    padding: 2rem 0rem;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1rem;
-  }
-  footer .swiper-container .swiper-wrapper .swiper-slide > div {
-    padding: 0.9rem 0rem;
-    flex: 0.95;
-  }
-  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
-    padding: 0.9rem 0rem;
-  }
-}
-@media (max-width: 575px) {
-  footer > :nth-child(1) {
-    padding: 1.15rem 0rem;
-  }
-  footer .swiper-container .swiper-wrapper .swiper-slide {
-    padding: 2rem 0rem;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1rem;
-  }
-  footer .swiper-container .swiper-wrapper .swiper-slide > div {
-    padding: 0.9rem 0rem;
-    flex: 0.95;
-  }
-  footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(2) {
-    padding: 0.9rem 0rem;
-  }
-}
 .videoSection {
   width: 90%;
   max-width: 1450px;
@@ -1114,8 +1021,12 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
   flex-flow: column wrap;
   gap: 0.5rem;
   margin: 0 auto;
+  background: red;
 }
 .videoSection h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
   text-align: center;
 }
 .videoSection > :nth-child(2) {
@@ -1138,6 +1049,7 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
 }
 .footerFinal a button {
   all: unset;
+  font-family: "Rubik", serif;
   background: #fedb05;
   font-weight: 600;
   padding: 1rem 1.75rem;
@@ -1229,7 +1141,7 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
 }
 .whatsappFixed {
   position: fixed;
-  bottom: 3%;
+  bottom: 5%;
   right: 1.5%;
   z-index: 100;
   display: flex;
@@ -1252,6 +1164,7 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(3) {
 }
 .whatsappFixed a img {
   width: 100%;
+  max-width: 35px;
 }
 
 @keyframes headerAnimation {
