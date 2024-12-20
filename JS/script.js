@@ -1,46 +1,46 @@
 $(document).ready(function () {
-    var $swiper = $(".swiper-container");
-    var $bottomSlide = null;
-    var $bottomSlideContent = null;
+  var $swiper = $(".swiper-container");
+  var $bottomSlide = null;
+  var $bottomSlideContent = null;
 
-    var mySwiper = new Swiper(".swiper-container", {
+  var mySwiper = new Swiper(".swiper-container", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    centeredSlides: true,
+    roundLengths: true,
+    loop: true,
+    loopAdditionalSlides: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      // Para pantallas pequeñas (hasta 480px)
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 6,
+      },
+      // Para pantallas medianas (hasta 768px)
+      768: {
+        slidesPerView: 1.5,
+        spaceBetween: 7,
+      },
+      // Para pantallas grandes (mayores a 768px)
+      1024: {
+        slidesPerView: 2.5,
+        spaceBetween: 8,
+      },
+      // Para pantallas extra grandes (mayores a 1200px)
+      1200: {
+        slidesPerView: 3,
         spaceBetween: 10,
-        slidesPerView: 4,
-        centeredSlides: true,
-        roundLengths: true,
-        loop: true,
-        loopAdditionalSlides: 30,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        breakpoints: {
-            // Para pantallas pequeñas (hasta 480px)
-            480: {
-                slidesPerView: 1,
-                spaceBetween: 6,
-            },
-            // Para pantallas medianas (hasta 768px)
-            768: {
-                slidesPerView: 1.5,
-                spaceBetween: 7,
-            },
-            // Para pantallas grandes (mayores a 768px)
-            1024: {
-                slidesPerView: 2.5,
-                spaceBetween: 8,
-            },
-            // Para pantallas extra grandes (mayores a 1200px)
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-            },
-            1400: {
-                slidesPerView: 3.5,
-                spaceBetween: 12,
-            }
-        }
-    });
+      },
+      1400: {
+        slidesPerView: 3.5,
+        spaceBetween: 12,
+      }
+    }
+  });
 });
 
 const closeWindow = document.getElementById('closeWindow');
@@ -109,21 +109,88 @@ const closeBtn = document.querySelector('.close');
 
 // Show modal when mouse leaves the viewport from the top
 document.addEventListener('mouseleave', (e) => {
-    // Solo mostrar el modal si no se ha enviado ningún formulario y showModal es true
-    if (e.clientY <= 0 && showModal && !formSubmitted) {
-        modal.style.display = 'block';
-        showModal = false; // Only show once per session
-    }
+  // Solo mostrar el modal si no se ha enviado ningún formulario y showModal es true
+  if (e.clientY <= 0 && showModal && !formSubmitted) {
+    modal.style.display = 'block';
+    showModal = false; // Only show once per session
+  }
 });
 
 // Close modal when clicking the close button
 closeBtn.onclick = () => {
-    modal.style.display = 'none';
+  modal.style.display = 'none';
 };
 
 // Close modal when clicking outside
 window.onclick = (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-    }
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
 };
+
+// VIEWPORT FUNCTION
+function isElementInViewport(element) {
+  if (!element) return false;
+
+  const rect = element.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  return (
+    rect.top <= windowHeight &&
+    rect.bottom >= 0 &&
+    rect.left <= windowWidth &&
+    rect.right >= 0
+  );
+}
+
+// Single function to handle all animations
+function toggleAnimation(elementId) {
+  const targetSection = document.getElementById(elementId);
+
+  if (!targetSection) {
+    console.error(`Element ${elementId} not found`);
+    return;
+  }
+
+  if (isElementInViewport(targetSection)) {
+    targetSection.classList.add('animationN1');
+  } else {
+    targetSection.classList.remove('animationN1');
+  }
+}
+
+// Array of all animation elements
+const animationElements = [
+  'mainAnimation1',
+  'mainAnimation2',
+  'mainAnimation3',
+  'mainAnimation4',
+  'mainAnimation5',
+  'mainAnimation6',
+  'mainAnimation7',
+  'mainAnimation8',
+  'mainAnimation9'
+];
+
+// Throttled scroll handler
+let throttleTimer;
+const throttleDelay = 100; // Reduced from 500ms for better responsiveness
+
+function throttledScrollHandler() {
+  if (!throttleTimer) {
+    throttleTimer = setTimeout(() => {
+      animationElements.forEach(elementId => toggleAnimation(elementId));
+      throttleTimer = null;
+    }, throttleDelay);
+  }
+}
+
+// Event listeners
+window.addEventListener("scroll", throttledScrollHandler);
+window.addEventListener("resize", throttledScrollHandler);
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+  animationElements.forEach(elementId => toggleAnimation(elementId));
+});
