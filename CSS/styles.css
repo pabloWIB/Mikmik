@@ -528,8 +528,8 @@ main > :nth-child(6) {
     padding: 0.75rem 0rem;
   }
   main > :nth-child(3) > div > :nth-child(1) > :nth-child(1) {
-    max-width: 200px;
-    height: 200px;
+    max-width: 250px;
+    height: 250px;
   }
   main > :nth-child(4) {
     text-align: center;
