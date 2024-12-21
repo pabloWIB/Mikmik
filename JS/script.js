@@ -173,22 +173,13 @@ const animationElements = [
   'mainAnimation9'
 ];
 
-// Throttled scroll handler
-let throttleTimer;
-const throttleDelay = 100; // Reduced from 500ms for better responsiveness
-
-function throttledScrollHandler() {
-  if (!throttleTimer) {
-    throttleTimer = setTimeout(() => {
-      animationElements.forEach(elementId => toggleAnimation(elementId));
-      throttleTimer = null;
-    }, throttleDelay);
-  }
+function scrollHandler() {
+  animationElements.forEach(elementId => toggleAnimation(elementId));
 }
 
 // Event listeners
-window.addEventListener("scroll", throttledScrollHandler);
-window.addEventListener("resize", throttledScrollHandler);
+window.addEventListener("scroll", scrollHandler);
+window.addEventListener("resize", scrollHandler);
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
