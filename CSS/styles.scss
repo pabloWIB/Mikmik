@@ -318,8 +318,8 @@ header {
       height: 100%;
       width: 100%;
       background: url("../IMG/1PHONE.jpg") fixed no-repeat;
-      object-fit: fill;
-      background-size: fill;
+      object-fit: cover;
+      background-size: cover;
       transform-origin: center;
       animation: headerAnimation 0.75s linear;
     }

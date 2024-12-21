@@ -286,9 +286,9 @@ header > :nth-child(2) a button:hover {
     height: 100%;
     width: 100%;
     background: url("../IMG/1PHONE.jpg") fixed no-repeat;
-    -o-object-fit: fill;
-       object-fit: fill;
-    background-size: fill;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-size: cover;
     transform-origin: center;
     animation: headerAnimation 0.75s linear;
   }
