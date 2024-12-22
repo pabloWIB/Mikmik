@@ -121,6 +121,7 @@ form {
   >:nth-child(1){
     margin: 0;
     padding: 0;
+    margin: 0rem 0rem 1.25rem 0rem;
   }
   > :nth-child(2) {
     display: flex;
@@ -180,10 +181,9 @@ form {
     text-align: center;
     gap: 1rem;
     >:nth-child(1){
-      margin: 0;
-      padding: 0;
+      
     }
-    > :nth-child(2) {
+    >:nth-child(2) {
       display: flex;
       flex-flow: column wrap;
       gap: 1rem;
@@ -366,17 +366,24 @@ header {
 
 @media (max-width: 500px) {
   header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
     > :nth-child(1) {
       position: absolute;
       top: 0;
       left: 0;
       z-index: 9;
       height: 100%;
-      width: 100%;
+      width: 100vh;
       background: url("../IMG/1PHONE.jpg") fixed no-repeat;
-      object-fit: cover;
-      background-size: contain;
+      background-size: cover;
       transform-origin: center;
+      animation: none;
     }
   }
 }
@@ -388,6 +395,7 @@ main {
   width: 95%;
   max-width: 1450px;
   margin: 0 auto;
+  margin-bottom: 1rem;
   > :nth-child(1) {
     text-align: center;
     display: flex;
@@ -428,8 +436,8 @@ main {
       text-align: center;
       padding: 1rem 0rem;
       border-radius: 15px;
-      background: white;
-      box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+      // background: white;
+      // box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
       > :nth-child(1) {
         width: 100%;
         display: flex;
@@ -601,6 +609,7 @@ main {
     display: flex;
     padding: 1rem;
     margin: 0 auto;
+    margin-top: 1.25rem;
   }
 }
 
@@ -783,7 +792,7 @@ section {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   width: 90%;
   max-width: 1450px;
   margin: 0 auto;
@@ -866,6 +875,7 @@ section {
 @media (max-width: 900px) {
   section {
     width: 90%;
+    margin-top: 1rem;
     > :nth-child(3) {
       display: flex;
       flex-flow: column wrap;
@@ -946,6 +956,7 @@ aside {
   max-width: 1450px;
   margin: 0 auto;
   transition: 2s;
+  margin-top: 1.25rem;
   > :nth-child(1) {
     padding: 0;
     margin: 0;
@@ -1163,6 +1174,7 @@ footer {
     align-items: center;
     gap: 1rem;
     padding: 1rem 0rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     div {
       img {
