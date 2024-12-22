@@ -58,30 +58,30 @@ h3 {
 .h3ClassGreen {
   font-weight: 600;
   color: #0aa14b;
-  font-size: 30px;
+  font-size: 31.5px;
 }
 
 @media (max-width: 1200px) {
   .h3ClassGreen {
-    font-size: 27.5px;
+    font-size: 28.5px;
   }
 }
 
 @media (max-width: 900px) {
   .h3ClassGreen {
-    font-size: 25px;
+    font-size: 26.5px;
   }
 }
 
 @media (max-width: 750px) {
   .h3ClassGreen {
-    font-size: 22.5px;
+    font-size: 24.5px;
   }
 }
 
 @media (max-width: 575px) {
   .h3ClassGreen {
-    font-size: 20px;
+    font-size: 23px;
   }
 }
 

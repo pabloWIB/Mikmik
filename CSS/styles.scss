@@ -223,9 +223,6 @@ form {
   }
 }
 
-@media (max-width: 575px) {
-}
-
 header {
   width: 100%;
   height: 100vh;
@@ -278,8 +275,10 @@ header {
     }
 
     h2 {
-      color: white;
+      font-weight: 800;
       font-size: 40px;
+      color: white;  /* Set text color to white */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);  /* Add shadow to white text */
     }
 
     a {
@@ -737,6 +736,7 @@ main {
       display: flex;
       flex-flow: column wrap;
       gap: 1rem;
+      margin-bottom: 1.5rem;
       > :nth-child(1),
       > :nth-child(2),
       > :nth-child(3),
@@ -1096,6 +1096,7 @@ footer {
   flex-flow: column wrap;
   gap: 0.5rem;
   margin: 0 auto;
+  margin-top: 1.5rem;
   h2 {
     padding: 0;
     margin: 0;
