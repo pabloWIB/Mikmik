@@ -154,197 +154,104 @@ $verdeOscuro: #48673e;
 
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-h1,
-h2,
-h3 {
-  font-family: "Rubik", serif;
+:root {
+  /* Colors */
+  --color-green: #0aa14b;
+  --color-dark-green: #48673e;
+  --color-red: #d2272b;
+  
+  /* Font families */
+  --font-rubik: "Rubik", serif;
+  --font-heebo: "Heebo", serif;
+  
+  /* Base sizes */
+  --base-size: 16px;
 }
 
-.h2Class {
+/* Typography base styles */
+h1, h2, h3 { font-family: var(--font-rubik); }
+p { font-family: var(--font-heebo); }
+
+/* Common styles */
+.h2Class,
+.h3ClassGreen,
+.h5RedClass,
+.pDarkGreen,
+.mediumGreenText,
+.miniRedText {
   font-weight: 600;
-  color: #0aa14b;
+}
+
+/* Green headings */
+.h2Class {
+  color: var(--color-green);
   font-size: 40px;
 }
 
-@media (max-width: 1200px) {
-  .h2Class {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 900px) {
-  .h2Class {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 750px) {
-  .h2Class {
-    font-size: 27.5px;
-  }
-}
-
-@media (max-width: 575px) {
-  .h2Class {
-    font-size: 25px;
-  }
-}
-
 .h3ClassGreen {
-  font-weight: 600;
-  color: #0aa14b;
+  color: var(--color-green);
   font-size: 31.5px;
 }
 
-@media (max-width: 1200px) {
-  .h3ClassGreen {
-    font-size: 28.5px;
-  }
-}
-
-@media (max-width: 900px) {
-  .h3ClassGreen {
-    font-size: 26.5px;
-  }
-}
-
-@media (max-width: 750px) {
-  .h3ClassGreen {
-    font-size: 24.5px;
-  }
-}
-
-@media (max-width: 575px) {
-  .h3ClassGreen {
-    font-size: 23px;
-  }
-}
-
-.h5RedClass {
-  all: unset;
-  color: #d2272b;
-  font-weight: 600;
-  font-family: "Heebo", serif;
-  font-size: 22.5px;
-}
-
-@media (max-width: 1200px) {
-  .h5RedClass {
-    font-size: 21.5px;
-  }
-}
-
-@media (max-width: 900px) {
-  .h5RedClass {
-    font-size: 20.5px;
-  }
-}
-
-@media (max-width: 750px) {
-  .h5RedClass {
-    font-size: 19.5px;
-  }
-}
-
-@media (max-width: 575px) {
-  .h5RedClass {
-    font-size: 18.5px;
-  }
-}
-
-.pDarkGreen {
-  color: #48673e;
-  font-weight: 600;
-  font-family: "Heebo", serif;
-  font-size: 20px;
-}
-
-@media (max-width: 1200px) {
-  .pDarkGreen {
-    font-size: 19px;
-  }
-}
-
-@media (max-width: 900px) {
-  .pDarkGreen {
-    font-size: 18.5px;
-  }
-}
-
-@media (max-width: 750px) {
-  .pDarkGreen {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 575px) {
-  .pDarkGreen {
-    font-size: 17.5px;
-  }
-}
-
 .mediumGreenText {
+  color: var(--color-green);
   font-size: 30px;
-  color: #0aa14b;
-  font-weight: 600;
 }
 
-@media (max-width: 1200px) {
-  .mediumGreenText {
-    font-size: 27.5px;
-  }
-}
-
-@media (max-width: 900px) {
-  .mediumGreenText {
-    font-size: 25.5px;
-  }
-}
-
-@media (max-width: 750px) {
-  .mediumGreenText {
-    font-size: 22.5px;
-  }
-}
-
-@media (max-width: 575px) {
-  .mediumGreenText {
-    font-size: 20px;
-  }
+/* Red text */
+.h5RedClass {
+  color: var(--color-red);
+  font-family: var(--font-heebo);
+  font-size: 22.5px;
 }
 
 .miniRedText {
-  color: #d2272b;
-  font-weight: 600;
+  color: var(--color-red);
   font-size: 22.5px;
 }
 
+/* Dark green text */
+.pDarkGreen {
+  color: var(--color-dark-green);
+  font-family: var(--font-heebo);
+  font-size: 20px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 1200px) {
-  .miniRedText {
-    font-size: 20px;
-  }
+  .h2Class { font-size: 35px; }
+  .h3ClassGreen { font-size: 28.5px; }
+  .mediumGreenText { font-size: 27.5px; }
+  .h5RedClass { font-size: 21.5px; }
+  .miniRedText { font-size: 20px; }
+  .pDarkGreen { font-size: 19px; }
 }
 
 @media (max-width: 900px) {
-  .miniRedText {
-    font-size: 18px;
-  }
+  .h2Class { font-size: 30px; }
+  .h3ClassGreen { font-size: 26.5px; }
+  .mediumGreenText { font-size: 25.5px; }
+  .h5RedClass { font-size: 20.5px; }
+  .miniRedText { font-size: 18px; }
+  .pDarkGreen { font-size: 18.5px; }
 }
 
 @media (max-width: 750px) {
-  .miniRedText {
-    font-size: 17px;
-  }
+  .h2Class { font-size: 27.5px; }
+  .h3ClassGreen { font-size: 24.5px; }
+  .mediumGreenText { font-size: 22.5px; }
+  .h5RedClass { font-size: 19.5px; }
+  .miniRedText { font-size: 17px; }
+  .pDarkGreen { font-size: 18px; }
 }
 
 @media (max-width: 575px) {
-  .miniRedText {
-    font-size: 16px;
-  }
-}
-
-p {
-  font-family: "Heebo", serif;
+  .h2Class { font-size: 25px; }
+  .h3ClassGreen { font-size: 23px; }
+  .mediumGreenText { font-size: 20px; }
+  .h5RedClass { font-size: 18.5px; }
+  .miniRedText { font-size: 16px; }
+  .pDarkGreen { font-size: 17.5px; }
 }
 
 body div::-moz-selection,
@@ -498,7 +405,6 @@ form {
     font-family: "Heebo", serif;
     padding: 12px;
     border: 2px solid black;
-    border-radius: 4px;
     box-sizing: border-box;
     outline: none;
     border-radius: 6px;
@@ -527,52 +433,17 @@ form {
 
 @media (max-width: 900px) {
   form {
-    padding: 2rem 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    display: flex;
-    flex-flow: column wrap;
-    text-align: center;
-    gap: 1rem;
     > :nth-child(2) {
-      display: flex;
       flex-flow: column wrap;
-      gap: 1rem;
-      justify-content: space-between;
-    }
-    input::placeholder {
-      color: black;
     }
     input[type="text"],
     input[type="tel"] {
-      width: 100%;
-      background: transparent;
-      font-weight: 600;
-      font-size: 22.5px;
-      font-family: "Heebo", serif;
-      padding: 12px;
-      border: 2px solid black;
-      border-radius: 4px;
-      box-sizing: border-box;
-      outline: none;
-      border-radius: 6px;
       color: black;
-      cursor: pointer;
     }
     .submitInp {
-      margin: 0 auto;
       width: 100%;
       input[type="submit"] {
         width: 100%;
-        padding: 1rem 5rem;
-        font-family: "Heebo", serif;
-        border: none;
-        font-weight: 600;
-        font-size: 22.5px;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: 0.3s ease;
       }
     }
   }
