@@ -1,5 +1,196 @@
 @charset "UTF-8";
-@import "Fonts/fontSizes.css";
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+h1,
+h2,
+h3 {
+  font-family: "Rubik", serif;
+}
+
+.h2Class {
+  font-weight: 600;
+  color: #0aa14b;
+  font-size: 40px;
+}
+
+@media (max-width: 1200px) {
+  .h2Class {
+    font-size: 35px;
+  }
+}
+@media (max-width: 900px) {
+  .h2Class {
+    font-size: 30px;
+  }
+}
+@media (max-width: 750px) {
+  .h2Class {
+    font-size: 27.5px;
+  }
+}
+@media (max-width: 575px) {
+  .h2Class {
+    font-size: 25px;
+  }
+}
+.h3ClassGreen {
+  font-weight: 600;
+  color: #0aa14b;
+  font-size: 31.5px;
+}
+
+@media (max-width: 1200px) {
+  .h3ClassGreen {
+    font-size: 28.5px;
+  }
+}
+@media (max-width: 900px) {
+  .h3ClassGreen {
+    font-size: 26.5px;
+  }
+}
+@media (max-width: 750px) {
+  .h3ClassGreen {
+    font-size: 24.5px;
+  }
+}
+@media (max-width: 575px) {
+  .h3ClassGreen {
+    font-size: 23px;
+  }
+}
+.h5RedClass {
+  all: unset;
+  color: #d2272b;
+  font-weight: 600;
+  font-family: "Heebo", serif;
+  font-size: 22.5px;
+}
+
+@media (max-width: 1200px) {
+  .h5RedClass {
+    font-size: 21.5px;
+  }
+}
+@media (max-width: 900px) {
+  .h5RedClass {
+    font-size: 20.5px;
+  }
+}
+@media (max-width: 750px) {
+  .h5RedClass {
+    font-size: 19.5px;
+  }
+}
+@media (max-width: 575px) {
+  .h5RedClass {
+    font-size: 18.5px;
+  }
+}
+.pDarkGreen {
+  color: #48673e;
+  font-weight: 600;
+  font-family: "Heebo", serif;
+  font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+  .pDarkGreen {
+    font-size: 19px;
+  }
+}
+@media (max-width: 900px) {
+  .pDarkGreen {
+    font-size: 18.5px;
+  }
+}
+@media (max-width: 750px) {
+  .pDarkGreen {
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .pDarkGreen {
+    font-size: 17.5px;
+  }
+}
+.mediumGreenText {
+  font-size: 30px;
+  color: #0aa14b;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .mediumGreenText {
+    font-size: 27.5px;
+  }
+}
+@media (max-width: 900px) {
+  .mediumGreenText {
+    font-size: 25.5px;
+  }
+}
+@media (max-width: 750px) {
+  .mediumGreenText {
+    font-size: 22.5px;
+  }
+}
+@media (max-width: 575px) {
+  .mediumGreenText {
+    font-size: 20px;
+  }
+}
+.miniRedText {
+  color: #d2272b;
+  font-weight: 600;
+  font-size: 22.5px;
+}
+
+@media (max-width: 1200px) {
+  .miniRedText {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .miniRedText {
+    font-size: 18px;
+  }
+}
+@media (max-width: 750px) {
+  .miniRedText {
+    font-size: 17px;
+  }
+}
+@media (max-width: 575px) {
+  .miniRedText {
+    font-size: 16px;
+  }
+}
+p {
+  font-family: "Heebo", serif;
+}
+
+body div::-moz-selection,
+body section::-moz-selection {
+  background: transparent;
+}
+
+body div::-moz-selection, body section::-moz-selection {
+  background: transparent;
+}
+
+body div::selection,
+body section::selection {
+  background: transparent;
+}
+
+body img::-moz-selection {
+  background: transparent;
+}
+
+body img::selection {
+  background: transparent;
+}
+
 .thank-you-container {
   position: fixed;
   top: 0;
@@ -1262,4 +1453,66 @@ footer .swiper-container .swiper-wrapper .swiper-slide > div > :nth-child(1) > :
   visibility: visible;
   transform: translateY(0%);
   transition-delay: 0.1s;
+}
+
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.swiper-container-multirow > .swiper-wrapper {
+  flex-wrap: wrap;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.swiper-wrapper {
+  touch-action: pan-y;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 35px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: 27px 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  left: 10px;
+  right: auto;
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  background-image: url("../IMG/right.webp");
+  right: 10px;
+  left: auto;
+}
+
+.swiper-button-next {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=styles.css.map */
