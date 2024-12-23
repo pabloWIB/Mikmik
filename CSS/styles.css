@@ -225,7 +225,7 @@ header {
   place-content: center;
   align-items: center;
   overflow: hidden;
-  background-image: url("../IMG/1PC.jpg");
+  background-image: url("../IMG/1PC.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -326,7 +326,7 @@ header > :nth-child(1) a button:hover {
 }
 @media (max-width: 575px) {
   header {
-    background-image: url("../IMG/1PHONE.jpg");
+    background-image: url("../IMG/1PHONE.webp");
   }
 }
 main {
@@ -415,27 +415,27 @@ main > :nth-child(3) > div > :nth-child(2) > :nth-child(1) {
   flex-flow: column wrap;
 }
 main > :nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
-  background: url("../IMG/2.jpg") center center;
+  background: url("../IMG/2.webp") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 main > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
-  background: url("../IMG/3.jpg") center center;
+  background: url("../IMG/3.webp") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 main > :nth-child(3) > :nth-child(3) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
-  background: url("../IMG/4.jpg") center center;
+  background: url("../IMG/4.webp") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 main > :nth-child(3) > :nth-child(4) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
-  background: url("../IMG/5.jpg") center center;
+  background: url("../IMG/5.webp") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 main > :nth-child(3) > :nth-child(5) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
-  background: url("../IMG/6.jpg") center center;
+  background: url("../IMG/6.webp") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
