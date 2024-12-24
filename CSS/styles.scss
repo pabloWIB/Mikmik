@@ -172,7 +172,7 @@ p {
   font-family: var(--font-heebo);
 }
 
-.h5RedClass, .h3ClassGreen {
+.h5RedClass {
   all: unset;
 }
 
@@ -896,14 +896,8 @@ main {
     }
     > :nth-child(4) {
       gap: 1.25rem;
-      background-color: red;
       >:nth-child(1){
-        background: yellow;
-        all: unset;
-        background: orange;
-        >*{
-          background: green;
-        }
+
       }
       > :nth-child(2) {
         flex-flow: column wrap;
