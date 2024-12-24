@@ -872,7 +872,6 @@ main {
       display: flex;
       flex-flow: column wrap;
       flex: 1;
-      gap: 0.25rem;
       padding: 0rem;
       > div {
         gap: 0.75rem;
@@ -881,7 +880,7 @@ main {
         align-items: center;
         place-content: center;
         text-align: center;
-        padding: 1rem 0rem;
+        padding: .65rem 0rem;
         width: 90%;
         max-width: 350px;
         margin: 0 auto;
@@ -893,13 +892,17 @@ main {
           }
         }
       }
+      >:nth-child(3){
+        // background: blue;
+        margin-top: -2.75rem;
+      }
     }
     > :nth-child(4) {
       gap: 1.25rem;
       >:nth-child(1){
-
       }
       > :nth-child(2) {
+        margin-top: -2rem;
         flex-flow: column wrap;
         gap: 2.5rem;
         > div {
@@ -914,12 +917,11 @@ main {
               flex-flow: column wrap;
               gap: 2rem;
               align-items: center;
-              min-height: 200px;
-              max-height: 150px;
+              height: auto;
               margin-bottom: 1.15rem;
               img {
                 width: 90%;
-                max-width: 150px;
+                max-width: 115px;
               }
             }
           }
