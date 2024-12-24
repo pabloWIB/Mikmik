@@ -676,7 +676,7 @@ main > :nth-child(2) {
   width: 12.5%;
   height: 5px;
   margin: 0 auto;
-  background-color: #0aa14b;
+  background-color: #fff6cc;
   border-radius: 20px;
 }
 main > :nth-child(3) {
