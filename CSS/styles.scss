@@ -159,27 +159,36 @@ $verdeOscuro: #48673e;
   --color-green: #0aa14b;
   --color-dark-green: #48673e;
   --color-red: #d2272b;
-  
+
   /* Font families */
   --font-rubik: "Rubik", serif;
   --font-heebo: "Heebo", serif;
-  
+
   /* Base sizes */
   --base-size: 16px;
 }
 
 /* Typography base styles */
-h1, h2, h3 { font-family: var(--font-rubik); }
-p { font-family: var(--font-heebo); }
+h1,
+h2,
+h3 {
+  font-family: var(--font-rubik);
+}
+p {
+  font-family: var(--font-heebo);
+}
 
 /* Common styles */
 .h2Class,
 .h3ClassGreen,
 .h5RedClass,
-.pDarkGreen,
 .mediumGreenText,
 .miniRedText {
   font-weight: 600;
+}
+
+.pDarkGreen{
+  font-weight: 500;
 }
 
 /* Green headings */
@@ -219,39 +228,87 @@ p { font-family: var(--font-heebo); }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-  .h2Class { font-size: 35px; }
-  .h3ClassGreen { font-size: 28.5px; }
-  .mediumGreenText { font-size: 27.5px; }
-  .h5RedClass { font-size: 21.5px; }
-  .miniRedText { font-size: 20px; }
-  .pDarkGreen { font-size: 19px; }
+  .h2Class {
+    font-size: 35px;
+  }
+  .h3ClassGreen {
+    font-size: 28.5px;
+  }
+  .mediumGreenText {
+    font-size: 27.5px;
+  }
+  .h5RedClass {
+    font-size: 21.5px;
+  }
+  .miniRedText {
+    font-size: 20px;
+  }
+  .pDarkGreen {
+    font-size: 19px;
+  }
 }
 
 @media (max-width: 900px) {
-  .h2Class { font-size: 30px; }
-  .h3ClassGreen { font-size: 26.5px; }
-  .mediumGreenText { font-size: 25.5px; }
-  .h5RedClass { font-size: 20.5px; }
-  .miniRedText { font-size: 18px; }
-  .pDarkGreen { font-size: 18.5px; }
+  .h2Class {
+    font-size: 30px;
+  }
+  .h3ClassGreen {
+    font-size: 26.5px;
+  }
+  .mediumGreenText {
+    font-size: 25.5px;
+  }
+  .h5RedClass {
+    font-size: 20.5px;
+  }
+  .miniRedText {
+    font-size: 18px;
+  }
+  .pDarkGreen {
+    font-size: 18.5px;
+  }
 }
 
 @media (max-width: 750px) {
-  .h2Class { font-size: 27.5px; }
-  .h3ClassGreen { font-size: 24.5px; }
-  .mediumGreenText { font-size: 22.5px; }
-  .h5RedClass { font-size: 19.5px; }
-  .miniRedText { font-size: 17px; }
-  .pDarkGreen { font-size: 18px; }
+  .h2Class {
+    font-size: 27.5px;
+  }
+  .h3ClassGreen {
+    font-size: 24.5px;
+  }
+  .mediumGreenText {
+    font-size: 22.5px;
+  }
+  .h5RedClass {
+    font-size: 19.5px;
+  }
+  .miniRedText {
+    font-size: 17px;
+  }
+  .pDarkGreen {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 575px) {
-  .h2Class { font-size: 25px; }
-  .h3ClassGreen { font-size: 23px; }
-  .mediumGreenText { font-size: 20px; }
-  .h5RedClass { font-size: 18.5px; }
-  .miniRedText { font-size: 16px; }
-  .pDarkGreen { font-size: 17.5px; }
+  .h2Class {
+    font-size: 25px;
+  }
+  .h3ClassGreen {
+    font-size: 23px;
+  }
+  .mediumGreenText {
+    font-size: 20px;
+  }
+  .h5RedClass {
+    font-size: 18.5px;
+  }
+  .miniRedText {
+    font-size: 16px;
+  }
+  .pDarkGreen {
+    font-size: 17.5px;
+  }
 }
 
 body div::-moz-selection,
@@ -355,7 +412,7 @@ body {
   flex-flow: column wrap;
   align-items: center;
   gap: 3.5rem;
-  background-color: #faf8f3;
+  background-color: #fff6cc;
 }
 
 @media (max-width: 900px) {
@@ -604,7 +661,7 @@ main {
     width: 12.5%;
     height: 5px;
     margin: 0 auto;
-    background-color: #e9e9e9;
+    background-color: $verde;
     border-radius: 20px;
   }
   > :nth-child(3) {
@@ -993,7 +1050,7 @@ section {
     margin: 0 auto;
     width: 12.5%;
     height: 5px;
-    background-color: #e9e9e9;
+    background-color: $verde;
     border-radius: 20px;
   }
   > :nth-child(3) {
@@ -1037,15 +1094,7 @@ section {
         width: 57.5%;
       }
     }
-    > :nth-child(2) {
-      > :nth-child(1) {
-        width: 57.5%;
-      }
-      > :nth-child(2) {
-        width: 100%;
-      }
-    }
-    > :nth-child(3) {
+    > :nth-child(2), > :nth-child(3) {
       > :nth-child(1) {
         width: 65%;
       }
@@ -1100,17 +1149,15 @@ section {
         }
       }
 
-      > :nth-child(2) {
+      > :nth-child(2) ,> :nth-child(3) {
         > :nth-child(1) {
           width: 100%;
         }
-      }
-      > :nth-child(3) {
-        > :nth-child(1) {
+        > :nth-child(2) {
           width: 100%;
         }
 
-        > :nth-child(2) {
+        > :nth-child(3) {
           width: 100%;
         }
       }
@@ -1255,7 +1302,7 @@ footer {
     height: 5px;
     margin: 0 auto;
     margin-bottom: 0rem;
-    background-color: #e9e9e9;
+    background-color: $verde;
     border-radius: 20px;
   }
   .swiper-container {
