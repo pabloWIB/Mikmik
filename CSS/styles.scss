@@ -861,6 +861,7 @@ main {
 @media (max-width: 1050px) {
   main {
     gap: 0.65rem;
+    margin-top: -1rem;
     > :nth-child(1) {
       > :nth-child(2) {
         img {
@@ -872,7 +873,8 @@ main {
       display: flex;
       flex-flow: column wrap;
       flex: 1;
-      padding: 0rem;
+      gap: 2rem;
+      padding: 1rem;
       > div {
         gap: 0.75rem;
         display: flex;
@@ -880,12 +882,12 @@ main {
         align-items: center;
         place-content: center;
         text-align: center;
-        padding: .65rem 0rem;
+        padding: 0rem;
         width: 90%;
         max-width: 350px;
         margin: 0 auto;
         > :nth-child(1) {
-          padding: 0.75rem 0rem;
+          padding: 0rem;
           > :nth-child(1) {
             max-width: 250px;
             height: 250px;
@@ -893,16 +895,13 @@ main {
         }
       }
       >:nth-child(3){
-        // background: blue;
         margin-top: -2.75rem;
       }
     }
     > :nth-child(4) {
       gap: 1.25rem;
-      >:nth-child(1){
-      }
       > :nth-child(2) {
-        margin-top: -2rem;
+        margin-top: -3.75rem;
         flex-flow: column wrap;
         gap: 2.5rem;
         > div {
@@ -961,8 +960,6 @@ main {
 
 @media (max-width: 575px) {
   main {
-    margin-top: 1.5rem;
-    gap: 0rem;
     > :nth-child(1) {
       > :nth-child(2) {
         img {
@@ -970,13 +967,6 @@ main {
         }
       }
     }
-    > :nth-child(2) {
-      margin-top: 0.65rem;
-    }
-
-    // > :nth-child(4) {
-    // }
-
     > :nth-child(5) {
       display: flex;
       flex-flow: column wrap;

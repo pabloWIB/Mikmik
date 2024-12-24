@@ -855,6 +855,7 @@ main > :nth-child(6) {
 @media (max-width: 1050px) {
   main {
     gap: 0.65rem;
+    margin-top: -1rem;
   }
   main > :nth-child(1) > :nth-child(2) img {
     max-width: 150px;
@@ -863,7 +864,8 @@ main > :nth-child(6) {
     display: flex;
     flex-flow: column wrap;
     flex: 1;
-    padding: 0rem;
+    gap: 2rem;
+    padding: 1rem;
   }
   main > :nth-child(3) > div {
     gap: 0.75rem;
@@ -872,13 +874,13 @@ main > :nth-child(6) {
     align-items: center;
     place-content: center;
     text-align: center;
-    padding: 0.65rem 0rem;
+    padding: 0rem;
     width: 90%;
     max-width: 350px;
     margin: 0 auto;
   }
   main > :nth-child(3) > div > :nth-child(1) {
-    padding: 0.75rem 0rem;
+    padding: 0rem;
   }
   main > :nth-child(3) > div > :nth-child(1) > :nth-child(1) {
     max-width: 250px;
@@ -891,7 +893,7 @@ main > :nth-child(6) {
     gap: 1.25rem;
   }
   main > :nth-child(4) > :nth-child(2) {
-    margin-top: -2rem;
+    margin-top: -3.75rem;
     flex-flow: column wrap;
     gap: 2.5rem;
   }
@@ -956,15 +958,8 @@ main > :nth-child(6) {
   }
 }
 @media (max-width: 575px) {
-  main {
-    margin-top: 1.5rem;
-    gap: 0rem;
-  }
   main > :nth-child(1) > :nth-child(2) img {
     max-width: 135px;
-  }
-  main > :nth-child(2) {
-    margin-top: 0.65rem;
   }
   main > :nth-child(5) {
     display: flex;
